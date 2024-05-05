@@ -23,6 +23,7 @@ description: 借用 github pages 可以免服务器部署静态站点，然后�
 - author: Hux  
 - tags: `[Blogging, Demo]`  
 - share: 是否  
+- description:   必要，否则文章只显示标题  
   
 ## 如何置顶文章  
   
@@ -50,3 +51,6 @@ mathjax: true
 ```  
 ![](/images/xxx/yyy.png)  
 ```  
+  
+>[!TIP] 特别注意  
+>模板库根目录 `index.html` 第 `59` 行和第 `84` 行的 `post.excerpt` 需要修改为 `post.description`，yaml 中的 `description` 参数才会起作用，否则文章在网页上会呈现第一段或者全部内容作为摘要。  
