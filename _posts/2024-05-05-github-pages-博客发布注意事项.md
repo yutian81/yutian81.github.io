@@ -7,6 +7,7 @@ categories:
   - 自建网站  
   - github pages  
 share: true  
+description: 借用 github pages 可以免服务器部署静态站点，然后用 obsidian 的 GitHub publisher 插件，可以在 obsidian 中编辑好文章后直接发布到站点，使其在外网可见  
 ---  
   
 ## 项目地址  
