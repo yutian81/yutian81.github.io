@@ -4,8 +4,8 @@ title: 数字花园+github+cf-pages 建站方案
 name: 2024-05-05-数字花园+github+cf-pages 建站方案  
 categories:  
   - 自建网站  
-  - github  
   - cloudflare  
+  - github  
 share: true  
 mathjax:   
 description: 用 github 链接到 cloudflare 托管 digital garden 博客模板的库，无需服务器就可以使用 obsidian 发布你的博客文章到外网  
@@ -39,8 +39,8 @@ description: 用 github 链接到 cloudflare 托管 digital garden 博客模板�
 #### 手动安装  
   
 如果没有科学上网可以在 [Github](https://github.com/oleeskild/obsidian-digital-garden/releases) 上下载 zip 包到本地解压    
-把 digitalgarden 文件夹放入你的库文件夹下的.obsidian/plugins 路径下    
-比如我的库名是 _test_ ,那么插件文件夹路径就是 _test/.obsidian/plugins/digitalgarden_    
+把 digitalgarden 文件夹放入你的库文件夹下的 `.obsidian/plugins` 路径下    
+比如我的库名是 _test_ ,那么插件文件夹路径就是 `test/.obsidian/plugins/digitalgarden`    
 正常情况下 digitalgarden 下有  
   
 - main.js  
@@ -69,8 +69,8 @@ description: 用 github 链接到 cloudflare 托管 digital garden 博客模板�
   
 ### 域名绑定  
   
-1. 购买一个域名，并托管到 CF。[域名托管教程](%E5%9F%9F%E5%90%8D%E6%89%98%E7%AE%A1%E6%95%99%E7%A8%8B.md)  
-2. 返回 CloudFlare 控制台,`Workers` 和 `Pages` 面板，点击你创建的 `Pages`  
+1. [购买一个域名](%E5%A6%82%E4%BD%95%E8%B4%AD%E4%B9%B0%E5%9F%9F%E5%90%8D.md)，并 [托管](%E5%9F%9F%E5%90%8D%E6%89%98%E7%AE%A1%E5%88%B0CF%E6%95%99%E7%A8%8B.md) 到 [CF](CF%20%E8%83%BD%E5%B9%B2%E4%BB%80%E4%B9%88.md)。  
+2. 返回 [CF](CF%20%E8%83%BD%E5%B9%B2%E4%BB%80%E4%B9%88.md#注册域名%20) 控制台，`Workers` 和 `Pages` 面板，点击你创建的 `Pages`  
 3. tab 中选择 `自定义域`  
 4. 设定你自己的域名，点击 `激活域`  
 5. 稍微等待一下，显示 `有效` 即为成功  
