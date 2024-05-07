@@ -7,7 +7,6 @@ categories:
   - cloudflare  
   - github  
 share: true  
-mathjax:   
 description: 用 github 链接到 cloudflare 托管 digital garden 博客模板的库，无需服务器就可以使用 obsidian 发布你的博客文章到外网  
 ---  
   
