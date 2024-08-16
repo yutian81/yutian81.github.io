@@ -90,9 +90,9 @@ navs:
     # href: /fragments/
     # label: 片段
 
-  -
-    href: /wiki/
-    label: 备忘
+  # -
+    # href: /wiki/
+    # label: 备忘
 
   -
     href: /donate/
