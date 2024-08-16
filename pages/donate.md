@@ -18,8 +18,8 @@ permalink: /donate/
 
 ## 微信 / Wechat
 
-<img style="width:256px;border:1px solid lightgrey;" src="{{ assets_base_url }}/assets/images/receipt-code-wechat.jpeg" alt="wechat receipt code" />
+<img style="width:256px;border:1px solid lightgrey;" src="{{ assets_base_url }}/assets/images/1723801844789微信收款码.jpg" alt="wechat receipt code" />
 
 ## 支付宝 / Alipay
 
-<img style="width:256px;border:1px solid lightgrey;" src="{{ assets_base_url }}/assets/images/receipt-code-alipay.jpeg" alt="alipay receipt code" />
+<img style="width:256px;border:1px solid lightgrey;" src="{{ assets_base_url }}/assets/images/1723801821790支付宝收款码.jpg" alt="alipay receipt code" />
