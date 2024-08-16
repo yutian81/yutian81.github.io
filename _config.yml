@@ -95,6 +95,10 @@ navs:
     label: 备忘
 
   -
+    href: /donate/
+    label: 赞助
+
+  -
     href: /links/
     label: 链接
     mobile-hidden: false
