@@ -25,7 +25,7 @@
 `[Name of Link]({% post_url 2010-07-21-name-of-post %})`  
 
 ## 码志  
-我的个人博客：<https://mazhuang.org>，欢迎 Star 和 Fork。
+我的个人博客：<https://blog.24811213.xyz>，欢迎 Star 和 Fork。
 
 ## 概览
 
