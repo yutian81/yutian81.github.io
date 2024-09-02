@@ -1,1 +1,1 @@
-Sitemap: https://blog.24811213.xyz/https://blog.24811213.xyz/sitemap.xml
+Sitemap: /https://blog.24811213.xyz/sitemap.xml
