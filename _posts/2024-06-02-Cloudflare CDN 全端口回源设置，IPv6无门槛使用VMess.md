@@ -18,7 +18,7 @@ share: true
   
 1. 一个已经转入 CloudFlare 的，且是全功能的域名，千万不要使用双向解析的域名  
 2. 一台 VPS (IPv6 和 IPv4 都可以)  
-3. [WebSSH](https://ssh.090227.xyz/) (让没有 IPv6 环境的小白朋友也可以连上 VPS 的 SSH)  
+3. [WebSSH](https://ssh.yzong.us.kg/) (让没有 IPv6 环境的小白朋友也可以连上 VPS 的 SSH)  
   
 ---  
   
@@ -26,7 +26,7 @@ share: true
   
 ## 1. 通过 WebSSH 安装 X-ui  
   
-打开 [WebSSH](https://ssh.090227.xyz/) ，`Hostname / 主机` 填入你 VPS 的 IP 即可，IPv6 无需修改 IP 格式直接填入即可，    
+打开 [WebSSH](https://ssh.yzong.us.kg/) ，`Hostname / 主机` 填入你 VPS 的 IP 即可，IPv6 无需修改 IP 格式直接填入即可，    
 然后填入你 VPS 的 `Username / 用户名` 和 `Password / 密码` 后点击 `Connect` 连上你的 VPS  
   
 连上机器后安装 X-ui，这里就使用 [甬哥的X-ui脚本](https://github.com/yonggekkk/x-ui-yg)  
