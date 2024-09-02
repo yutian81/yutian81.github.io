@@ -5,7 +5,7 @@
   
     {
       "title"    : "页面没有找到",
-      "url"      : "/404.html",
+      "url"      : "https://blog.24811213.xyz/404.html",
       "keywords" : "404"
     },
   
@@ -13,7 +13,7 @@
   
     {
       "title"    : "About",
-      "url"      : "/about/",
+      "url"      : "https://blog.24811213.xyz/about/",
       "keywords" : "关于,青云志"
     },
   
@@ -21,7 +21,7 @@
   
     {
       "title"    : "归档",
-      "url"      : "/archives/",
+      "url"      : "https://blog.24811213.xyz/archives/",
       "keywords" : "归档"
     },
   
@@ -29,7 +29,7 @@
   
     {
       "title"    : "Categories",
-      "url"      : "/categories/",
+      "url"      : "https://blog.24811213.xyz/categories/",
       "keywords" : "分类"
     },
   
@@ -37,7 +37,7 @@
   
     {
       "title"    : "捐助 / Donate",
-      "url"      : "/donate/",
+      "url"      : "https://blog.24811213.xyz/donate/",
       "keywords" : "Donate"
     },
   
@@ -45,7 +45,7 @@
   
     {
       "title"    : "Fragments",
-      "url"      : "/fragments/",
+      "url"      : "https://blog.24811213.xyz/fragments/",
       "keywords" : "fragments"
     },
   
@@ -55,7 +55,7 @@
   
     {
       "title"    : "Links",
-      "url"      : "/links/",
+      "url"      : "https://blog.24811213.xyz/links/",
       "keywords" : "友情链接"
     },
   
@@ -63,7 +63,7 @@
   
     {
       "title"    : "mindmap",
-      "url"      : "/mindmap-viewer/",
+      "url"      : "https://blog.24811213.xyz/mindmap-viewer/",
       "keywords" : "mindmap"
     },
   
@@ -71,7 +71,7 @@
   
     {
       "title"    : "Open Source Projects",
-      "url"      : "/open-source/",
+      "url"      : "https://blog.24811213.xyz/open-source/",
       "keywords" : "开源,open-source,GitHub,开源项目"
     },
   
@@ -81,7 +81,7 @@
   
     {
       "title"    : "Wiki",
-      "url"      : "/wiki/",
+      "url"      : "https://blog.24811213.xyz/wiki/",
       "keywords" : "维基, Wiki"
     },
   
@@ -110,7 +110,7 @@
       
       "content"  : ""项目地址 GitHub - mzlogin/mzlogin.github.io 发布所需的 frontmatter 文件头  layout: post 如果要发布图集，则写为 gallery title: Hello 2015 博客模板实际显示的文章名 name: 2024-05-01-title 在 github publish 插件中设置的参数，用于改变上传到 github 中的文件名为前缀带日期的格式，必须是这样的前缀才会显示在博客网页上，否则文章不显示 categories: [Blogging, Demo] author: Hux keywords: [Blogging, Demo] 类似于tags，有啥作用不知道，但作者的博客都带了这个参数 share: true 参数为 true，则github publish 插件 会识别为这篇文章可发布，否则不发布 description: 必要，否则文章只显示标题 topmost: true 是否置顶 集成了高级图表  以下四个开关分别对应 flowchart.js（流程图）、sequence-diagram.js（时序图）、mermaid 和 MathJax 的支持，按需开启即可，然后就可以在正文里正常画图了，展示效果可以参见 https://mazhuang.org/wiki/markdown/。 flow: true sequence: true mermaid: true mathjax: true  对应写法参考源文件 https://github.com/mzlogin/mzlogin.github.io/blob/master/_wiki/markdown.md。 文章中插入本地图片 ![](/images/xxx/yyy.png)  [!TIP] 特别注意 模板库根目录 index.html 第 59 行和第 84 行的 post.excerpt 需要修改为 post.description，yaml 中的 description 参数才会起作用，否则文章在网页上会呈现第一段或者全部内容作为摘要。 "",
       
-      "url"      : "/2024/05/05/github-pages-%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B8%83%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/",
+      "url"      : "https://blog.24811213.xyz/2024/05/05/github-pages-%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B8%83%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/",
       "keywords" : ""
     } ,
   
@@ -120,7 +120,7 @@
       
       "content"  : ""引言 能读到这篇文章说明你对 Obsidian 有一定了解了，双链笔记的特性已经不用赘述。该文档介绍了如何通过 GitHub 私有库和 Cloudflare 的 Pages 服务资源实现完美的一键发布的方法。 能力要求  该方案需要懂一点点 GitHub 的操作 本文假定如果用户需要自定义域名,那么用户应具有添加域名解析 CNAME 的能力,相关知识不再赘述 使用插件 数字花园 Digital Garden 第三方服务 https://github.com/ https://cloudflare.com/ 实施方法 安装插件 插件市场安装 在插件市场搜索 digital garden 安装 手动安装 如果没有科学上网可以在 Github 上下载 zip 包到本地解压 把 digitalgarden 文件夹放入你的库文件夹下的 .obsidian/plugins 路径下 比如我的库名是 test ,那么插件文件夹路径就是 test/.obsidian/plugins/digitalgarden 正常情况下 digitalgarden 下有  main.js manifest-beta.json manifest.json styles.css  等你配置好了以后会有 data.json 文件夹保存你的配置 这些都不用手动干涉 克隆库  首先 fork 仓库 https://github.com/oleeskild/digitalgarden 然后设置仓库为 private 将库部署到 CloudFlare  进入控制台 选择左侧目录 Workers 和 Pages 选择 创建应用程序 tab 中选择 Pages 点击连接到 git 授权 github 权限 点击 从您的帐户部署站点 选择 github 账户 并选择之前 fork 的仓库 digitalgarden 点击开始设置 预设类型留空 构建命令 npm run build 构建输出目录 dist 点击开始 域名绑定  购买一个域名，并 托管 到 CF。 返回 CF 控制台，Workers 和 Pages 面板，点击你创建的 Pages tab 中选择 自定义域 设定你自己的域名，点击 激活域 稍微等待一下，显示 有效 即为成功 插件配置  点击 https://github.com/settings/tokens/new?scopes=repo 新建一个令牌 复制 令牌填充到 Github token 这栏 Github repo name 那一栏填你 克隆的库名 Github Username 填你的 Github 用户名称 下面的 Base URL 填你的域名 包含子域名 不带协议 Slugify Note URL 置空 否则中文路径出错 Features 这里配置页面出现的内容 Appearance 这里控制站点的名称 主题样式 语言 图标等 关闭后自动保存 尝试发布  写一个新文档 添加文档属性 可以通过快捷键 ⌘(ctrl)+p 唤出快捷栏，输入 tag，选中 Digital Garden: Add publish flag，然后文章头部出现文档属性 可以通过在 ob 中设置模板 批量添加 frontmatter ⌘(ctrl)+p 然后输入 publish single Note, 回车即可看到提示栏信息发布状态 返回 CloudFlare 控制台,Workers 和 Pages面板 的 page 模块中，点击你创建的 Pages 查看构建状态等待完成 如果有错误 查看报错信息 去自己的域名看看发布效果 左侧的工具栏有个按钮，可控制批量更新发布 其他  网站样式、风格和标题等在插件的配置里有详细说明，可以参考 插件文档。 GitHub 账户务必做好隐私保护，将库设为 private 并限制好 CloudFlare 授权的库，最好不要选择全部授权。 图床使用 GitHub 和 Cloudflare，无需繁琐的额外配置，相当于白嫖了。 注意标记添加文档属性 dg-home 为 ==首页==，可以通过快捷键⌘(ctrl)+p 唤出快捷栏，输入 tag，选中 Digital Garden: Add publish flag，然后文章头部出现文档属性，添加 dg-home，选则属性类型为复选框，然后选中即可设置当前页为首页。注意不要重复设置首页，发布构建会报错。 为什么不选择教程中的方法呢？因为 Vercel 和 Netlify 在大陆地区的访问都有点麻烦，而且速度慢。Vercel 即使 CNAME 指向中国也是访问很慢，而 Netlify 则可能莫名其妙封禁用户。因此，我探索了 CloudFlare 方案。 每次发布构建 GitHub 都发邮件好烦怎么办？将 GitHub 的库 watch 改为 ignore 即可忽略邮件。但是这样你也会错过发布失败的提示，考虑到发布半分钟后你可能回去页面刷新预览，也不是不能接受。 总结  Cloudflare 免费资源有上限，但一般情况下个人很难用完。这个资源和 workers 是共享的,注意有 workers 大量需求的用户,观察资源的余量 最后，我个人强烈建议新手看下 obsidian 社区 软通达 大佬的 建议 ，那就是不要做那些花里胡哨的东西，笔记的本质是记录和总结。 作者主页  类星体  掘金  语雀  什么值得买  bilibili  "",
       
-      "url"      : "/2024/05/05/%E6%95%B0%E5%AD%97%E8%8A%B1%E5%9B%AD+github+cf-pages-%E5%BB%BA%E7%AB%99%E6%96%B9%E6%A1%88/",
+      "url"      : "https://blog.24811213.xyz/2024/05/05/%E6%95%B0%E5%AD%97%E8%8A%B1%E5%9B%AD+github+cf-pages-%E5%BB%BA%E7%AB%99%E6%96%B9%E6%A1%88/",
       "keywords" : ""
     } ,
   
@@ -130,7 +130,7 @@
       
       "content"  : ""自定义规则的相关路径 执行程序路径（根据自身软件目录修改）： ?: program* * *.exe * Green* * *.exe * Green* * *.bat * 安全软件 * *.exe * 安全软件 * *.bat * 办公设计 * *.exe * 软件安装包 *.exe * 系统安装维护 * *.exe * 系统安装维护 * *.bat ?: users * program* * *.exe ?: windows sys????? *.exe  要保护的主要路径 注册表 HKEY_USERS * Software * "",
       
-      "url"      : "/2024/05/05/%E7%81%AB%E7%BB%92%E8%87%AA%E5%AE%9A%E4%B9%89%E8%A7%84%E5%88%99%E7%9A%84%E4%B8%BB%E8%A6%81%E6%8E%92%E9%99%A4%E8%B7%AF%E5%BE%84/",
+      "url"      : "https://blog.24811213.xyz/2024/05/05/%E7%81%AB%E7%BB%92%E8%87%AA%E5%AE%9A%E4%B9%89%E8%A7%84%E5%88%99%E7%9A%84%E4%B8%BB%E8%A6%81%E6%8E%92%E9%99%A4%E8%B7%AF%E5%BE%84/",
       "keywords" : ""
     } ,
   
@@ -140,7 +140,7 @@
       
       "content"  : ""MD 是什么 .md 即 markdown 文件的基本常用编写语法,是一种快速标记、快速排版语言 1.基本符号：* - + &gt; 基本上所有的 markdown 标记都是基于这四个符号或组合，需要注意的是，如果以基本符号开头的标记，注意基本符号后有一个用于分割标记符和内容的空格 2.标题 前面带#号，后面带文字，分别表示 h1-h6,只到 h6，而且 h1 下面会有一条横线 –&gt; 相当于标签闭合 # 一级标题 ## 二级标题 ### 三级标题 #### 四级标题 ##### 五级标题 ###### 六级标题  # 一级标题 # ## 二级标题 ## ### 三级标题 ### #### 四级标题 #### ##### 五级标题 ##### ###### 六级标题 #####  3.列表  无序列表 ^1ae825 //形式一 + a + b + c //形式二 - d - e - f //形式三 * g * h * i  有序列表 ^507f74 //正常形式 1. abc 2. bcd 3. cde //错序效果 2. fgh 3. ghi 5. hij  注意 如图,数字后面的点只能是英文的点，有序列表的序号是根据第一行列表的数字顺序来的， 错序列表的序号本来是序号是乱的， 但是还是显示 2 3 5  嵌套列表 //无序列表嵌套 + 123  + abc  + bcd  + cde + 465 + 789 //有序列表嵌套 1. abcd  1. abcde  2. abcde  3. abcde 2. bcde 3. cdef  列表可以嵌套，使用时在嵌套列表前按 tab 或 空格 来缩进,去控制列表的层数 4.引用说明区块 对某个部分做的内容做一些说明或者引用某某的话等，可以用这个语法  正常形式 &gt; 引用内容、说明内容。在语句前面加一个 &gt; ，注意是英文的那个右尖括号，注意空格，引用因为是一个区块，理论上是应该什么内容都可以放，比如说：标题，列表，引用等等。  效果图 [外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传 (img-Je0VDV4N-1599483960063)(/hugoblog/引用说明.png)]  嵌套区块 这里我只介绍一下我常用的方法，也是个人认为比较规范的一种方法，就是给区块的下一级区块多加一个右尖括号 &gt; 一级引用 &gt;&gt; 二级引用 &gt;&gt;&gt; 三级引用 &gt;&gt;&gt;&gt; 四级引用 &gt;&gt;&gt;&gt;&gt; 五级引用 &gt;&gt;&gt;&gt;&gt;&gt; 六级引用  5.代码块 在发布一些技术文章会涉及展示代码的问题，这时候代码块就显得尤为重要  少量代码，单行使用，直接用 `包裹起来就行了 ` shaoliangdaima,danhangshiyong `  大量代码，需要多行使用，用``` 包裹起来  ```   daliangdaima,xuyaoduohangshiyong   daliangdaima,xuyaoduohangshiyong   daliangdaima,xuyaoduohangshiyong   daliangdaima,xuyaoduohangshiyong   daliangdaima,xuyaoduohangshiyong  ```  效果图 [外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传 (img-Nn3sY16E-1599483960068)(/hugoblog/多行代码.png)] 6.链接  行内式 链接的文字放在 [] 中，链接地址放在随后的 () 中，链接也可以带 title 属性，链接地址后面空一格，然后用引号引起来 [简书](https://www.jianshu.com 创作你的创作), 是一个创作社区,任何人均可以在其上进行创作。用户在简书上面可以方便的创作自己的作品,互相交流。   参数式 链接的文字放在 [] 中，链接地址放在随后的: 后，链接地址后面空一格，然后用引号引起来 [简书]: https://www.jianshu.com 创作你的创作 [简书]是一个创作社区,任何人均可以在其上进行创作。用户在简书上面可以方便的创作自己的作品,互相交流。 //参数定义的其他写法 [简书]: https://www.jianshu.com '创作你的创作' [简书]: https://www.jianshu.com (创作你的创作) [简书]: &lt;https://www.jianshu.com&gt; 创作你的创作  7.图片  行内式 和链接的形式差不多，图片的名字放在 [] 中，图片地址放在随后的 () 中，title 属性（图片地址后面空一格，然后用引号引起来）,注意的是 [] 前要加上 ![my-logo.png](https://upload-images.jianshu.io/upload_images/13623636-6d878e3d3ef63825.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240 my-logo)  参数式 图片的文字放在 [] 中，图片地址放在随后的: 后，title 属性（图片地址后面空一格，然后用引号引起来）,注意引用图片的时候在 [] 前要加上 [my-logo.png]: https://upload-images.jianshu.io/upload_images/13623636-6d878e3d3ef63825.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240 my-logo ![my-logo.png] //参数定义的其他写法 [my-logo.png]: https://upload-images.jianshu.io/upload_images/13623636-6d878e3d3ef63825.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240 'my-logo' [my-logo.png]: https://upload-images.jianshu.io/upload_images/13623636-6d878e3d3ef63825.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240 (my-logo) [my-logo.png]: &lt;https://upload-images.jianshu.io/upload_images/13623636-6d878e3d3ef63825.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&gt; my-logo  8.分割线 分割线可以由 * - _（星号，减号，底线）这 3 个符号的至少 3 个符号表示，注意至少要 3 个，且不需要连续，有空格也可以 --- - - - ------ *** * * * ****** ___ _ _ _ ______  9.其他  强调字体 一个星号或者是一个下划线包起来，会转换为 _ 倾斜，如果是 2 个，会转换为加粗_  *md*  **md** _md_  __md__  效果图 [外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传 (img-3HSJYaiK-1599483960073)(/hugoblog/强调字体.png)]  转义 基本上和 js 转义一样, 加需要转义的字符     *  +  -  `  _  删除线 用~~把需要显示删除线的字符包裹起来  ~~删除~~  10.表格  //例子一 |123|234|345| |:-|:-:|-:| |abc|bcd|cde| |abc|bcd|cde| |abc|bcd|cde| //例子二 |123|234|345| |:---|:---:|---:| |abc|bcd|cde| |abc|bcd|cde| |abc|bcd|cde| //例子三 123|234|345 :-|:-:|-: abc|bcd|cde abc|bcd|cde abc|bcd|cde  上面三个例子的效果一样，由此可得  表格的格式不一定要对的非常起，但是为了良好的变成风格，尽量对齐是最好的 分割线后面的冒号表示对齐方式，写在左边表示左对齐，右边为右对齐，两边都写表示居中 "",
       
-      "url"      : "/2024/05/06/MD-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/",
+      "url"      : "https://blog.24811213.xyz/2024/05/06/MD-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/",
       "keywords" : ""
     } ,
   
@@ -150,7 +150,7 @@
       
       "content"  : ""块引用  块的最小单位为段落，在一篇文章内引用另一篇文章或其中一个标题或其中一个段落，需要用到 [[ ]] 语法 [[文章名]] 引用另一篇文章 [[文章名#标题名]] 引用另一篇文章中的标题及段落内容 [[^^选择段落]] 引用一个段落，不能是 有序列表 或 无序列表 [[文章名#标题名|显示的别名]] 阅读模式下会显示为 | 后的文字 ![[文章名#标题名|显示的别名]] 前面加 ! 会将引用的内容直接显示在文章内 标签  在段尾空两格打上标签，再空一行，才能正确设置 #标签名 显示为一个标签，标签名内不能有空格 #标签名1 #标签名2 同时设置两个或多个标签 #标签名a/标签名b 设置套嵌标签，即 标签名b 是 标签名a 的子标签 "",
       
-      "url"      : "/2024/05/06/Obsidian-%E7%89%B9%E6%AE%8A%E8%AF%AD%E6%B3%95/",
+      "url"      : "https://blog.24811213.xyz/2024/05/06/Obsidian-%E7%89%B9%E6%AE%8A%E8%AF%AD%E6%B3%95/",
       "keywords" : ""
     } ,
   
@@ -160,7 +160,7 @@
       
       "content"  : ""前期准备  注册 购买一个域名 注册商可以选择腾讯云或者阿里云，但最好是选择国外的，这里以国内腾讯云举例。 #云服务商 一、登录 Cloudflare 账号并增加站点 登录 cloudflare，在账户主页点击增加站点。 二、输入要转移到 Cloudflare 的域名 然后在下一个页面输入我们要转移的域名。 三、选择免费计划 输入完域名之后我们选择计划，选择免费的就好。 四、获取 Cloudflare 名称服务器地址 然后 cf 会扫描你已经增加的记录，扫描完成后我们点继续就好。不出意外的话可以看到下面的页面。往下翻就能找到 cloudflare 给你的名称服务器。 五、进入域名注册商控制面板修改 DNS 地址 这时候我们就要去将我们买域名的地方将 DNS 服务器改为 cloudflare 的。 那腾讯云做例子吧。进入腾讯云的控制台。找到 域名注册，点击 我的域名，找到要更换 DNS 的域名点击 更多，DNS修改  在弹出的窗口中选择自定义 DNS，然后将 cloudflare 页面上给你的名称服务器填入就好。 做完这一步就行了，我们回到 cloudflare 页面看看域名是否托管到 cf 即可。域名托管成功后我们就可以在 cf 上面解析你的域名了。 "",
       
-      "url"      : "/2024/05/06/%E5%9F%9F%E5%90%8D%E6%89%98%E7%AE%A1%E5%88%B0CF%E6%95%99%E7%A8%8B/",
+      "url"      : "https://blog.24811213.xyz/2024/05/06/%E5%9F%9F%E5%90%8D%E6%89%98%E7%AE%A1%E5%88%B0CF%E6%95%99%E7%A8%8B/",
       "keywords" : ""
     } ,
   
@@ -170,7 +170,7 @@
       
       "content"  : ""免费域名  一般都是二级域名 L53 注册地址 只能选择 onflashdrive.app 后缀，才能 托管 在 CF 中 获取一年免费域名使用优惠码：newuser X10 注册地址 免费一年，有三个后缀都可以托管：x10.mx ， x10.bz 注意：注册地址和管理地址不相同，保存好邮箱里的管理地址 收费域名  国内的 腾讯云、阿里云、百度云、华为云 等都可以购买，但是国内比较贵 #云服务商 建议在国外网站购买，尽量选择便宜的域名，且续费价格也不能高 top xyz link club 这几种后缀相对便宜 使用 数字前缀 会更便宜一些，例如：7893210.top ，一年大概 ¥10 元 左右吧 NameSilo Spaceship 他家的数字前缀域名特别便宜，不到 1 美元 GoDaddy 这个比较知名 另外推荐一个域名比价网站  通过他可以找出最便宜的域名注册商，并且列出了优惠码 域名比价 "",
       
-      "url"      : "/2024/05/06/%E5%A6%82%E4%BD%95%E8%B4%AD%E4%B9%B0%E5%9F%9F%E5%90%8D/",
+      "url"      : "https://blog.24811213.xyz/2024/05/06/%E5%A6%82%E4%BD%95%E8%B4%AD%E4%B9%B0%E5%9F%9F%E5%90%8D/",
       "keywords" : ""
     } ,
   
@@ -180,7 +180,7 @@
       
       "content"  : "" 去官方网站 Disqus 申请一个账号 绑定自己的网站主页，进入 disgus 管理后台  点击左上角安装，网页拉到最下面，看到如图所示，点击他：   在视频教程下面，出现代码，复制它：  在数字花园 github 库的 src/site/_includes/components/user 目录下，我们可以给自己的数字花园添加自定义的组件。由于我们是给我们的每篇笔记页面都添加一个评论，所以在该目录下新建 notes/footer 目录，在该目录下添加如下文件 001-comment.njk ，文件名除了扩展名 .njk 外，名字可以随意。将上面复制的代码粘贴到这里，保存。  同时还将获得一段评论计数的代码：  在 github 中找到 src/site/_includes/layouts/note.njk 文件，在最后面 &lt;/body&gt; 字段前插入这行代码。 大功告成。 "",
       
-      "url"      : "/2024/05/07/%E5%A6%82%E4%BD%95%E5%9C%A8%E5%8D%9A%E5%AE%A2%E4%B8%AD%E5%B5%8C%E5%85%A5disqus%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/",
+      "url"      : "https://blog.24811213.xyz/2024/05/07/%E5%A6%82%E4%BD%95%E5%9C%A8%E5%8D%9A%E5%AE%A2%E4%B8%AD%E5%B5%8C%E5%85%A5disqus%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/",
       "keywords" : ""
     } ,
   
@@ -190,7 +190,7 @@
       
       "content"  : ""|类别 |名称 |网址 | |———| ———- | ———- | |文字类 |火山写作 |https://www.writingo.net/document | |文字类 |讯飞星火 |https://xinghuo.xfyun.cn/desk | |文字类 |智谱清言 |https://chatglm.cn/main/toolsCenter | |文字类 |Kimi |https://kimi.moonshot.cn | |语音类 |AI 配音 |https://tool.a5.cn/tosound.html | |语音类 |马克配音 |https://ttsmaker.cn | |音乐类 |BGM猫 |https://bgmcat.com/home | |音乐类 |suno音乐生成 |https://app.suno.ai | |音乐类 |riffusion音乐生成 |https://www.riffusion.com | |视频类 |pixverse视频生成 |https://app.pixverse.ai/creative/list| |视频类 |腾讯智影 |https://zenvideo.qq.com | |视频类 |讯飞智作 |https://peiyin.xunfei.cn | |聚合类 |AI旋风 |https://www.aixuanfeng.com| |聚合类 |AI工具集 |https://ai-bot.cn | |聚合类 |AI导航 |https://tabxx.com | #AI "",
       
-      "url"      : "/2024/05/08/AI-%E5%B7%A5%E5%85%B7%E6%B1%87%E6%80%BB/",
+      "url"      : "https://blog.24811213.xyz/2024/05/08/AI-%E5%B7%A5%E5%85%B7%E6%B1%87%E6%80%BB/",
       "keywords" : "AI"
     } ,
   
@@ -200,7 +200,7 @@
       
       "content"  : ""评论系统 比较常见的评论系统是 giscus、utterances 、gitalk 和 disqus。前三种评论都依赖于 github 账号。 评论系统giscus giscus 是基于 Github Discussions 实现的 giscus 评论系统，受 utterances 的启发。它会使用 Github Discussions 搜索 API 来搜索当前页面对应的 discussions，即对于当前页面的评论。 评论系统disqus 官方网站 Disqus 注册一个账号，绑定网站主页即可使用 disqus。 统计功能 谷歌统计  统计功能是通过 Google Analytics 实现，同样也是参考 issue 实现的。注册 Google Analytics，会生成一段 JS 代码，再把代码插入到博客的 head 里即可。 统计代码格式如下： index名称：************ index网址：你需要进行统计的网址 账号ID：************ 分析代码：G-********  对于 ODG，插入位置是：src/site/_includes/components/user/index/head。 重新部署完成后，在 Google Analytics 侧测试下博客域名地址，通过即说明安装完成。然后就可以在报告页看到网站的流量统计数据了。 百度统计  注册地址 百度统计——一站式智能数据分析与应用平台 在 网站列表 里 新增网站，获取以下信息：  域名：你创建项目时设置的域名  网站名称：你自己设置的名称   点击获取代码，得到如下格式的一段代码： &lt;script&gt; var _hmt = _hmt || []; (function() {  var hm = document.createElement(script);  hm.src = https://hm.baidu.com/hm.js?431aaa51xxxxxxxxx0beab6cba0ab80bc;  var s = document.getElementsByTagName(script)[0]; s.parentNode.insertBefore(hm, s); })(); &lt;/script&gt;  Umami 统计  访问 umami 官网 注册一个账号，新建一个项目 进入控制台，点击左侧 Websites，在创建的项目上点击 edit，获得如下信息：  网站 ID：xxxxxxxxx-xxxxx-xxxxxx-xxxxxxxxxxxxx  名称：你建立项目所设置的名称  域名：你需要统计的域名，不带 https  跟踪代码：&lt;script defer src=https://eu.umami.is/script.js data-website-id=此处为你的网站ID&gt;&lt;/script&gt;   将跟踪代码嵌入到网页代码中即可。有的博客模板仅需要填写 网站ID、名称和域名 三个字段，不需要代码。 搜索功能  访问 algolia官网 注册一个账号，并新建一个项目，在 设置 – API 里获取以下信息：  应用 ID：你新建的项目会自动生成一个  搜索 API：xxxxxxxxxxxxxxxxxxx  indexName：你新建项目时设置的   代码如下： search: { \tprovider: algolia, \tconfig: { \t\tappId: xxxxxxx, \t\tapiKey: xxxxxxxxxxxxxxxxxxxxxxxxx, \t\tindexName: xxxxxxxxx, \t}, },  简单一点，可以直接用有些模板里自带的 kbar 搜索。 "",
       
-      "url"      : "/2024/05/08/%E7%BB%99%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA-%E7%BB%9F%E8%AE%A1%E4%B8%8E%E7%AB%99%E5%86%85%E6%90%9C%E7%B4%A2/",
+      "url"      : "https://blog.24811213.xyz/2024/05/08/%E7%BB%99%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA-%E7%BB%9F%E8%AE%A1%E4%B8%8E%E7%AB%99%E5%86%85%E6%90%9C%E7%B4%A2/",
       "keywords" : ""
     } ,
   
@@ -210,7 +210,7 @@
       
       "content"  : ""   国家  IP 段     香港  103.22.202.0/24103.22.203.0/24108.162.222.0/24108.162.223.0/24162.158.176.0/24162.158.177.0/24162.158.178.0/24162.158.179.0/24172.68.248.0/22172.69.96.0/22172.69.176.0/22173.245.62.0/24    台湾  103.31.4.0/23162.158.224.0/22162.158.240.0/22    澳门  172.69.72.0/22    新加坡  162.158.24.0/24162.158.25.0/24 162.158.26.0/24 162.158.27.0/24 162.158.160.0/20 172.68.144.0/22 172.69.132.0/22    日本  172.69.152.0/22108.162.226.0/24108.162.227.0/24 103.22.200.0/23 162.158.4.0/22 162.158.116.0/22 172.69.108.0/22    韩国  108.162.252.0/24 141.101.82.0/24 141.101.83.0/24 141.101.84.0/24 141.101.85.0/24 162.158.188.0/24 162.158.189.0/24 162.158.190.0/24 162.158.191.0/24    菲律宾  172.69.184.0/22162.158.136.0/22162.158.228.0/22    泰国  172.68.4.0/22172.68.104.0/22 172.68.232.0/22 172.68.240.0/22    柬埔寨  172.69.80.0/22    印度  162.158.44.0/24162.158.45.0/24 162.158.46.0/24 162.158.47.0/24 162.158.48.0/24 162.158.49.0/24 162.158.50.0/24 162.158.51.0/24 162.158.52.0/24 162.158.53.0/24 162.158.54.0/24 162.158.55.0/24 172.68.160.0/22 172.69.104.0/22    尼泊尔  172.69.76.0/22    阿联酋  162.158.96.0/24 162.158.97.0/24 162.158.98.0/24 162.158.99.0/24    阿曼  162.158.28.0/24162.158.29.0/24 162.158.30.0/24 162.158.31.0/24    卡塔尔  162.158.8.0/24162.158.9.0/24 162.158.10.0/24 162.158.11.0/24    科威特  162.158.12.0/22    伊拉克  172.69.100.0/22    斯里兰卡  172.68.200.0/22    黎巴嫩  172.69.84.0/22    以色列  172.69.128.0/22    毛里求斯  172.69.92.0/22    澳大利亚  108.162.247.0/24 108.162.248.0/24 108.162.249.0/24 108.162.250.0/24 162.158.0.0/22 172.68.0.0/22 172.68.84.0/22 172.68.116.0/22    加拿大  108.162.208.0/24108.162.240.0/24 108.162.241.0/24 162.158.144.0/24 162.158.145.0/24 162.158.146.0/24 162.158.147.0/24 172.69.156.0/22 172.69.212.0/22 172.69.216.0/22    美国洛杉矶  108.162.214.0/24108.162.215.0/24 141.101.72.0/24 162.158.56.0/22 172.68.44.0/22 172.68.208.0/22 172.69.32.0/22 173.245.48.0/24    美国芝加哥  108.162.216.0/24108.162.217.0/24 141.101.73.0/24 162.158.72.0/22 172.68.56.0/24 172.68.57.0/24 172.68.58.0/24 172.68.59.0/24    美国凤凰城  162.158.140.0/24162.158.141.0/24 162.158.142.0/24 162.158.143.0/24    美国纽瓦克  108.162.218.0/24108.162.219.0/24 162.158.60.0/22    美国达拉斯  108.162.220.0/24108.162.221.0/24 141.101.74.0/24 172.69.64.0/21    美国圣何塞  162.158.252.0/22172.68.80.0/22 172.68.132.0/22 172.68.140.0/22 172.68.188.0/22 172.69.16.0/22    美国迈阿密  162.158.120.0/24162.158.121.0/24 162.158.122.0/24 162.158.123.0/24 108.162.210.0/24 108.162.211.0/24 108.162.212.0/24 108.162.213.0/24    美国亚特兰大  108.162.236.0/24 108.162.237.0/24 108.162.238.0/24 162.158.124.0/22 162.158.184.0/24 162.158.185.0/24 162.158.186.0/24 162.158.187.0/24    美国西雅图  108.162.243.0/24108.162.244.0/24 108.162.245.0/24 108.162.246.0/24 162.158.104.0/24 162.158.105.0/24 162.158.106.0/24 162.158.107.0/24    美国阿什本  162.158.76.0/22172.68.64.0/22 172.69.60.0/22 173.245.54.0/24 188.114.104.0/24    美国其他地区  108.162.253.0/24108.162.254.0/24162.158.212.0/22162.158.244.0/22172.68.148.0/22172.68.32.0/22172.68.36.0/22172.68.52.0/22172.68.204.0/22172.68.172.0/22172.69.168.0/22172.69.40.0/22172.68.228.0/22172.68.68.0/22172.68.72.0/22172.68.76.0/22172.68.88.0/22172.69.4.0/22172.69.48.0/22172.69.88.0/22172.69.140.0/22172.69.180.0/22172.69.196.0/22172.69.208.0/22173.245.52.0/24    俄罗斯  172.68.8.0/22172.68.12.0/22 172.68.244.0/22    法国  108.162.228.0/24 141.101.66.0/24 141.101.67.0/24 141.101.68.0/24 141.101.69.0/24 108.162.229.0/24 141.101.88.0/22 162.158.192.0/24 162.158.193.0/24 162.158.194.0/24 162.158.195.0/24 172.69.224.0/22162.158.20.0/22172.69.220.0/22    荷兰  141.101.64.0/24 141.101.65.0/24 141.101.75.0/24 141.101.76.0/24 141.101.77.0/24 141.101.104.0/24 162.158.108.0/22 172.69.52.0/22    英国  141.101.70.0/24 141.101.71.0/24 141.101.98.0/24 141.101.99.0/24 141.101.105.0/24 141.101.106.0/24 141.101.107.0/24 162.158.152.0/22 162.158.156.0/22 172.64.16.0/20 172.69.124.0/22 188.114.105.0/24162.158.32.0/22172.69.172.0/22    爱尔兰  162.158.36.0/24162.158.37.0/24 162.158.38.0/24 162.158.39.0/24 172.69.120.0/22    德国  162.158.82.0/24 162.158.83.0/24 162.158.84.0/24 162.158.85.0/24 162.158.86.0/24 162.158.87.0/24 162.158.88.0/24 162.158.89.0/24 162.158.90.0/24 162.158.91.0/24 162.158.92.0/24 162.158.93.0/24 162.158.94.0/24 162.158.95.0/24162.158.112.0/24 162.158.113.0/24 162.158.114.0/24 162.158.115.0/24162.158.200.0/22172.68.108.0/22    意大利  162.158.196.0/24162.158.197.0/24 162.158.198.0/24 162.158.199.0/24 188.114.100.0/24 188.114.101.0/24 188.114.102.0/24 188.114.103.0/24172.68.196.0/22    西班牙  172.68.92.0/22 188.114.106.0/24 188.114.107.0/24 188.114.108.0/24 188.114.109.0/24 188.114.110.0/24 188.114.111.0/24    葡萄牙  172.68.100.0/22    奥地利  172.68.48.0/22172.69.0.0/22    匈牙利  172.68.224.0/22    希腊  172.68.60.0/22172.69.56.0/22    比利时  162.158.232.0/22    瑞士  162.158.148.0/22    瑞典  162.158.180.0/22 172.68.180.0/22    丹麦  162.158.132.0/24162.158.133.0/24 162.158.134.0/24 162.158.135.0/24    土耳其  172.69.116.0/22    挪威  162.158.220.0/22    芬兰  162.158.236.0/22    冰岛  172.69.144.0/22    保加利亚  162.158.208.0/22    克罗地亚  172.68.220.0/22    立陶宛  172.69.188.0/22    亚美尼亚  172.68.124.0/22    爱沙尼亚  172.69.136.0/22    拉脱维亚  172.69.192.0/22    捷克  141.101.95.0/24141.101.96.0/24 141.101.97.0/24 172.68.212.0/22    塞尔维亚  172.68.152.0/22    罗马尼亚  162.158.16.0/22172.69.148.0/22    波兰  162.158.100.0/24162.158.101.0/24 162.158.102.0/24 162.158.103.0/24 172.68.136.0/22    乌克兰  162.158.248.0/22172.68.236.0/22    墨西哥  172.69.164.0/22    巴拿马  172.68.96.0/22    库拉索  172.68.120.0/22    巴西  172.68.16.0/20188.114.96.0/24 188.114.97.0/24 188.114.98.0/24 188.114.99.0/24172.68.216.0/22    智利  141.101.100.0/22172.68.112.0/22    厄瓜多尔  172.68.176.0/22    摩尔多瓦  172.69.200.0/22    哥伦比亚  141.101.108.0/24141.101.109.0/24 141.101.110.0/24 141.101.111.0/24 172.69.204.0/22    肯尼亚  162.158.40.0/24162.158.41.0/24 162.158.42.0/24 162.158.43.0/24    埃及  162.158.128.0/22    安哥拉  172.68.40.0/22    吉布提  172.68.128.0/22    南非  172.68.184.0/22172.69.112.0/22 197.234.240.0/22  "",
       
-      "url"      : "/2024/05/17/CF%E5%AE%98%E6%96%B9IP%E6%AE%B5-%E6%8C%89%E5%9C%B0%E5%8C%BA%E5%88%86%E7%B1%BB/",
+      "url"      : "https://blog.24811213.xyz/2024/05/17/CF%E5%AE%98%E6%96%B9IP%E6%AE%B5-%E6%8C%89%E5%9C%B0%E5%8C%BA%E5%88%86%E7%B1%BB/",
       "keywords" : "IP"
     } ,
   
@@ -220,7 +220,7 @@
       
       "content"  : ""反代域名，可以通过工具网站解析获得反代 IP    域名  落地区域  维护者     proxyip.fxxk.dedyn.io  美国、英国、加拿大、卢森堡  CM    proxyip.us.fxxk.dedyn.io  美国、英国、俄罗斯、保加利亚  CM    proxyip.sg.fxxk.dedyn.io  美国、俄罗斯、荷兰、新加坡  CM    proxyip.jp.fxxk.dedyn.io  美国、日本、荷兰、德国  CM    proxyip.hk.fxxk.dedyn.io  美国、俄罗斯、英国、德国  CM    proxyip.aliyun.fxxk.dedyn.io  美国、俄罗斯、英国、德国、香港  CM    proxyip.oracle.fxxk.dedyn.io  美国、俄罗斯、荷兰、英国  CM    proxyip.digitalocean.fxxk.dedyn.io  美国、立陶宛、荷兰、英国  CM    proxy.xxxxxxxx.tk  香港、新加坡  OTC    workers.cloudflare.cyou  美国、英国、加拿大、卢森堡  白嫖哥    my-telegram-is-herocore.onecf.eu.org  美国、英国、香港、日本  Mingyu    bestproxy.onecf.eu.org  香港、新加坡  Mingyu    ipdb.rr.nu  香港、韩国、德国、罗马尼亚  Mingyu    us.ipdb.rr.nu  美国  Mingyu    hk.ipdb.rr.nu  香港  Mingyu    jp.ipdb.rr.nu  日本  Mingyu    sg.ipdb.rr.nu  新加坡  Mingyu    nl.ipdb.rr.nu  荷兰  Mingyu    us.cf.zhetengsha.eu.org  美国  小一    hk.cf.zhetengsha.eu.org  香港  小一    sg.cf.zhetengsha.eu.org  新加坡  小一    jp.cf.zhetengsha.eu.org  日本  小一    a.wuqu.pp.ua  新加坡       proxyip.gpt.878088.eu.org  德国、芬兰  CM 的 tg 群    cdnhk.huabuxiang.vip  香港       cdn-b100.xn–b6gac.eu.org  新加坡、香港、韩国      新加坡反代域名优先 sgfd.24811213.xyz bestproxy.onecf.eu.org sg.ipdb.rr.nu sg.cf.zhetengsha.eu.org cdn-b100.xn--b6gac.eu.org  443 系反代 IP 搜集 自建反代域名 新加坡：sgfd.24811213.xyz 美国反代 IP 107.182.131.171 155.248.196.218  新加坡反代 IP 8.222.175.6 43.156.27.249 101.32.239.42 47.245.86.230 8.219.50.180 8.222.181.117 8.219.193.202  通过 fofa 网站筛选 https://fofa.info  免费用户每月 3000 条下载量 查找优选 IP server=cloudflare &amp;&amp; country=JP &amp;&amp; city=Tokyo &amp;&amp; port=2053 server=cloudflare &amp;&amp; asn==45102 &amp;&amp; country=HK &amp;&amp; port=443 server=cloudflare &amp;&amp; asn==45102 &amp;&amp; country=SG &amp;&amp; port=443 server=cloudflare &amp;&amp; country=US &amp;&amp; city=San Mateo &amp;&amp; port=8080  查找反代 IP server==cloudflare &amp;&amp; port==443 &amp;&amp; header=Forbidden &amp;&amp; country==TW  server==cloudflare &amp;&amp; port==2053 &amp;&amp; header=Forbidden &amp;&amp; country==SG &amp;&amp; asn!=13335 &amp;&amp; asn!=209242  附加命令  剔除 CF——asn!=13335 &amp;&amp; asn!=209242 阿里云——server==cloudflare &amp;&amp; asn==45102 甲骨文韩国——server==cloudflare &amp;&amp; asn==31898 &amp;&amp; country==KR' 搬瓦工——server==cloudflare &amp;&amp; asn==25820 "",
       
-      "url"      : "/2024/06/02/CF%E5%8F%8D%E4%BB%A3%E5%9F%9F%E5%90%8D%E5%92%8CIP%E6%90%9C%E9%9B%86/",
+      "url"      : "https://blog.24811213.xyz/2024/06/02/CF%E5%8F%8D%E4%BB%A3%E5%9F%9F%E5%90%8D%E5%92%8CIP%E6%90%9C%E9%9B%86/",
       "keywords" : "反代, 域名, CF, IP"
     } ,
   
@@ -230,7 +230,7 @@
       
       "content"  : ""准备工作  一个已经转入 CloudFlare 的，且是全功能的域名，千万不要使用双向解析的域名 一台 VPS (IPv6 和 IPv4 都可以) WebSSH (让没有 IPv6 环境的小白朋友也可以连上 VPS 的 SSH)  部署开始 1. 通过 WebSSH 安装 X-ui 打开 WebSSH ，Hostname / 主机 填入你 VPS 的 IP 即可，IPv6 无需修改 IP 格式直接填入即可， 然后填入你 VPS 的 Username / 用户名 和 Password / 密码 后点击 Connect 连上你的 VPS 连上机器后安装 X-ui，这里就使用 甬哥的X-ui脚本 bash &lt;(curl -Ls https://raw.githubusercontent.com/yonggekkk/x-ui-yg/main/install.sh  注意: 如果你的机器未安装 BBR，请优先安装 BBR后再展开后续的工作。 X-ui 面板端口设为 2052，CF 支持 HTTP 回源端口如下：80、8080、8880、2052、2082、2086、2095，推荐使用除了 80 之外的端口 X-ui 面板用户名和密码随意即可 注意: 如果机器出口没有 IPv4，可通过安装 WARP 来给机器添加 IPv4出口 2. 设置域名 打开 CloudFlare， 选中你要使用的域名，以下例子使用 google.com 域名举例；  进入 SSL/TLS &gt; 概述 &gt; SSL/TLS 加密模式 为 完全 进入 SSL/TLS &gt; 边缘证书 &gt; 关闭 始终使用 HTTPS 和 自动 HTTPS 重写 进入 SSL/TLS &gt; 源服务器 &gt; 创建证书 将 证书 和 密钥 复制出来！保存好！！！ 进入 DNS &gt; 记录 添加 2 条 AAAA 记录， xui.google.com 和 vmess.google.com，地址就填入你的小鸡 IPv6 即可 ，其中 xui 必须开启小黄云 注意: vmess.google.com 将会作为你 VMess 节点的伪装域名使用  3. 登录 X-ui 面板，设置 VMess 节点 打开 http://xui.google.com:2052， 填入你设置的 X-ui 面板用户名和密码后点击登录即可  添加节点 VMess-ws noTLS 节点  协议: vmess  端口: 随意 复制下来备用  uuid: 复制下来备用  传输协议: ws  TLS: 关闭  点击 添加 完成   添加节点 VMess-ws-TLS 节点  协议: vmess  端口: 随意 复制下来备用  uuid: 将第 3.1 步复制下来的 uuid 粘贴在此处  传输协议: ws  TLS: 开启  证书方式: certificate file content  公钥内容: 填入第 2.3 步复制下来的 证书 内容  密钥内容: 填入第 2.3 步复制下来的 密钥 内容  点击 添加 完成  4. 设置 CF 的Origin Rules回源规则 打开 CloudFlare， 选中你要使用的域名  进入 规则 &gt; Origin Rules &gt; 创建规则  规则名称: noTLS  字段: 主机名 &gt; 等于 &gt; vmess.google.com &gt; And  字段: SSL/HTTPS &gt; 关闭  目标端口: 重写到 &gt; 填入第 3.1 步复制下来的 noTLS端口 内容  点击 部署 完成   进入 规则 &gt; Origin Rules &gt; 创建规则  规则名称: TLS  字段: 主机名 &gt; 等于 &gt; vmess.google.com &gt; And  字段: SSL/HTTPS &gt; 开启  目标端口: 重写到 &gt; 填入第 3.2 步复制下来的 TLS端口 内容  点击 部署 完成  5. 填入你 VMess 节点信息，完成优选订阅 https://VMess.fxxk.dedyn.io/sub?cc=[VMess](https://vmess.fxxk.dedyn.io/sub?cc=%5BVMess) 服务名字]&amp;host=[你的 VMess 域名]&amp;uuid=[你的 UUID]&amp;path=[你的 ws 路径]&amp;alterid=[额外 ID]&amp;security=[加密方式]  host 必填项，你 VMess 节点的 伪装域名 uuid 必填项，你 VMess 节点的 uuid path 非必填项，你 VMess 节点的 路径，默认 / cc 非必填项，可能会影响使用在线订阅转换,推荐使用地区代号，例如 HK、SG、US alterid 非必填项，默认 0 security 非必填项，默认 auto 快速订阅方式 https://VMess.fxxk.dedyn.io/sub?host=[你的VMess域名]&amp;uuid=[你的UUID]&amp;path=[你的ws路径])  例如： https://VMess.fxxk.dedyn.io/sub?host=obdii.cfd&amp;uuid=05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d&amp;path=/linkws 作者 CMLiussss "",
       
-      "url"      : "/2024/06/02/Cloudflare-CDN-%E5%85%A8%E7%AB%AF%E5%8F%A3%E5%9B%9E%E6%BA%90%E8%AE%BE%E7%BD%AE-IPv6%E6%97%A0%E9%97%A8%E6%A7%9B%E4%BD%BF%E7%94%A8VMess/",
+      "url"      : "https://blog.24811213.xyz/2024/06/02/Cloudflare-CDN-%E5%85%A8%E7%AB%AF%E5%8F%A3%E5%9B%9E%E6%BA%90%E8%AE%BE%E7%BD%AE-IPv6%E6%97%A0%E9%97%A8%E6%A7%9B%E4%BD%BF%E7%94%A8VMess/",
       "keywords" : ""
     } ,
   
@@ -240,7 +240,7 @@
       
       "content"  : ""系统相关  非 root 的机器上获取 root 用户权限 sudo -i  修改为默认 root 用户登录 echo root:你自定义的root用户密码 | sudo chpasswd root &amp;&amp; sudo sed -i 's/^# ?PermitRootLogin.*/PermitRootLogin yes/g' /etc/ssh/sshd_config &amp;&amp; sudo sed -i 's/^# ?PasswordAuthentication.*/PasswordAuthentication yes/g' /etc/ssh/sshd_config &amp;&amp; sudo service ssh restart &amp;&amp; sudo reboot &amp;&amp; echo Password changed successfully and SSH configuration updated. Restarting Server… || echo Failed to change password or update SSH configuration  系统更新与安装依赖包  debian 和 ubuntu 系统   apt update -y &amp;&amp; apt install -y curl    alpine 系统   apk add curl &amp;&amp; apk add bash &amp;&amp; apk add sudo   系统换源  debian9 系统   wget -O /etc/apt/sources.list https://static.lty.fun/%E5%85%B6%E4%BB%96%E8%B5%84%E6%BA%90/SourcesList/Debian-9-archive.list    LXC 乌班图 20 系统   cat &gt; /etc/apt/sources.list &lt;&lt;EOF  deb http://mirrors.163.com/ubuntu/ focal main restricted universe multiverse  deb http://mirrors.163.com/ubuntu/ focal-security main restricted universe multiverse  deb http://mirrors.163.com/ubuntu/ focal-updates main restricted universe multiverse  deb http://mirrors.163.com/ubuntu/ focal-proposed main restricted universe multiverse  deb http://mirrors.163.com/ubuntu/ focal-backports main restricted universe multiverse  deb-src http://mirrors.163.com/ubuntu/ focal main restricted universe multiverse  deb-src http://mirrors.163.com/ubuntu/ focal-security main restricted universe multiverse  deb-src http://mirrors.163.com/ubuntu/ focal-updates main restricted universe multiverse  deb-src http://mirrors.163.com/ubuntu/ focal-proposed main restricted universe multiverse  deb-src http://mirrors.163.com/ubuntu/ focal-backports main restricted universe multiverse  EOF   系统重启 reboot  添加 swap 交换分区 curl -L https://raw.githubusercontent.com/spiritLHLS/addswap/main/addswap.sh -o addswap.sh &amp;&amp; chmod +x addswap.sh &amp;&amp; bash addswap.sh  BBR 加速 wget -N --no-check-certificate https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh &amp;&amp; chmod +x tcp.sh &amp;&amp; ./tcp.sh  查看 VPS 的 IP 与网络信息 ip a  防火墙相关  debian 和 ubuntu 系统，其他系统不知道 安装防火墙 apt-get install firewalld -y &amp;&amp; firewall-cmd --zone=public --add-port=22/tcp --permanent &amp;&amp; firewall-cmd --reload  开放指定端口 firewall-cmd --zone=public --add-port=端口/tcp --permanent &amp;&amp; firewall-cmd --reload  停止防火墙 systemctl stop firewalld  禁用防火墙 systemctl disable firewalld  防火墙端口放行 ufw allow 端口号  安装 docker curl -sSL https://get.docker.com/ | sh systemctl start docker systemctl enable docker  安装面板  科技蓝系统优化与建站  github 官方源   curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;&amp; chmod +x kejilion.sh &amp;&amp; ./kejilion.sh    国内加速源   curl -sS -O https://raw.gitmirror.com/kejilion/sh/main/cn/kejilion.sh &amp;&amp; chmod +x kejilion.sh &amp;&amp; ./kejilion.sh   宝塔面板：主要用于建站  乌班图系统   wget -O install.sh https://download.bt.cn/install/install-ubuntu_6.0.sh &amp;&amp; sudo bash install.sh ed8484bec    debian 系统   wget -O install.sh https://download.bt.cn/install/install-ubuntu_6.0.sh &amp;&amp; bash install.sh ed8484bec    万能版   if [ -f /usr/bin/curl ];then curl -sSO https://download.bt.cn/install/install_panel.sh;else wget -O install_panel.sh https://download.bt.cn/install/install_panel.sh;fi;bash install_panel.sh ed8484bec   1panel 面板：主要用于建站 curl -sSL https://resource.fit2cloud.com/1panel/package/quick_start.sh -o quick_start.sh &amp;&amp; sudo bash quick_start.sh   哪吒探针：用户监控 VPS 的状态        教程：[安装 Dashboard   哪吒监控](https://nezha.wiki/guide/dashboard.html)        github 官方源   curl -L https://raw.githubusercontent.com/naiba/nezha/master/script/install.sh -o nezha.sh &amp;&amp; chmod +x nezha.sh &amp;&amp; sudo ./nezha.sh    国内加速源   curl -L https://gitee.com/naibahq/nezha/raw/master/script/install.sh -o nezha.sh &amp;&amp; chmod +x nezha.sh &amp;&amp; sudo CN=true ./nezha.sh   搭建节点  申请 CF 的 acme 证书    Misaka15 年证书脚本    15 年证书，先到 cf 绑定域名并申请源服务器证书      wget -N --no-check-certificate https://raw.githubusercontent.com/Misaka-blog/acme-script/main/acme.sh &amp;&amp; bash acme.sh    甬哥证书申请脚本   bash &lt;(curl -Ls https://gitlab.com/rwkgyg/acme-script/raw/main/acme.sh)   搭建 x-ui 面板  FranzKafkaYu 版   bash &lt;(curl -Ls https://raw.githubusercontent.com/FranzKafkaYu/x-ui/master/install.sh)    sing-web 版   bash &lt;(wget -qO- https://raw.githubusercontent.com/sing-web/x-ui/main/install_CN.sh)    甬哥版   bash &lt;(curl -Ls https://raw.githubusercontent.com/yonggekkk/x-ui-yg/main/install.sh)    Misaka 的 3x-ui   bash &lt;(curl -Ls https://raw.githubusercontent.com/Misaka-blog/3x-ui/master/install.sh)    alpine 系统专用版   apk add curl &amp;&amp; apk add bash &amp;&amp; bash &lt;(curl -Ls https://raw.githubusercontent.com/Lynn-Becky/Alpine-x-ui/main/alpine-xui.sh)   HY2 脚本   V4 机器需使用 warp 的情况下，需要先安装 HY2 脚本   wget -N --no-check-certificate https://raw.githubusercontent.com/Misaka-blog/hysteria-install/main/hy2/hysteria.sh &amp;&amp; bash hysteria.sh   Argo 类脚本   不能与 X-UI 面板共存   ArgoX 脚本（fscarmen）   bash &lt;(wget -qO- https://raw.githubusercontent.com/fscarmen/argox/main/argox.sh)    梭哈脚本（白嫖哥）   curl [https://www.baipiao.eu.org/suoha.sh](https://www.baipiao.eu.org/suoha.sh) -o suoha.sh &amp;&amp; bash suoha.sh    全能脚本   curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;&amp; chmod +x ssh_tool.sh &amp;&amp; ./ssh_tool.sh   WARP 脚本  fscarmen 版 warp   wget -N https://gitlab.com/fscarmen/warp/-/raw/main/menu.sh &amp;&amp; bash menu.sh[option] [lisence/url/token]    甬哥版多功能 warp   bash &lt;(wget -qO- https://gitlab.com/rwkgyg/CFwarp/raw/main/CFwarp.sh 2&gt; /dev/null)    甬哥多平台优选 WARP 对端 IP + 无限生成 WARP-Wireguard 配置 手机版   curl -sSL https://gitlab.com/rwkgyg/CFwarp/raw/main/point/endip.sh -o endip.sh &amp;&amp; chmod +x endip.sh &amp;&amp; bash endip.sh    CMliu warp 优选 IP 并生成 clash 配置文件   wget -N -P Warp2Clash https://raw.githubusercontent.com/cmliu/Warp2Clash/main/W2C_start.sh &amp;&amp; cd Warp2Clash &amp;&amp; chmod +x W2C_start.sh  "",
       
-      "url"      : "/2024/06/02/VPS%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E8%BD%AF%E4%BB%B6/",
+      "url"      : "https://blog.24811213.xyz/2024/06/02/VPS%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E8%BD%AF%E4%BB%B6/",
       "keywords" : "脚本, 命令, linux, VPS"
     } ,
   
@@ -250,7 +250,7 @@
       
       "content"  : ""centos 系统 安装防火墙: apt-get install firewalld -y &amp;&amp; firewall-cmd --zone=public --add-port=22/tcp --permanent &amp;&amp; firewall-cmd --reload 开启防火墙：systemctl start firewalld.service 开放指定端口: firewall-cmd --zone=public --add-port=端口/tcp --permanent &amp;&amp; firewall-cmd --reload 重启防火墙: systemctl restart firewalld.service 停止开机启动: systemctl disable firewalld.service 启用开机启动: systemctl enable firewalld.service 临时停止防火墙: systemctl stop firewalld.service 查看防火墙状态: systemctl status firewalld.service 查看所有端口号：firewall-cmd --list-ports 或 yum install net-tools -y &amp;&amp; netstat -ntlp debian 和 ubuntu 系统 iptable 方案 安装防火墙：apt update -y &amp;&amp; apt install -y iptables-persistent 卸载防火墙：apt purge -y iptables-persistent 开启防火墙： service iptables start 放行指定端口：iptables -A INPUT -p tcp --dport 端口号 -j ACCEPT 重启防火墙：service iptables restart 查看防火墙现有规则：iptables -L -n -v 禁止开机启动：service iptables stop 开启开机启动：service iptables save 查看防火墙状态：service iptables status 编辑 iptable 规则:  查看规则文件：nano /etc/iptables/rules.v4  编辑规则内容，开启 22 端口： *filter :INPUT DROP [0:0] :FORWARD DROP [0:0] :OUTPUT ACCEPT [0:0] -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT -A OUTPUT -m state --state ESTABLISHED,RELATED -j ACCEPT -A INPUT -p tcp --dport 22 -j ACCEPT  -A INPUT -i lo -j ACCEPT  COMMIT  加载 iptable 规则: iptables-restore &lt; /etc/iptables/rules.v4 systemctl enable netfilter-persistent  ufw 方案 安装防火墙：apt update -y &amp;&amp; apt install -y ufw 卸载防火墙：apt purge -y ufw 开启防火墙： ufw enable 关闭防火墙：ufw disable 放行指定端口：ufw allow 端口号 重启防火墙：ufw reload 查看防火墙现有规则：ufw status 或 ufw show added 查看防火墙状态：ufw status verbose 重置防火墙：ufw reset 查看所有端口号：apt install net-tools -y &amp;&amp; netstat -ntlp 其他通用命令 查看指定端口是否被占用：lsof -i tcp:端口号 或同时查看占用端口的进程 netstat -ntulp |grep 端口号 查看进程详细信息：ps 11111 &gt; 11111 为进程 PID 号 结束指定进程：kill -9 11111 &gt; 11111 为进程 PID 号 "",
       
-      "url"      : "/2024/06/22/VPS%E9%98%B2%E7%81%AB%E5%A2%99%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/",
+      "url"      : "https://blog.24811213.xyz/2024/06/22/VPS%E9%98%B2%E7%81%AB%E5%A2%99%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/",
       "keywords" : ""
     } ,
   
@@ -260,7 +260,7 @@
       
       "content"  : ""需要的软件 优选 ip 工具：https://github.com/XIU2/CloudflareSpeedTest Termux 下载: https://github.com/termux/termux-app/releases 运行 Termux 更新软件源 pkg update -y  给 termux 读取手机存储的权限： termux-setup-storage  安装 wget pkg install wget -y  下载优选 ip 工具 wget -N https://ghproxy.net/https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.2.5/CloudflareST_linux_arm64.tar.gz  或者 wget -N https://gh-proxy.com/https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.2.5/CloudflareST_linux_arm64.tar.gz  解压优选 ip 工具压缩包 tar -zxf CloudflareST_linux_arm64.tar.gz  添加执行权限 chmod +x CloudflareST  优选 ip ./CloudflareST -url https://cdn.cloudflare.steamstatic.com/steam/apps/256843155/movie_max.mp4  上面的地址是一个测速地址，也可以换成其他地址，比如 mingyu 大佬提供的 `https://spurl.api.030101.xyz/100mb "",
       
-      "url"      : "/2024/06/22/%E5%A6%82%E4%BD%95%E5%9C%A8%E6%89%8B%E6%9C%BA%E4%B8%8A%E4%BC%98%E9%80%89cloudflare-ip/",
+      "url"      : "https://blog.24811213.xyz/2024/06/22/%E5%A6%82%E4%BD%95%E5%9C%A8%E6%89%8B%E6%9C%BA%E4%B8%8A%E4%BC%98%E9%80%89cloudflare-ip/",
       "keywords" : ""
     } ,
   
@@ -270,7 +270,7 @@
       
       "content"  : ""视频教程 原贴地址 youtube 视频教程地址 相关链接 项目地址 （项目已经关停删库） 项目文档 （项目已经关停删库） 官方获取 Access Token 和 Session Token 第三方 WebUI pandora获取Access Token和Session Token pandora生成Share Token pandora生成Pool Token 使用 Web 模式 免费账号共享池 pandora演示地址一 pandora演示地址二 通过fofa寻找别人搭建的网页 用过CF反向代理 Pandora 反向代理代码RProxy.zip export default {  async fetch(request, env) {  let url = new URL(request.url);  url.hostname = 'chat.zhile.io'  return fetch(new Request(url, request));  }, };  使用 Proxy 模式（自己搭建） license_id（根据 github 账号年限获取使用额度 #下载pandora https://github.com/pandora-next/deploy/releases #后台运行pandora nohup ./PandoraNext &gt; pandora.log 2&gt;&amp;1 &amp; #下载pandora-get-token.py https://raw.githubusercontent.com/bulianglin/demo/main/pandora-get-token.py #后台运行载pandora-get-token.py nohup python3 -u pandora-get-token.py &gt; gettoken.log 2&gt;&amp;1 &amp;  共享 Pool Token：pk-this-is-a-real-free-pool-token-for-everyone "",
       
-      "url"      : "/2024/06/26/%E5%9B%BD%E5%86%85%E7%9B%B4%E8%BF%9Echatgpt%E4%B8%80%E7%AB%99%E5%BC%8F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/",
+      "url"      : "https://blog.24811213.xyz/2024/06/26/%E5%9B%BD%E5%86%85%E7%9B%B4%E8%BF%9Echatgpt%E4%B8%80%E7%AB%99%E5%BC%8F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/",
       "keywords" : "直连, chatgpt, pandora"
     } ,
   
@@ -280,7 +280,7 @@
       
       "content"  : ""测速工具 1. Cloudflare Workers 文件反代（无需服务器，需要域名）  注意：因为 *.workers.dev 域名被 DNS 污染，所以默认分配的子域名将无法使用，有域名的可以将 Workers 服务路由绑定至自己的域名就能访问了。 可以利用 Cloudflare Workers 服务，这个只限制访问次数不限制流量，免费版每日 10 万次数限制（每天 8 点重置）。 搭建 Workers 文件反代很简单，也就在 Cloudflare 后台点几下就完事了，连服务器都省了。 「 点击展开 查看快速搭建步骤 」 简单来说就是：创建服务、粘贴代码、保存部署，完事~  打开 Cloudflare Workers，点击中间橙色的 Start building 按钮。 如果是第一次用，则会让你取个 专属于你 的二级子域名，即 YYY.workers.dev，以后可以改...  点击 创建服务 按钮（如下图所示）  输入服务名称（三级子域名），选择第二个 HTTP 处理程序，点击 创建服务 按钮（如下图所示）  点击右下角的 快速编辑 按钮  清空原内容并粘贴以下代码，点击 保存并部署（通常 10 秒内就完成了，如下图所示） addEventListener(fetch, event =&gt; {  let url = new URL(event.request.url);  url.protocol = 'https:'  url.hostname = cachefly.cachefly.net;  let request = new Request(url, event.request);  event.respondWith(fetch(request)); })  这里是以 https://cachefly.cachefly.net/200mb.test 为反代目标（不建议只照着这一个薅），不过最大只有 200MB，想要更大的请修改反代目标（下面有可用的大文件 URL），另外如果目标是 http 地址则记得将上面代码中的 https: 改为 http: 为了减少回源，提高下载测速准确度。建议反代目标选择文件小于 512MB 且 支持 CDN 缓存的文件后缀。  最后尝试浏览器访问 https://XXX.YYY.workers.dev/200mb.test 如果可以正常下载则代表部署成功 注意：因为 *.workers.dev 域名被 DNS 污染，所以默认分配的子域名将无法使用，有域名的可以将 Workers 服务路由绑定至自己的域名就能访问了。 具体可以看看 #189 这里提到了 Workers 自定义域名。 后续使用 CloudflareST 时，记得加上 -url 参数，例如： # Windows CloudflareST.exe -url https://XXX.YYY.workers.dev/200mb.test  # Linux/Mac ./CloudflareST -url https://XXX.YYY.workers.dev/200mb.test  访问这个 URL 其实就是在反代 https://cachefly.cachefly.net/200mb.test 如果想要改成其他大文件 URL（下面写的有），只需要修改 Workers 代码中的 cachefly.cachefly.net 域名和协议即可  1.1【可选】自定义 Workers 地址的 URL 路径（简短好记） 「 点击展开 查看简单说明 」 把上面原先的 Workers 代码改成下面这样，即可把原先很长/不好记的 URL 路径改为简短好记： addEventListener(fetch, event =&gt; {  let url = new URL(event.request.url);  if (url.pathname == /test &amp;&amp; url.search == ) {  url.href=https://cachefly.cachefly.net/200mb.test  let request = new Request(url, event.request);  event.respondWith(fetch(request));  } })  其中第 3 行的 /test 就是你可以自定义的 URL 路径，最终下载测速地址为：https://xxx.yyy/test  你可以将其改为 /，这样的话最终下载测速地址为：https://xxx.yyy（/ 可省略不写  2. 服务器套 Cloudflare CDN（需要服务器+域名） 「 点击展开 查看简单说明 」 首先你需要有个域名，然后在你的服务器上面创建一个虚拟主机（如 Nginx/Caddy），并在其目录下生成一个空文件即可： # 以下命令会在 /XXX 目录下，生成一个文件名为 cfst.bin 大小为 300MB 的文件 # （超过 512M 的文件不会被 CDN 缓存，会导致次次回源，即大量消耗服务器流量不说，还会影响下载测速准确度，因为多了个回源环节） # 记得修改命令中的 /XXX/ 示例路径，否则直接运行会提示找不到文件夹！ dd if=/dev/zero of=/XXX/cfst.bin bs=1M count=0 seek=300 # 因为是空文件，所以 Cloudflare 在缓存时 300MB 就会被压缩为 300KB 了，不占用 Cloudflare 的节点缓存空间，因此 Cloudflare 并没有追究文件正不正常的问题，顶多像我这样因流量太大（每天 10TB）而被域名限速了。。。 # 另外，不建议搞太多不同大小的文件，这样不利于缓存，因此 Cloudflare 的缓存机制还会看文件热度，如果流量分散到几个文件上，可能会导致文件热度不足早早就被清理，从而增加回源次数，消耗服务器流量。  也可以使用其他 Cloudflare CDN 支持缓存的文件后缀，具体见：#default-cached-file-extensions 最后给你的网站套上 Cloudflare CDN 即可。  使用初期的时候，会因为回源而消耗部分服务器流量并缓存到 CDN 节点，后续访问 URL 就直接从 CDN 缓存中读取了。 另外，建议去缓存 - Tiered Cache 中开启 Argo Tiered Cache 功能，这样可以进一步降低回源次数，节省服务器流量。 # 一些可用于 Cloudflare Workers 文件反代 的大文件 URL： 文件反代不知道在哪里找大文件的话，可以去看看各 IDC 的官方测速文件（可以谷歌搜索 VPS looking glass 或 testfile MB 就能找到很多，建议优先选择美西），建议选择 512MB 以下且 支持 CDN 缓存的文件后缀，我举几个例子： # 这几个小于 512 MB，且都是会被 CDN 缓存的 .zip 文件后缀（常见的 文档、图片、音视频、压缩包、安装包、静态文件 后缀） http://ipv4.download.thinkbroadband.com/200MB.zip http://ipv4.download.thinkbroadband.com/512MB.zip https://testfileorg.netwet.net/500MB-CZIPtestfile.org.zip # 这几个 .test 的后缀是不支持缓存的，可以用但会影响下载测速准确度 https://cachefly.cachefly.net/200mb.test https://lg-seattle.cloudzy.com/500MB.test https://lg-miami.cloudzy.com/500MB.test https://lg-chicago.cloudzy.com/500MB.test https://lg.my.controlvm.com/500MB.test http://23.145.48.48/500MB.test http://speedtest-sfo3.digitalocean.com/1gb.test  注意：这些文件地址是让你 Workers 反代用的，不能直接用于 -url 参数！ "",
       
-      "url"      : "/2024/06/26/%E8%87%AA%E5%BB%BA%E4%B8%8B%E8%BD%BD%E6%B5%8B%E9%80%9F%E5%9C%B0%E5%9D%80%E7%9A%84%E6%96%B9%E6%B3%95/",
+      "url"      : "https://blog.24811213.xyz/2024/06/26/%E8%87%AA%E5%BB%BA%E4%B8%8B%E8%BD%BD%E6%B5%8B%E9%80%9F%E5%9C%B0%E5%9D%80%E7%9A%84%E6%96%B9%E6%B3%95/",
       "keywords" : ""
     } ,
   
@@ -290,7 +290,7 @@
       
       "content"  : ""杨幂的脚 2024-07-03 Let’s Encrypt 证书只有 3 个月而且验证巨 TM 慢！！！ 如何操作  禁用通用 SSL删除原有证书   获取区域 ID   获取Global API Key 密钥   执行如下命令 替换如下命令中的区域 ID、账户邮箱、Global API Key 密钥为你提取到的值  curl -X PATCH https://api.cloudflare.com/client/v4/zones/区域ID/ssl/universal/settings     -H Content-Type: application/json     -H X-Auth-Email: 账户邮箱     -H X-Auth-Key: Global API Key密钥     --data '{certificate_authority: digicert}'   原文：https://blog.intel.im/archives/cloudflare-geng-huan-bian-yuan-zheng-shu-ban-fa-ji-gou "",
       
-      "url"      : "/2024/07/09/Cloudflare%E6%9B%B4%E6%8D%A2%E8%BE%B9%E7%BC%98%E8%AF%81%E4%B9%A6%E9%A2%81%E5%8F%91%E6%9C%BA%E6%9E%84/",
+      "url"      : "https://blog.24811213.xyz/2024/07/09/Cloudflare%E6%9B%B4%E6%8D%A2%E8%BE%B9%E7%BC%98%E8%AF%81%E4%B9%A6%E9%A2%81%E5%8F%91%E6%9C%BA%E6%9E%84/",
       "keywords" : "Cloudflare, SSL证书"
     } ,
   
@@ -300,7 +300,7 @@
       
       "content"  : ""一、简介 Serv00 是一家提供免费虚拟主机的厂商，但是他提供了 ssh 终端服务，所以我们也可以把它当作一个功能不算太过健全的 VPS 来使用，我们可以用它来部署各种简单的服务，比如 vless 节点，wordpress，alist 等，要求是每 3 个月需登录一次控制面板或 SSH,避免账号被回收 二、注册  注册之前检测自己的 IP纯净度  如果节点纯净度不够的话注册是不会成功的【他会给我们发送当前邮箱已注册】  如果大家 IP 纯净度不够可以使用【红杏加速器】    红杏加速器博主测试所有节点 IP 纯净度极高   限时 5 折优惠券,2024-07-26 截止【SVIP88】   永久 8.8 折优惠券【Yixiu】     节点开全局 打开 官网地址 注册的时候需要注意【What is the cost of hosting on serv00.com?】这一栏填写 free，不要空着  如果提示邮箱已注册我们换节点刷新页面重新来  如果显示发送成功但是邮箱没有收到信息    检查垃圾箱   换 IP 换邮箱重新注册【邮箱注意不要换同一个后缀名称的】可以用临时邮箱来注册     注册完成后 serv00 会给我们的邮箱发送一个包含 VPS 信息的邮件 三、登录面板开启权限  打开面板地址 https://panel4.serv00.com/ 修改语言为英文，选择右上角 Zmień język 修改语言为 English 第一步需要做的就是开启可以运行自己应用的权限。Additional services -&gt; Run your own applications -&gt; Enabled 如果不开启这一项，自己的用户目录下的所有文件都无法添加可执行权限。 选择 Change password 修改密码【可选】 四、自动化保号 因 serv00 要求是每 3 个月需登录一次控制面板或 SSH，所以为了避免被收回我写了个脚本可以批量自动化保号 1.Fork 仓库  打开 serv00-login 仓库页面。 点击页面右上角的 “Star” 按钮 点击页面右上角的 “Fork” 按钮，将仓库 fork 到你的 GitHub 账户下。 点击 Create fork 2. 设置 GitHub Secrets  创建 Telegram Bot   在 Telegram 中找到 @BotFather，创建一个新 Bot，并获取 API Token。  获取到你的 Chat ID 方法一，在 一休技术交流群 里发送 /id@KinhRoBot 获取，返回用户信息中的 ID 就是 Chat ID  获取到你的 Chat ID 方法二，可以通过向 Bot 发送一条消息，然后访问 https://api.telegram.org/bot&lt;your_bot_token&gt;/getUpdates 找到 Chat ID。   配置 GitHub Secrets    转到你 fork 的仓库页面。     点击 Settings，然后在左侧菜单中选择 Secrets。   添加以下 Secrets：    ACCOUNTS_JSON: 包含账号信息的 JSON 数据。例如：    [  {username: serv00的账号, password: serv00的密码, panel: panel6.serv00.com},  {username: ct8的账号, password: ct8的密码, panel: panel.ct8.pl},  {username: user2, password: password2, panel: panel6.serv00.com}  ]      TELEGRAM_BOT_TOKEN: 你的 Telegram Bot 的 API Token。   TELEGRAM_CHAT_ID: 你的 Telegram Chat ID。      获取方法：    在 Telegram 中创建 Bot，并获取 API Token 和 Chat ID。   在 GitHub 仓库的 Secrets 页面添加这些值，确保它们安全且不被泄露。     3. 启动 GitHub Actions  配置 GitHub Actions   在你的 fork 仓库中，进入 Actions 页面。  如果 Actions 没有自动启用，点击 Enable GitHub Actions 按钮以激活它。   运行工作流   GitHub Actions 将会根据你设置的定时任务（例如每三天一次）自动运行脚本。  如果需要手动触发，可以在 Actions 页面手动运行工作流。   4. 等待脚本执行完成，查看 TelegramBot 信息  如果脚本执行异常，检查环境变量 ACCOUNTS_JSON  必须为标准 json 格式，可利用 json解析工具 检查是否配置异常  尤其注意最后一组数据不需要 “,”,很多小白朋友会配置错误   五、vless 节点搭建 1. 确保已经开启权限 第一步需要做的就是开启可以运行自己应用的权限。Additional services -&gt; Run your own applications -&gt; Enabled 如果不开启这一项，自己的用户目录下的所有文件都无法添加可执行权限。 2. 配置端口号  在面板中设置添加端口号 Port reservation-&gt;Add port-&gt;Random-&gt;add 3. ssh 进入服务器 #s6.serv00.com可能会因为被墙连不上,可以用web6.serv00.com或者cache6.serv00.com  ssh -p 22 &lt;Login&gt;@&lt;SSH/SFTP服务器地址&gt;  如果不会使用终端可采用其他 ssh 工具或者 webssh，只需要输入账号密码端口即可 4. 拉取代码到指定目录 cd ~/domains &amp;&amp; git clone https://github.com/yixiu001/serv00-script.git &amp;&amp; cd serv00-script &amp;&amp; bash vless.sh  5. 执行命令 cd ~/domains/$USER.serv00.net/vless &amp;&amp; ./check_vless.sh -p &lt;端口号&gt;  6，复制信息中返回的 vless 信息并粘贴到 v2ray 中使用 7，配置定时任务维护节点 在面板中依次打开 Cron jobs-&gt;Add cron job-&gt;Specify time 选择每小时执行一次 Hourly-&gt;Command 中输入以下命令 cd ~/domains/$USER.serv00.net/vless &amp;&amp; ./check_vless.sh  六、其他常用命令 1. 删除 vless 节点代码以及进程关闭 pm2 delete vless &amp;&amp; rm -rf ~/domains/serv00-script &amp;&amp; rm -rf ~/domains/$USER.serv00.net/vless  2. 查看当前 vless 节点状态 pm2 status  # 如果状态异常可以执行以下命令重启  cd ~/domains/$USER.serv00.net/vless &amp;&amp; ./check_vless.sh  3. 查看错误日志 如果出现异常可以执行以下命令查看日志截图发到 TG群聊 解决 pm2 logs  后续其他命令修改待更新！！！ 七、serv00 自动化部署启动，保活，并且可发送消息到 Telegram 项目地址 视频教程 这个项目是群内的 python 大佬做的一个代码，完全自动化，利用 githubActions 以及 python 脚本实现了自动化部署 vless 节点以及维护节点，如果大家有兴趣的话可以自己去部署以下，如果有问题可以加 电报群 艾特大佬 "",
       
-      "url"      : "/2024/07/15/Serv00%E8%B4%A6%E5%8F%B7%E6%B3%A8%E5%86%8C-%E8%8A%82%E7%82%B9%E6%90%AD%E5%BB%BA%E4%B8%8E%E8%B4%A6%E5%8F%B7%E4%BF%9D%E6%B4%BB/",
+      "url"      : "https://blog.24811213.xyz/2024/07/15/Serv00%E8%B4%A6%E5%8F%B7%E6%B3%A8%E5%86%8C-%E8%8A%82%E7%82%B9%E6%90%AD%E5%BB%BA%E4%B8%8E%E8%B4%A6%E5%8F%B7%E4%BF%9D%E6%B4%BB/",
       "keywords" : ""
     } ,
   
@@ -310,7 +310,7 @@
       
       "content"  : ""一、准备工作 新建 2 个端口 新建一个域名  自定义域名要在 cf 解析一下 IP 开启 Run your own applications SSH 连接安装 PM2 bash &lt;(curl -s https://raw.githubusercontent.com/k0baya/alist_repl/main/serv00/install-pm2.sh)  安装完成，需断开一下 SSH，才能生效。 安装 go  mkdir -p ~/local/soft &amp;&amp; cd ~/local/soft wget https://dl.google.com/go/go1.22.0.freebsd-amd64.tar.gz tar -xzvf go1.22.0.freebsd-amd64.tar.gz rm go1.22.0.freebsd-amd64.tar.gz echo 'export PATH=~/local/soft/go/bin:$PATH' &gt;&gt; ~/.profile source ~/.profile go version  二、下载编辑面板的源码 git clone https://github.com/naiba/nezha.git  切换到面板的编译目录，进行编译 三、准备运行需要的文件 mkdir ~/nezhapanel &amp;&amp; cd ~/nezhapanel cp ~/nezha/cmd/dashboard/dashboard ~/nezhapanel/dashboard cp -r ~/nezha/resource ~/nezhapanel/resource rm ~/nezhapanel/resource/resource.go mkdir ~/nezhapanel/data cp ~/nezha/script/config.yaml ~/nezhapanel/data/config.yaml  四、修改配置文件  7 个地方需要修改 ssh 内修改不方便，进入网站文件管理修改方便点 nezhapanel—data—config.yaml 视频里漏讲 language：改成 zh-CN 按照视频教程获取配置填写方法 运行面板， 确保你在 ~/nezhapanel 目录 cd ~/nezhapanel chmod +x ./dashboard pm2 start ./dashboard pm2 save  五、自动运行，在网站管理面板添加 cron jobs 启动时间（Specify time）：After reboot 任务类型（Form type）：Advanced 命令行代码（Command）： /home/你的用户名/.npm-global/bin/pm2 resurrect  到一步，面板已经成功运行起来。 六、补充功能 清除所有配置文件，cron jobs 需要手动删除 chmod -R 755 ~/*   chmod -R 755 ~/.*   rm -rf ~/.*   rm -rf ~/* pkill -kill -u 用户名  原文：https://tweek.top/archives/1721044997616 "",
       
-      "url"      : "/2024/07/16/Serv00-nezha/",
+      "url"      : "https://blog.24811213.xyz/2024/07/16/Serv00-nezha/",
       "keywords" : ""
     } ,
   
@@ -320,7 +320,7 @@
       
       "content"  : ""1、来到 cloudflare 首页 https://www.cloudflare.com/zh-cn 2、登入到 cloudflare，首页点击 zero trust 3、在进入到 Networks–&gt;Tunnels 4、再选择添加一个通道 Add a tunnel 5、选择使用 cloudflared 客户端，再下一步 6、给这个通道取名，方便识别，再下一步 7、先选择 docker 平台，然后再点第 2 步中的复制，把这段代码复制出来备用 docker run cloudflare/cloudflared:latest tunnel --no-autoupdate run --token eyJhIjoiNGQwNTk5NWQ0ZTFiZTk5ZDJjMTZkOGMzYjQ1NDhkMjYiLCJ0IjoiMGIzNmFiMmQtMzQ1NC00N2NhLWE0NzQtZDA0ZjkwMGI4ODcyIiwicyI6Ik9UTmhaRFV5Tfdafa0RdjsdjJtu3dsdGFS5tVm1OUzAwTm1Jd0xXRTVNak10T1RJellUUTJNRFV6WldNNCJ9  因为官方给出的 docker 创建方式，缺少一个重启后的策略，所以再重启后不能自动运行，所以我们只选择复制出来的命令中的 token 的密码部分，下面的代码是我修改过的部署 docker 容器的命令，最后加入您复制出来的 token 密码即可使用 docker run --name cloudflared -d --restart=unless-stopped cloudflare/cloudflared:latest tunnel --no-autoupdate run --token ‘这里替换成你的token密码，不要带引号’  8、然后复制到路由器 ssh 终端中进行部署 9、容器运行起来后继续设置 当前隧道的设置页面来到了域名部分：  第 1 步，这里填一个子域名，选择一个当前可以使用的域。 第 2 步，这里选择提供 web 服务的内网 ip 及端口以及协议。 第 3 步，保存，设置结束，去访问一下看看吧。  原文出处：米拉一频道 "",
       
-      "url"      : "/2024/07/17/Cloudflare-Tunnel-fandai/",
+      "url"      : "https://blog.24811213.xyz/2024/07/17/Cloudflare-Tunnel-fandai/",
       "keywords" : ""
     } ,
   
@@ -330,7 +330,7 @@
       
       "content"  : ""使用场景  有很多优选 IP 回源端口不一致 节点端口不是 CF 支持的端口 回源规则配置 关于 CF CDN 端口问题解释 无回源规则: 80-&gt;80 443-&gt;443 2052-&gt;2052 一一对应 有回源规则 如回源到 12345 80-&gt;12345 443-&gt;12345 2052-&gt;12345 所有 CF 支持的端口全部访问指定的回源端口 经过实际测试 SSL 开灵活除 443 端口以为其他 TLS 端口均无法生效 节点配置 节点我们需要有两个节点一个不使用 TLS 一个使用 TLS 两个节点端口必须不同, uuid host path 必须相同 这样是为了方便合并成一个节点 CF 回源规则配置 对于 CF 的回源规则同样需要两个规则  现在你的节点就能够使用 CF 的 13 个端口了 进阶配置 1.使用 URL 路径来批量指定节点 2.使用 Configuration Rules 来设置 SSL 是否为完全 拉到最底部 至此配置完成 节点的 TLS 只需要简单的在 v2 里面点击打开就行了不需要输入相关配置 "",
       
-      "url"      : "/2024/07/24/%E4%BD%BF%E7%94%A8-Cloudflare-OriginRules-%E8%AE%A9%E8%8A%82%E7%82%B9%E8%83%BD%E5%A4%9F%E4%BD%BF%E7%94%A8%E6%89%80%E6%9C%89%E7%9A%84CF%E7%AB%AF%E5%8F%A3/",
+      "url"      : "https://blog.24811213.xyz/2024/07/24/%E4%BD%BF%E7%94%A8-Cloudflare-OriginRules-%E8%AE%A9%E8%8A%82%E7%82%B9%E8%83%BD%E5%A4%9F%E4%BD%BF%E7%94%A8%E6%89%80%E6%9C%89%E7%9A%84CF%E7%AB%AF%E5%8F%A3/",
       "keywords" : ""
     } ,
   
@@ -340,7 +340,7 @@
       
       "content"  : "" 注册地址：https://www.ct8.pl/offer/create_new_account （注册需要波兰 IP） 控制台主页：https://panel.ct8.pl 控制台操作  新建一个端口：Port reservation——Add new port——如 TCP 34218，用于连接 alist（必须是 10000 以上的端口，或者使用随机端口） 新建一个域名：www pages——Add new page——如 ct8.yzong.us.kg；关联端口 34218，类型选 proxy，其他不改 新建一个数据库：MySQL——Add database，数据库名：m46021_alist，登录用户名：m46021_alist，设置一个密码，假设为 aabbcc111，其他不设置 默认的数据库地址为：mysql.ct8.pl，端口为：3306 创建域名证书：SSL，为 ct8.yzong.us.kg 域名生成一个证书 (可以使用 CF 的 15 年证书，也可以用 ct8 生成一个证书) SSH 操作  通过 SSH 工具连接 CT8 服务器 进入域名文件夹：cd domains/ct8.yzong.us.kg （不要照抄，写你自己添加的域名） 新建 alist 文件夹：mkdir alist 进入 alist 文件夹：cd alist 安装 alist （第三方编译用于 freebsd 系统的版本）： wget -O alist-freebsd.sh https://raw.githubusercontent.com/bin862324915/serv00-app/main/alist/alist-freebsd.sh &amp;&amp; sh alist-freebsd.sh  修改配置信息：从面板的文件管理器进入 domains/ct8.yzong.us.kg/alist/data/，修改 config.json 文件  database 字段改为如下：  database: {    type: mysql,    host: mysql.ct8.pl,    port: 3306, #数据库默认端口    user: m46021_alist,    password: aabbcc111, #填你设置的数据库密码    name: m46021_alist,    db_file: data/data.db,    table_prefix: x_,    ssl_mode: ,    dsn: },   scheme 字段改为如下：  scheme: {    address: 0.0.0.0,    http_port: 34218, #这里填你在面板上开放的端口    https_port: -1,    force_https: false,    cert_file: ,    key_file: ,    unix_file: ,    unix_file_perm: }   运行测试：./alist server 首次运行后会生成一个默认的密码，找到 password 后面的字符串就是默认密码 默认登录名为 admin 如果忘记密码可以使用以下指令重置密码（在 alist 管理后台也可以修改）： # 随机生成一个密码 ./alist admin random # 手动设置一个密码,假设为123123 ./alist admin set 123123  访问 Alist  打开浏览器，输入你部署好的网址 https://ct8.yzong.us.kg 输入用户名 admin，密码 123123 至此，整个 alist 的安装部署就到此结束了 后台运行  按 ctrl+d 可以结束当前运行的 alist 程序 通过 screen 命令新建会话让 alist 保持在后台运行： cd domains/ct8.yzong.us.kg/alist &amp;&amp; chmod +x alist &amp;&amp; screen ./alist server  可以在当前会话按下 Ctrl + A，然后按 D，这会让你从当前 screen 会话中脱离，但 alist 程序仍会在后台运行。 如果你需要重新连接到这个 screen 会话，可以使用以下命令：screen -r alist 在网页管理面板进入 Cron jobs 菜单，点击 Add cron job，新建一个 reboot 脚本，在 Command 框中输入: cd domains/ct8.yzong.us.kg/alist &amp;&amp; chmod +x alist &amp;&amp; screen ./alist server  然后点击 Add，这样，当服务器重启的时候就会执行操作自动启动 alist 应用了 大功告成，可以根据 alist 官方教程去添加你的网盘了 "",
       
-      "url"      : "/2024/08/03/ct8-alist/",
+      "url"      : "https://blog.24811213.xyz/2024/08/03/ct8-alist/",
       "keywords" : ""
     } ,
   
@@ -350,7 +350,7 @@
       
       "content"  : ""部署方法 1、workers 部署 在 cf 中创建一个 workers，复制 _worker.js 中的代码到 workers 中，点击保存并部署。 项目地址：GitHub - yutian81/domain-check 2、pages 部署 fork 本仓库，在 cf 中创建一个 pages，链接到你 fork 的仓库，点击部署 变量设置    变量名  填写示例  说明  是否必填     SITENAME  我的域名监控  自定义站点名称，默认为 域名监控  否    DOMAINS  https://raw.githubusercontent.com/用户名/仓库名/main/domains.json  替换为你自己的 json 文件  是    TGID  652***4277  TG 机器人 ID，不需要通知可不填  否    TGTOKEN  60947***43:BBCrcWzLbXghYU8vdtt0jyESjpL9-uKM7p8  TG 机器人 TOKEN，不需要通知可不填  否    DAYS  7  提前几天发送 TG 提醒，必须是整数，默认为 7  否   域名信息 json 文件格式 示例 [  { domain: 883344.best, registrationDate: 2024-06-16, expirationDate: 2025-07-15, system: SpaceShip, systemURL: https://www.spaceship.com/zh },  { domain: 711911.xyz, registrationDate: 2024-04-16, expirationDate: 2029-04-15, system: SpaceShip, systemURL: https://www.spaceship.com/zh },  { domain: hello.xyz, registrationDate: 2024-07-17, expirationDate: 2025-07-16, system: SpaceShip, systemURL: https://www.spaceship.com/zh } ]  相关截图 TG 通知截图  监控页面截图  致谢 ypq123456789 "",
       
-      "url"      : "/2024/09/02/domain-check/",
+      "url"      : "https://blog.24811213.xyz/2024/09/02/domain-check/",
       "keywords" : ""
     } ,
   
@@ -360,7 +360,7 @@
       
       "content"  : ""部署方法 1、workers 部署 在 cf 中创建一个 workers，复制 _worker.js 中的代码到 workers 中，点击保存并部署。 项目地址：GitHub - yutian81/vps-check 2、pages 部署 fork 本仓库，在 cf 中创建一个 pages，链接到你 fork 的仓库，点击部署 变量设置    变量名  填写示例  说明  是否必填     SITENAME  VPS 到期监控  自定义站点名称，默认为 VPS到期监控  否    DOMAINS  https://raw.githubusercontent.com/用户名/仓库名/main/vpsinfo.json  替换为你自己的 json 文件  是    TGID  652***4277  TG 机器人 ID，不需要通知可不填  否    TGTOKEN  60947***43:BBCrcWzLbXghYU8vdtt0jyESjpL9-uKM7p8  TG 机器人 TOKEN，不需要通知可不填  否    DAYS  5  提前几天发送 TG 提醒，必须是整数，默认为 5  否   域名信息 json 文件格式 示例，请修改其中信息为你自己的 vps [  { country: 香港, system: Akile, asn: AS61112 Akile, type: VPS, registrationDate: 2024-04-12, expirationDate: 2025-04-12, systemURL: https://akile.io },  { country: 巴西, system: DCI-FD5, asn: AS31898 Oracle, type: NAT, registrationDate: 2024-08-19, expirationDate: 2024-11-16, systemURL: https://dash.duckyci.com },  { country: 波兰, system: Serv00-S9, asn: AS57367 Atman, type: 容器, registrationDate: 2024-08-18, expirationDate: 2034-08-20, systemURL: https://panel9.serv00.com } ]  相关截图 TG 通知截图  监控页面截图 "",
       
-      "url"      : "/2024/09/02/vps-check/",
+      "url"      : "https://blog.24811213.xyz/2024/09/02/vps-check/",
       "keywords" : ""
     } ,
   
@@ -370,7 +370,7 @@
       
       "content"  : ""Content here "",
       
-      "url"      : "/wiki/template/",
+      "url"      : "https://blog.24811213.xyz/wiki/template/",
       "keywords" : "keyword1, keyword2"
     } 
   
