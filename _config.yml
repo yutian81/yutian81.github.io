@@ -2,7 +2,7 @@
 #   Main Configs   #
 # ---------------- #
 baseurl: https://blog.24811213.xyz
-url: 
+url: https://blog.24811213.xyz
 date_format: "ordinal"
 title: 青云志
 subtitle: "雨天狂奔的网络空间"
