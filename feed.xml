@@ -1,0 +1,961 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="/https://blog.24811213.xyz/feed.xml" rel="self" type="application/atom+xml" /><link href="/https://blog.24811213.xyz/" rel="alternate" type="text/html" /><updated>2024-09-02T18:12:43+08:00</updated><id>/https://blog.24811213.xyz/feed.xml</id><title type="html">青云志</title><subtitle>网络技术爱好者</subtitle><author><name>青云志</name></author><entry><title type="html">domain-check：监控域名到期并通过TG提醒</title><link href="/https://blog.24811213.xyz/2024/09/02/domain-check/" rel="alternate" type="text/html" title="domain-check：监控域名到期并通过TG提醒" /><published>2024-09-02T00:00:00+08:00</published><updated>2024-09-02T00:00:00+08:00</updated><id>/https://blog.24811213.xyz/2024/09/02/domain-check</id><content type="html" xml:base="/https://blog.24811213.xyz/2024/09/02/domain-check/"><![CDATA[<h2 id="部署方法">部署方法</h2>
+
+<h3 id="1workers-部署">1、workers 部署</h3>
+
+<p>在 cf 中创建一个 workers，复制 <code class="language-plaintext highlighter-rouge">_worker.js</code> 中的代码到 workers 中，点击保存并部署。</p>
+
+<p>项目地址：<a href="https://github.com/yutian81/domain-check">GitHub - yutian81/domain-check</a></p>
+
+<p><a href="https://deploy.workers.cloudflare.com/?url=https://github.com/yutian81/domain-check"><img src="https://deploy.workers.cloudflare.com/button" alt="快速部署到 CF Worker" /></a></p>
+
+<h3 id="2pages-部署">2、pages 部署</h3>
+
+<p>fork 本仓库，在 cf 中创建一个 pages，链接到你 fork 的仓库，点击部署</p>
+
+<h2 id="变量设置">变量设置</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>变量名</th>
+      <th>填写示例</th>
+      <th>说明</th>
+      <th>是否必填</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>SITENAME</td>
+      <td>我的域名监控</td>
+      <td>自定义站点名称，默认为 <code class="language-plaintext highlighter-rouge">域名监控</code></td>
+      <td>否</td>
+    </tr>
+    <tr>
+      <td>DOMAINS</td>
+      <td><code class="language-plaintext highlighter-rouge">https://raw.githubusercontent.com/用户名/仓库名/main/domains.json</code></td>
+      <td>替换为你自己的 json 文件</td>
+      <td>是</td>
+    </tr>
+    <tr>
+      <td>TGID</td>
+      <td>652***4277</td>
+      <td>TG 机器人 ID，不需要通知可不填</td>
+      <td>否</td>
+    </tr>
+    <tr>
+      <td>TGTOKEN</td>
+      <td>60947***43:BBCrcWzLbXghYU8vdtt0jyESjpL9-uKM7p8</td>
+      <td>TG 机器人 TOKEN，不需要通知可不填</td>
+      <td>否</td>
+    </tr>
+    <tr>
+      <td>DAYS</td>
+      <td>7</td>
+      <td>提前几天发送 TG 提醒，必须是整数，默认为 <code class="language-plaintext highlighter-rouge">7</code></td>
+      <td>否</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="域名信息-json-文件格式">域名信息 json 文件格式</h2>
+
+<p><strong>示例</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[  
+  { "domain": "883344.best", "registrationDate": "2024-06-16", "expirationDate": "2025-07-15", "system": "SpaceShip", "systemURL": "https://www.spaceship.com/zh" },  
+  { "domain": "711911.xyz", "registrationDate": "2024-04-16", "expirationDate": "2029-04-15", "system": "SpaceShip", "systemURL": "https://www.spaceship.com/zh" },  
+  { "domain": "hello.xyz", "registrationDate": "2024-07-17", "expirationDate": "2025-07-16", "system": "SpaceShip", "systemURL": "https://www.spaceship.com/zh" }  
+]  
+</code></pre></div></div>
+
+<h2 id="相关截图">相关截图</h2>
+
+<p>TG 通知截图  <br />
+<img src="https://fastly.jsdelivr.net/gh/yutian81/yutian81.github.io@master/assets/images/1724210502008%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20240821104404.png" alt="TG通知.png" /></p>
+
+<p>监控页面截图  <br />
+<img src="https://fastly.jsdelivr.net/gh/yutian81/yutian81.github.io@master/assets/images/17242327870871724232786683.png" alt="监控页面.png" /></p>
+
+<h2 id="致谢">致谢</h2>
+
+<p><a href="https://github.com/ypq123456789/domainkeeper">ypq123456789</a></p>]]></content><author><name>青云志</name></author><category term="监控" /><category term="域名" /><category term="TG" /><summary type="html"><![CDATA[这是一个简洁高效的域名可视化展示面板，基于 Cloudflare Workers 构建。它提供了一个直观的界面，让用户能够一目了然地查看他们域名的状态、注册商、注册日期、过期日期和使用进度，并可在到期前通过 TG 机器人向用户推送通知]]></summary></entry><entry><title type="html">vps-check：监控域名到期并通过TG提醒</title><link href="/https://blog.24811213.xyz/2024/09/02/vps-check/" rel="alternate" type="text/html" title="vps-check：监控域名到期并通过TG提醒" /><published>2024-09-02T00:00:00+08:00</published><updated>2024-09-02T00:00:00+08:00</updated><id>/https://blog.24811213.xyz/2024/09/02/vps-check</id><content type="html" xml:base="/https://blog.24811213.xyz/2024/09/02/vps-check/"><![CDATA[<h2 id="部署方法">部署方法</h2>
+
+<h3 id="1workers-部署">1、workers 部署</h3>
+
+<p>在 cf 中创建一个 workers，复制 <code class="language-plaintext highlighter-rouge">_worker.js</code> 中的代码到 workers 中，点击保存并部署。</p>
+
+<p>项目地址：<a href="https://github.com/yutian81/vps-check">GitHub - yutian81/vps-check</a></p>
+
+<p><a href="https://deploy.workers.cloudflare.com/?url=https://github.com/yutian81/vps-check"><img src="https://deploy.workers.cloudflare.com/button" alt="快速部署到 CF Worker" /></a></p>
+
+<h3 id="2pages-部署">2、pages 部署</h3>
+
+<p>fork 本仓库，在 cf 中创建一个 pages，链接到你 fork 的仓库，点击部署</p>
+
+<h2 id="变量设置">变量设置</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>变量名</th>
+      <th>填写示例</th>
+      <th>说明</th>
+      <th>是否必填</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>SITENAME</td>
+      <td>VPS 到期监控</td>
+      <td>自定义站点名称，默认为 <code class="language-plaintext highlighter-rouge">VPS到期监控</code></td>
+      <td>否</td>
+    </tr>
+    <tr>
+      <td>DOMAINS</td>
+      <td><code class="language-plaintext highlighter-rouge">https://raw.githubusercontent.com/用户名/仓库名/main/vpsinfo.json</code></td>
+      <td>替换为你自己的 json 文件</td>
+      <td>是</td>
+    </tr>
+    <tr>
+      <td>TGID</td>
+      <td>652***4277</td>
+      <td>TG 机器人 ID，不需要通知可不填</td>
+      <td>否</td>
+    </tr>
+    <tr>
+      <td>TGTOKEN</td>
+      <td>60947***43:BBCrcWzLbXghYU8vdtt0jyESjpL9-uKM7p8</td>
+      <td>TG 机器人 TOKEN，不需要通知可不填</td>
+      <td>否</td>
+    </tr>
+    <tr>
+      <td>DAYS</td>
+      <td>5</td>
+      <td>提前几天发送 TG 提醒，必须是整数，默认为 <code class="language-plaintext highlighter-rouge">5</code></td>
+      <td>否</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="域名信息-json-文件格式">域名信息 json 文件格式</h2>
+
+<p><strong>示例</strong>，请修改其中信息为你自己的 vps</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[  
+  { "country": "香港", "system": "Akile", "asn": "AS61112 Akile", "type": "VPS", "registrationDate": "2024-04-12", "expirationDate": "2025-04-12", "systemURL": "https://akile.io" },  
+  { "country": "巴西", "system": "DCI-FD5", "asn": "AS31898 Oracle", "type": "NAT", "registrationDate": "2024-08-19", "expirationDate": "2024-11-16", "systemURL": "https://dash.duckyci.com" },  
+  { "country": "波兰", "system": "Serv00-S9", "asn": "AS57367 Atman", "type": "容器", "registrationDate": "2024-08-18", "expirationDate": "2034-08-20", "systemURL": "https://panel9.serv00.com" }  
+]  
+</code></pre></div></div>
+
+<h2 id="相关截图">相关截图</h2>
+
+<p>TG 通知截图  <br />
+<img src="https://fastly.jsdelivr.net/gh/yutian81/yutian81.github.io@master/assets/images/17243062899351724306289601.png" alt="TG提醒" /></p>
+
+<p>监控页面截图  <br />
+<img src="https://fastly.jsdelivr.net/gh/yutian81/yutian81.github.io@master/assets/images/17243063439351724306343197.png" alt="监控页面" /></p>]]></content><author><name>青云志</name></author><category term="监控" /><category term="TG" /><category term="VPS" /><summary type="html"><![CDATA[这是一个简洁高效的域名可视化展示面板，基于Cloudflare Workers构建。它提供了一个直观的界面，让用户能够一目了然地查看他们VPS的状态、注册商、注册日期、过期日期和使用进度，并可在到期前通过TG机器人向用户推送通知。]]></summary></entry><entry><title type="html">使用CT8免费虚拟主机私有化部署Alist</title><link href="/https://blog.24811213.xyz/2024/08/03/ct8-alist/" rel="alternate" type="text/html" title="使用CT8免费虚拟主机私有化部署Alist" /><published>2024-08-03T00:00:00+08:00</published><updated>2024-08-03T00:00:00+08:00</updated><id>/https://blog.24811213.xyz/2024/08/03/ct8-alist</id><content type="html" xml:base="/https://blog.24811213.xyz/2024/08/03/ct8-alist/"><![CDATA[<blockquote>
+  <p>注册地址：https://www.ct8.pl/offer/create_new_account （注册需要波兰 IP）  <br />
+控制台主页：https://panel.ct8.pl</p>
+</blockquote>
+
+<h2 id="控制台操作">控制台操作</h2>
+
+<ul>
+  <li>新建一个端口：<code class="language-plaintext highlighter-rouge">Port reservation</code>——<code class="language-plaintext highlighter-rouge">Add new port</code>——如 <code class="language-plaintext highlighter-rouge">TCP 34218</code>，用于连接 alist（必须是 10000 以上的端口，或者使用随机端口）</li>
+  <li>新建一个域名：<code class="language-plaintext highlighter-rouge">www pages</code>——<code class="language-plaintext highlighter-rouge">Add new page</code>——如 <code class="language-plaintext highlighter-rouge">ct8.yzong.us.kg</code>；关联端口 <code class="language-plaintext highlighter-rouge">34218</code>，类型选 <code class="language-plaintext highlighter-rouge">proxy</code>，其他不改</li>
+  <li>新建一个数据库：<code class="language-plaintext highlighter-rouge">MySQL</code>——<code class="language-plaintext highlighter-rouge">Add database</code>，数据库名：<code class="language-plaintext highlighter-rouge">m46021_alist</code>，登录用户名：<code class="language-plaintext highlighter-rouge">m46021_alist</code>，设置一个密码，假设为 <code class="language-plaintext highlighter-rouge">aabbcc111</code>，其他不设置</li>
+  <li>默认的数据库地址为：<code class="language-plaintext highlighter-rouge">mysql.ct8.pl</code>，端口为：<code class="language-plaintext highlighter-rouge">3306</code></li>
+  <li>创建域名证书：<code class="language-plaintext highlighter-rouge">SSL</code>，为 <code class="language-plaintext highlighter-rouge">ct8.yzong.us.kg</code> 域名生成一个证书 (可以使用 CF 的 15 年证书，也可以用 ct8 生成一个证书)</li>
+</ul>
+
+<h2 id="ssh-操作">SSH 操作</h2>
+
+<ul>
+  <li>通过 SSH 工具连接 <code class="language-plaintext highlighter-rouge">CT8</code> 服务器</li>
+  <li>进入域名文件夹：<code class="language-plaintext highlighter-rouge">cd domains/ct8.yzong.us.kg</code> （不要照抄，写你自己添加的域名）</li>
+  <li>新建 alist 文件夹：<code class="language-plaintext highlighter-rouge">mkdir alist</code></li>
+  <li>进入 alist 文件夹：<code class="language-plaintext highlighter-rouge">cd alist</code></li>
+  <li>安装 alist （第三方编译用于 freebsd 系统的版本）：</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget -O alist-freebsd.sh https://raw.githubusercontent.com/bin862324915/serv00-app/main/alist/alist-freebsd.sh &amp;&amp; sh alist-freebsd.sh  
+</code></pre></div></div>
+
+<ul>
+  <li>修改配置信息：从面板的文件管理器进入 <code class="language-plaintext highlighter-rouge">domains/ct8.yzong.us.kg/alist/data/</code>，修改 <code class="language-plaintext highlighter-rouge">config.json</code> 文件</li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">database</code> 字段改为如下：</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  "database": {  
+    "type": "mysql",  
+    "host": "mysql.ct8.pl",  
+    "port": 3306, #数据库默认端口  
+    "user": "m46021_alist",  
+    "password": "aabbcc111", #填你设置的数据库密码  
+    "name": "m46021_alist",  
+    "db_file": "data/data.db",  
+    "table_prefix": "x_",  
+    "ssl_mode": "",  
+    "dsn": ""  
+  },  
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">scheme</code> 字段改为如下：</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  "scheme": {  
+    "address": "0.0.0.0",  
+    "http_port": 34218, #这里填你在面板上开放的端口  
+    "https_port": -1,  
+    "force_https": false,  
+    "cert_file": "",  
+    "key_file": "",  
+    "unix_file": "",  
+    "unix_file_perm": ""  
+  }  
+</code></pre></div>    </div>
+  </li>
+  <li>运行测试：<code class="language-plaintext highlighter-rouge">./alist server</code></li>
+  <li>首次运行后会生成一个默认的密码，找到 <code class="language-plaintext highlighter-rouge">password</code> 后面的字符串就是默认密码</li>
+  <li>默认登录名为 <code class="language-plaintext highlighter-rouge">admin</code></li>
+  <li>如果忘记密码可以使用以下指令重置密码（在 alist 管理后台也可以修改）：</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 随机生成一个密码  
+./alist admin random  
+# 手动设置一个密码,假设为123123  
+./alist admin set 123123  
+</code></pre></div></div>
+
+<h2 id="访问-alist">访问 Alist</h2>
+
+<ul>
+  <li>打开浏览器，输入你部署好的网址 <code class="language-plaintext highlighter-rouge">https://ct8.yzong.us.kg</code></li>
+  <li>输入用户名 <code class="language-plaintext highlighter-rouge">admin</code>，密码 <code class="language-plaintext highlighter-rouge">123123</code></li>
+  <li>至此，整个 alist 的安装部署就到此结束了</li>
+</ul>
+
+<h2 id="后台运行">后台运行</h2>
+
+<ul>
+  <li>按 <code class="language-plaintext highlighter-rouge">ctrl+d</code> 可以结束当前运行的 alist 程序</li>
+  <li>通过 <code class="language-plaintext highlighter-rouge">screen</code> 命令新建会话让 alist 保持在后台运行：</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd domains/ct8.yzong.us.kg/alist &amp;&amp; chmod +x alist &amp;&amp; screen ./alist server  
+</code></pre></div></div>
+
+<ul>
+  <li>可以在当前会话按下 <code class="language-plaintext highlighter-rouge">Ctrl + A</code>，然后按 <code class="language-plaintext highlighter-rouge">D</code>，这会让你从当前 <code class="language-plaintext highlighter-rouge">screen</code> 会话中脱离，但 <code class="language-plaintext highlighter-rouge">alist</code> 程序仍会在后台运行。</li>
+  <li>如果你需要重新连接到这个 <code class="language-plaintext highlighter-rouge">screen</code> 会话，可以使用以下命令：<code class="language-plaintext highlighter-rouge">screen -r alist</code></li>
+  <li>在网页管理面板进入 <code class="language-plaintext highlighter-rouge">Cron jobs</code> 菜单，点击 <code class="language-plaintext highlighter-rouge">Add cron job</code>，新建一个 <code class="language-plaintext highlighter-rouge">reboot</code> 脚本，在 <code class="language-plaintext highlighter-rouge">Command</code> 框中输入:</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd domains/ct8.yzong.us.kg/alist &amp;&amp; chmod +x alist &amp;&amp; screen ./alist server  
+</code></pre></div></div>
+
+<ul>
+  <li>然后点击 <code class="language-plaintext highlighter-rouge">Add</code>，这样，当服务器重启的时候就会执行操作自动启动 alist 应用了</li>
+  <li>大功告成，可以根据 alist 官方教程去添加你的网盘了</li>
+</ul>]]></content><author><name>青云志</name></author><category term="虚拟主机" /><category term="Alist" /><category term="CT8" /><category term="WebDAV" /><summary type="html"><![CDATA[使用CT8免费虚拟主机私有化部署Alist，将自己的网盘聚合在一个网页，随时随地轻松访问，并可挂载到支持webdav协议挂载到文件管理器或播放器，像浏览本地文件一样的浏览和播放]]></summary></entry><entry><title type="html">使用 Cloudflare OriginRules 让节点能够使用所有的CF端口</title><link href="/https://blog.24811213.xyz/2024/07/24/%E4%BD%BF%E7%94%A8-Cloudflare-OriginRules-%E8%AE%A9%E8%8A%82%E7%82%B9%E8%83%BD%E5%A4%9F%E4%BD%BF%E7%94%A8%E6%89%80%E6%9C%89%E7%9A%84CF%E7%AB%AF%E5%8F%A3/" rel="alternate" type="text/html" title="使用 Cloudflare OriginRules 让节点能够使用所有的CF端口" /><published>2024-07-24T00:00:00+08:00</published><updated>2024-07-24T00:00:00+08:00</updated><id>/https://blog.24811213.xyz/2024/07/24/%E4%BD%BF%E7%94%A8%20Cloudflare%20OriginRules%20%E8%AE%A9%E8%8A%82%E7%82%B9%E8%83%BD%E5%A4%9F%E4%BD%BF%E7%94%A8%E6%89%80%E6%9C%89%E7%9A%84CF%E7%AB%AF%E5%8F%A3</id><content type="html" xml:base="/https://blog.24811213.xyz/2024/07/24/%E4%BD%BF%E7%94%A8-Cloudflare-OriginRules-%E8%AE%A9%E8%8A%82%E7%82%B9%E8%83%BD%E5%A4%9F%E4%BD%BF%E7%94%A8%E6%89%80%E6%9C%89%E7%9A%84CF%E7%AB%AF%E5%8F%A3/"><![CDATA[<h2 id="使用场景">使用场景</h2>
+
+<ul>
+  <li>有很多优选 IP</li>
+  <li>回源端口不一致</li>
+  <li>节点端口不是 CF 支持的端口</li>
+</ul>
+
+<h2 id="回源规则配置">回源规则配置</h2>
+
+<h3 id="关于-cf-cdn-端口问题解释">关于 CF CDN 端口问题解释</h3>
+
+<p>无回源规则:  <br />
+80-&gt;80  <br />
+443-&gt;443  <br />
+2052-&gt;2052  <br />
+一一对应  <br />
+有回源规则 如回源到 12345  <br />
+80-&gt;12345  <br />
+443-&gt;12345  <br />
+2052-&gt;12345  <br />
+所有 CF 支持的端口全部访问指定的回源端口</p>
+
+<h4 id="经过实际测试-ssl-开灵活除-443-端口以为其他-tls-端口均无法生效">经过实际测试 SSL 开灵活除 443 端口以为其他 TLS 端口均无法生效</h4>
+
+<h2 id="节点配置">节点配置</h2>
+
+<p>节点我们需要有两个节点一个不使用 TLS 一个使用 TLS</p>
+
+<p><img src="https://r2.bestip.one/image/%E4%BD%BF%E7%94%A8CloudflareOriginRules%E8%AE%A9%E8%8A%82%E7%82%B9%E8%83%BD%E5%A4%9F%E6%89%80%E6%9C%89%E7%9A%84CF%E7%AB%AF%E5%8F%A3/1690736824356.png" alt="1690736824356.png" /></p>
+
+<p><img src="https://r2.bestip.one/image/%E4%BD%BF%E7%94%A8CloudflareOriginRules%E8%AE%A9%E8%8A%82%E7%82%B9%E8%83%BD%E5%A4%9F%E6%89%80%E6%9C%89%E7%9A%84CF%E7%AB%AF%E5%8F%A3/1690736953404.png" alt="1690736953404.png" /></p>
+
+<h3 id="两个节点端口必须不同-uuid-host-path-必须相同-这样是为了方便合并成一个节点">两个节点端口必须不同, uuid host path 必须相同 这样是为了方便合并成一个节点</h3>
+
+<h2 id="cf-回源规则配置">CF 回源规则配置</h2>
+
+<p>对于 CF 的回源规则同样需要两个规则</p>
+
+<p><img src="https://r2.bestip.one/image/%E4%BD%BF%E7%94%A8CloudflareOriginRules%E8%AE%A9%E8%8A%82%E7%82%B9%E8%83%BD%E5%A4%9F%E6%89%80%E6%9C%89%E7%9A%84CF%E7%AB%AF%E5%8F%A3/1690737328992.png" alt="1690737328992.png" /></p>
+
+<p><img src="https://r2.bestip.one/image/%E4%BD%BF%E7%94%A8CloudflareOriginRules%E8%AE%A9%E8%8A%82%E7%82%B9%E8%83%BD%E5%A4%9F%E6%89%80%E6%9C%89%E7%9A%84CF%E7%AB%AF%E5%8F%A3/1690737374203.png" alt="1690737374203.png" /></p>
+
+<p><img src="https://r2.bestip.one/image/%E4%BD%BF%E7%94%A8CloudflareOriginRules%E8%AE%A9%E8%8A%82%E7%82%B9%E8%83%BD%E5%A4%9F%E6%89%80%E6%9C%89%E7%9A%84CF%E7%AB%AF%E5%8F%A3/1690737430855.png" alt="1690737430855.png" /></p>
+
+<p>现在你的节点就能够使用 CF 的 13 个端口了</p>
+
+<h3 id="进阶配置">进阶配置</h3>
+
+<p>1.使用 URL 路径来批量指定节点</p>
+
+<p><img src="https://r2.bestip.one/image/%E4%BD%BF%E7%94%A8CloudflareOriginRules%E8%AE%A9%E8%8A%82%E7%82%B9%E8%83%BD%E5%A4%9F%E6%89%80%E6%9C%89%E7%9A%84CF%E7%AB%AF%E5%8F%A3/1690737629255.png" alt="1690737629255.png" /></p>
+
+<p>2.使用 Configuration Rules 来设置 SSL 是否为完全</p>
+
+<p><img src="https://r2.bestip.one/image/%E4%BD%BF%E7%94%A8CloudflareOriginRules%E8%AE%A9%E8%8A%82%E7%82%B9%E8%83%BD%E5%A4%9F%E6%89%80%E6%9C%89%E7%9A%84CF%E7%AB%AF%E5%8F%A3/1690737780552.png" alt="1690737780552.png" /></p>
+
+<p>拉到最底部</p>
+
+<p><img src="https://r2.bestip.one/image/%E4%BD%BF%E7%94%A8CloudflareOriginRules%E8%AE%A9%E8%8A%82%E7%82%B9%E8%83%BD%E5%A4%9F%E6%89%80%E6%9C%89%E7%9A%84CF%E7%AB%AF%E5%8F%A3/1690737807369.png" alt="1690737807369.png" /></p>
+
+<h2 id="至此配置完成">至此配置完成</h2>
+
+<p><img src="https://r2.bestip.one/image/%E4%BD%BF%E7%94%A8CloudflareOriginRules%E8%AE%A9%E8%8A%82%E7%82%B9%E8%83%BD%E5%A4%9F%E6%89%80%E6%9C%89%E7%9A%84CF%E7%AB%AF%E5%8F%A3/1690738142250.png" alt="1690738142250.png" /></p>
+
+<p>节点的 TLS 只需要简单的在 v2 里面点击打开就行了不需要输入相关配置</p>]]></content><author><name>青云志</name></author><category term="端口" /><category term="回源" /><category term="cloudflare" /><summary type="html"><![CDATA[使用场景：有很多优选IP；回源端口不一致；节点端口不是CF支持的端口]]></summary></entry><entry><title type="html">通过 Cloudflare Tunnel 对内网 Web 服务进行反向代理发布 Web 站点</title><link href="/https://blog.24811213.xyz/2024/07/17/Cloudflare-Tunnel-fandai/" rel="alternate" type="text/html" title="通过 Cloudflare Tunnel 对内网 Web 服务进行反向代理发布 Web 站点" /><published>2024-07-17T00:00:00+08:00</published><updated>2024-07-17T00:00:00+08:00</updated><id>/https://blog.24811213.xyz/2024/07/17/Cloudflare-Tunnel-fandai</id><content type="html" xml:base="/https://blog.24811213.xyz/2024/07/17/Cloudflare-Tunnel-fandai/"><![CDATA[<h2 id="1来到-cloudflare-首页">1、来到 cloudflare 首页</h2>
+
+<p>https://www.cloudflare.com/zh-cn</p>
+
+<h2 id="2登入到-cloudflare首页点击-zero-trust">2、登入到 cloudflare，首页点击 zero trust</h2>
+
+<p><img src="https://www.milaone.com/usr/uploads/2024/05/2017611789.png" alt="2024-05-08T07:29:43.png" title="2024-05-08T07:29:43.png" /></p>
+
+<h2 id="3在进入到-networkstunnels">3、在进入到 Networks–&gt;Tunnels</h2>
+
+<p><img src="https://www.milaone.com/usr/uploads/2024/05/3353415380.png" alt="2024-05-08T07:41:42.png" title="2024-05-08T07:41:42.png" /></p>
+
+<h2 id="4再选择添加一个通道-add-a-tunnel">4、再选择添加一个通道 Add a tunnel</h2>
+
+<p><img src="https://www.milaone.com/usr/uploads/2024/05/4179603346.png" alt="2024-05-08T07:44:17.png" title="2024-05-08T07:44:17.png" /></p>
+
+<h2 id="5选择使用-cloudflared-客户端再下一步">5、选择使用 cloudflared 客户端，再下一步</h2>
+
+<p><img src="https://www.milaone.com/usr/uploads/2024/05/3351229790.png" alt="2024-05-08T07:47:16.png" title="2024-05-08T07:47:16.png" /></p>
+
+<h2 id="6给这个通道取名方便识别再下一步">6、给这个通道取名，方便识别，再下一步</h2>
+
+<p><img src="https://www.milaone.com/usr/uploads/2024/05/3647999332.png" alt="2024-05-08T07:50:53.png" title="2024-05-08T07:50:53.png" /></p>
+
+<h2 id="7先选择-docker-平台然后再点第-2-步中的复制把这段代码复制出来备用">7、先选择 docker 平台，然后再点第 2 步中的复制，把这段代码复制出来备用</h2>
+
+<p><img src="https://www.milaone.com/usr/uploads/2024/05/1297867551.png" alt="2024-05-08T08:00:55.png" title="2024-05-08T08:00:55.png" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run cloudflare/cloudflared:latest tunnel --no-autoupdate run --token eyJhIjoiNGQwNTk5NWQ0ZTFiZTk5ZDJjMTZkOGMzYjQ1NDhkMjYiLCJ0IjoiMGIzNmFiMmQtMzQ1NC00N2NhLWE0NzQtZDA0ZjkwMGI4ODcyIiwicyI6Ik9UTmhaRFV5Tfdafa0RdjsdjJtu3dsdGFS5tVm1OUzAwTm1Jd0xXRTVNak10T1RJellUUTJNRFV6WldNNCJ9  
+</code></pre></div></div>
+
+<blockquote>
+  <p>因为官方给出的 docker 创建方式，缺少一个重启后的策略，所以再重启后不能自动运行，所以我们只选择复制出来的命令中的 token 的密码部分，下面的代码是我修改过的部署 docker 容器的命令，最后加入您复制出来的 token 密码即可使用</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run --name cloudflared -d --restart=unless-stopped cloudflare/cloudflared:latest tunnel --no-autoupdate run --token ‘这里替换成你的token密码，不要带引号’  
+</code></pre></div></div>
+
+<h2 id="8然后复制到路由器-ssh-终端中进行部署">8、然后复制到路由器 ssh 终端中进行部署</h2>
+
+<p><img src="https://www.milaone.com/usr/uploads/2024/05/1121620860.png" alt="2024-05-08T08:14:34.png" title="2024-05-08T08:14:34.png" /></p>
+
+<h2 id="9容器运行起来后继续设置">9、容器运行起来后继续设置</h2>
+
+<p>当前隧道的设置页面来到了域名部分：</p>
+
+<ul>
+  <li>第 1 步，这里填一个子域名，选择一个当前可以使用的域。</li>
+  <li>第 2 步，这里选择提供 web 服务的内网 ip 及端口以及协议。</li>
+  <li>第 3 步，保存，设置结束，去访问一下看看吧。</li>
+</ul>
+
+<p><img src="https://www.milaone.com/usr/uploads/2024/05/2263970796.png" alt="2024-05-08T08:22:13.png" title="2024-05-08T08:22:13.png" /></p>
+
+<p>原文出处：<a href="https://milaone.com/archives/44.html">米拉一频道</a></p>]]></content><author><name>青云志</name></author><category term="反向代理" /><category term="argo" /><category term="cloudflare" /><summary type="html"><![CDATA[通过 Cloudflare Tunnel 对内网 Web 服务进行反向代理发布 Web 站点，将部署在内网的本地服务反向代理到公网，本文以docker方式部署]]></summary></entry><entry><title type="html">通过 Serv00 免费虚拟主机搭建哪吒面板</title><link href="/https://blog.24811213.xyz/2024/07/16/Serv00-nezha/" rel="alternate" type="text/html" title="通过 Serv00 免费虚拟主机搭建哪吒面板" /><published>2024-07-16T00:00:00+08:00</published><updated>2024-07-16T00:00:00+08:00</updated><id>/https://blog.24811213.xyz/2024/07/16/Serv00-nezha</id><content type="html" xml:base="/https://blog.24811213.xyz/2024/07/16/Serv00-nezha/"><![CDATA[<h2 id="一准备工作">一、准备工作</h2>
+
+<h3 id="新建-2-个端口">新建 2 个端口</h3>
+
+<p><a href="https://tweek.top/upload/image-uymc.png"><img src="https://tweek.top/upload/image-uymc.png" alt="" /></a></p>
+
+<h3 id="新建一个域名">新建一个域名</h3>
+
+<p><a href="https://tweek.top/upload/image-ctux.png"><img src="https://tweek.top/upload/image-ctux.png" alt="" /></a></p>
+
+<blockquote>
+  <p>自定义域名要在 cf 解析一下 IP</p>
+</blockquote>
+
+<h3 id="开启-run-your-own-applications">开启 Run your own applications</h3>
+
+<p><a href="https://tweek.top/upload/image-dijm.png"><img src="https://tweek.top/upload/image-dijm.png" alt="" /></a></p>
+
+<h3 id="ssh-连接安装-pm2">SSH 连接安装 PM2</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bash &lt;(curl -s https://raw.githubusercontent.com/k0baya/alist_repl/main/serv00/install-pm2.sh)  
+</code></pre></div></div>
+
+<blockquote>
+  <p>安装完成，需断开一下 SSH，才能生效。</p>
+</blockquote>
+
+<h3 id="安装-go">安装 go</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  
+mkdir -p ~/local/soft &amp;&amp; cd ~/local/soft  
+  
+wget https://dl.google.com/go/go1.22.0.freebsd-amd64.tar.gz  
+  
+tar -xzvf go1.22.0.freebsd-amd64.tar.gz  
+  
+rm go1.22.0.freebsd-amd64.tar.gz  
+  
+echo 'export PATH=~/local/soft/go/bin:$PATH' &gt;&gt; ~/.profile  
+  
+source ~/.profile  
+  
+go version  
+</code></pre></div></div>
+
+<h2 id="二下载编辑面板的源码">二、下载编辑面板的源码</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/naiba/nezha.git  
+</code></pre></div></div>
+
+<blockquote>
+  <p>切换到面板的编译目录，进行编译</p>
+</blockquote>
+
+<h2 id="三准备运行需要的文件">三、准备运行需要的文件</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir ~/nezhapanel &amp;&amp; cd ~/nezhapanel  
+cp ~/nezha/cmd/dashboard/dashboard ~/nezhapanel/dashboard  
+cp -r ~/nezha/resource ~/nezhapanel/resource  
+rm ~/nezhapanel/resource/resource.go  
+mkdir ~/nezhapanel/data  
+cp ~/nezha/script/config.yaml ~/nezhapanel/data/config.yaml  
+</code></pre></div></div>
+
+<h2 id="四修改配置文件">四、修改配置文件</h2>
+
+<blockquote>
+  <p>7 个地方需要修改</p>
+</blockquote>
+
+<p>ssh 内修改不方便，进入网站文件管理修改方便点</p>
+
+<p><code class="language-plaintext highlighter-rouge">nezhapanel</code>—<code class="language-plaintext highlighter-rouge">data</code>—<code class="language-plaintext highlighter-rouge">config.yaml</code> 视频里漏讲 language：改成 <code class="language-plaintext highlighter-rouge">zh-CN</code></p>
+
+<p><a href="https://tweek.top/upload/edaf7f19ef1e29dbeec2aaa483b0e11.png"><img src="https://tweek.top/upload/edaf7f19ef1e29dbeec2aaa483b0e11.png" alt="" /></a></p>
+
+<p>按照视频教程获取配置填写方法</p>
+
+<p>运行面板， 确保你在 <code class="language-plaintext highlighter-rouge">~/nezhapanel</code> 目录</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ~/nezhapanel  
+chmod +x ./dashboard  
+pm2 start ./dashboard  
+pm2 save  
+</code></pre></div></div>
+
+<h2 id="五自动运行在网站管理面板添加-cron-jobs">五、自动运行，在网站管理面板添加 <code class="language-plaintext highlighter-rouge">cron jobs</code></h2>
+
+<p>启动时间（Specify time）：After reboot</p>
+
+<p>任务类型（Form type）：Advanced</p>
+
+<p>命令行代码（Command）：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/home/你的用户名/.npm-global/bin/pm2 resurrect  
+</code></pre></div></div>
+
+<blockquote>
+  <p>到一步，面板已经成功运行起来。</p>
+</blockquote>
+
+<h2 id="六补充功能-清除所有配置文件cron-jobs-需要手动删除">六、补充功能 清除所有配置文件，<strong>cron jobs 需要手动删除</strong></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chmod -R 755 ~/* \  
+chmod -R 755 ~/.* \  
+rm -rf ~/.* \  
+rm -rf ~/*  
+pkill -kill -u 用户名  
+</code></pre></div></div>
+
+<p>原文：https://tweek.top/archives/1721044997616</p>]]></content><author><name>青云志</name></author><category term="Serv00" /><category term="哪吒探针" /><summary type="html"><![CDATA[Serv00免费虚拟主机支持搭建halo博客，苹果CMS影视站，vless节点，panlndex网盘，Alist，哪吒面板，图床Lsky-Pro，Cloudreve网盘，KodBox，Uptime-Kuma，Gpt4-copilot-java，OneList，One-api，Synctv等等。本期教程为哪吒面板的搭建]]></summary></entry><entry><title type="html">Serv00账号注册、节点搭建与账号保活</title><link href="/https://blog.24811213.xyz/2024/07/15/Serv00%E8%B4%A6%E5%8F%B7%E6%B3%A8%E5%86%8C-%E8%8A%82%E7%82%B9%E6%90%AD%E5%BB%BA%E4%B8%8E%E8%B4%A6%E5%8F%B7%E4%BF%9D%E6%B4%BB/" rel="alternate" type="text/html" title="Serv00账号注册、节点搭建与账号保活" /><published>2024-07-15T00:00:00+08:00</published><updated>2024-07-15T00:00:00+08:00</updated><id>/https://blog.24811213.xyz/2024/07/15/Serv00%E8%B4%A6%E5%8F%B7%E6%B3%A8%E5%86%8C%E3%80%81%E8%8A%82%E7%82%B9%E6%90%AD%E5%BB%BA%E4%B8%8E%E8%B4%A6%E5%8F%B7%E4%BF%9D%E6%B4%BB</id><content type="html" xml:base="/https://blog.24811213.xyz/2024/07/15/Serv00%E8%B4%A6%E5%8F%B7%E6%B3%A8%E5%86%8C-%E8%8A%82%E7%82%B9%E6%90%AD%E5%BB%BA%E4%B8%8E%E8%B4%A6%E5%8F%B7%E4%BF%9D%E6%B4%BB/"><![CDATA[<h2 id="一简介">一、简介</h2>
+
+<p>Serv00 是一家提供免费虚拟主机的厂商，但是他提供了 ssh 终端服务，所以我们也可以把它当作一个功能不算太过健全的 VPS 来使用，我们可以用它来部署各种简单的服务，比如 vless 节点，wordpress，alist 等，要求是每 3 个月需登录一次控制面板或 SSH,避免账号被回收</p>
+
+<h2 id="二注册">二、注册</h2>
+
+<ul>
+  <li>注册之前检测自己的 <a href="https://scamalytics.com/">IP纯净度</a>
+    <ul>
+      <li>如果节点纯净度不够的话注册是不会成功的【他会给我们发送当前邮箱已注册】</li>
+      <li>如果大家 IP 纯净度不够可以使用【<a href="https://hongxingdl.com/web/#/login?code=fOEo9d4m">红杏加速器</a>】
+        <ul>
+          <li>红杏加速器博主测试所有节点 IP 纯净度极高</li>
+          <li>限时 5 折优惠券,2024-07-26 截止【<code class="language-plaintext highlighter-rouge">SVIP88</code>】</li>
+          <li>永久 8.8 折优惠券【<code class="language-plaintext highlighter-rouge">Yixiu</code>】</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>节点开全局</li>
+  <li>打开 <a href="https://www.serv00.com/">官网地址</a></li>
+  <li>注册的时候需要注意【<code class="language-plaintext highlighter-rouge">What is the cost of hosting on serv00.com?</code>】这一栏填写 <code class="language-plaintext highlighter-rouge">free</code>，不要空着
+    <ul>
+      <li>如果提示邮箱已注册我们换节点刷新页面重新来</li>
+      <li>如果显示发送成功但是邮箱没有收到信息
+        <ul>
+          <li>检查垃圾箱</li>
+          <li>换 IP 换邮箱重新注册【邮箱注意不要换同一个后缀名称的】可以用临时邮箱来注册</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>注册完成后 serv00 会给我们的邮箱发送一个包含 VPS 信息的邮件</li>
+</ul>
+
+<h2 id="三登录面板开启权限">三、登录面板开启权限</h2>
+
+<ul>
+  <li>打开面板地址 <code class="language-plaintext highlighter-rouge">https://panel4.serv00.com/</code></li>
+  <li>修改语言为英文，选择右上角 <code class="language-plaintext highlighter-rouge">Zmień język</code> 修改语言为 <code class="language-plaintext highlighter-rouge">English</code></li>
+  <li>第一步需要做的就是开启可以运行自己应用的权限。<code class="language-plaintext highlighter-rouge">Additional services</code> -&gt; <code class="language-plaintext highlighter-rouge">Run your own applications</code> -&gt; <code class="language-plaintext highlighter-rouge">Enabled</code> 如果不开启这一项，自己的用户目录下的所有文件都无法添加可执行权限。</li>
+  <li>选择 <code class="language-plaintext highlighter-rouge">Change password</code> 修改密码【可选】</li>
+</ul>
+
+<h2 id="四自动化保号">四、自动化保号</h2>
+
+<p>因 serv00 要求是每 3 个月需登录一次控制面板或 SSH，所以为了避免被收回我写了个脚本可以批量自动化保号</p>
+
+<h3 id="1fork-仓库">1.Fork 仓库</h3>
+
+<ul>
+  <li>打开 <a href="https://github.com/yixiu001/serv00-login">serv00-login</a> 仓库页面。</li>
+  <li>点击页面右上角的 “<code class="language-plaintext highlighter-rouge">Star</code>” 按钮</li>
+  <li>点击页面右上角的 “<code class="language-plaintext highlighter-rouge">Fork</code>” 按钮，将仓库 <code class="language-plaintext highlighter-rouge">fork</code> 到你的 <code class="language-plaintext highlighter-rouge">GitHub</code> 账户下。</li>
+  <li>点击 <code class="language-plaintext highlighter-rouge">Create fork</code></li>
+</ul>
+
+<h3 id="2-设置-github-secrets">2. 设置 GitHub Secrets</h3>
+
+<ol>
+  <li>
+    <p><strong>创建 Telegram Bot</strong></p>
+
+    <ul>
+      <li>在 Telegram 中找到 <code class="language-plaintext highlighter-rouge">@BotFather</code>，创建一个新 Bot，并获取 API Token。</li>
+      <li>获取到你的 Chat ID 方法一，在 <a href="https://t.me/yxjsjl">一休技术交流群</a> 里发送 <code class="language-plaintext highlighter-rouge">/id@KinhRoBot</code> 获取，返回用户信息中的 <code class="language-plaintext highlighter-rouge">ID</code> 就是 Chat ID</li>
+      <li>获取到你的 Chat ID 方法二，可以通过向 Bot 发送一条消息，然后访问 <code class="language-plaintext highlighter-rouge">https://api.telegram.org/bot&lt;your_bot_token&gt;/getUpdates</code> 找到 Chat ID。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>配置 GitHub Secrets</strong></p>
+
+    <ul>
+      <li>
+        <p>转到你 fork 的仓库页面。</p>
+      </li>
+      <li>
+        <p>点击 <code class="language-plaintext highlighter-rouge">Settings</code>，然后在左侧菜单中选择 <code class="language-plaintext highlighter-rouge">Secrets</code>。</p>
+      </li>
+      <li>添加以下 Secrets：
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">ACCOUNTS_JSON</code>: 包含账号信息的 JSON 数据。例如：</li>
+        </ul>
+
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  [    
+    {"username": "serv00的账号", "password": "serv00的密码", "panel": "panel6.serv00.com"},    
+    {"username": "ct8的账号", "password": "ct8的密码", "panel": "panel.ct8.pl"},    
+    {"username": "user2", "password": "password2", "panel": "panel6.serv00.com"}    
+  ]  
+</code></pre></div>        </div>
+
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">TELEGRAM_BOT_TOKEN</code>: 你的 Telegram Bot 的 API Token。</li>
+          <li><code class="language-plaintext highlighter-rouge">TELEGRAM_CHAT_ID</code>: 你的 Telegram Chat ID。</li>
+        </ul>
+      </li>
+      <li>
+        <p><strong>获取方法</strong>：</p>
+
+        <ul>
+          <li>在 Telegram 中创建 Bot，并获取 API Token 和 Chat ID。</li>
+          <li>在 GitHub 仓库的 Secrets 页面添加这些值，确保它们安全且不被泄露。</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="3-启动-github-actions">3. 启动 GitHub Actions</h3>
+
+<ol>
+  <li>
+    <p><strong>配置 GitHub Actions</strong></p>
+
+    <ul>
+      <li>在你的 fork 仓库中，进入 <code class="language-plaintext highlighter-rouge">Actions</code> 页面。</li>
+      <li>如果 Actions 没有自动启用，点击 <code class="language-plaintext highlighter-rouge">Enable GitHub Actions</code> 按钮以激活它。</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>运行工作流</strong></p>
+
+    <ul>
+      <li>GitHub Actions 将会根据你设置的定时任务（例如每三天一次）自动运行脚本。</li>
+      <li>如果需要手动触发，可以在 Actions 页面手动运行工作流。</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="4-等待脚本执行完成查看-telegrambot-信息">4. 等待脚本执行完成，查看 TelegramBot 信息</h3>
+
+<ul>
+  <li>如果脚本执行异常，检查环境变量 <code class="language-plaintext highlighter-rouge">ACCOUNTS_JSON</code>
+    <ul>
+      <li>必须为标准 json 格式，可利用 <a href="https://www.json.cn/">json解析工具</a> 检查是否配置异常</li>
+      <li>尤其注意最后一组数据不需要 “,”,很多小白朋友会配置错误</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="五vless-节点搭建">五、vless 节点搭建</h2>
+
+<h3 id="1-确保已经开启权限">1. 确保已经开启权限</h3>
+
+<p>第一步需要做的就是开启可以运行自己应用的权限。<code class="language-plaintext highlighter-rouge">Additional services</code> -&gt; <code class="language-plaintext highlighter-rouge">Run your own applications</code> -&gt; <code class="language-plaintext highlighter-rouge">Enabled</code> 如果不开启这一项，自己的用户目录下的所有文件都无法添加可执行权限。</p>
+
+<h3 id="2-配置端口号">2. 配置端口号</h3>
+
+<ul>
+  <li>在面板中设置添加端口号 <code class="language-plaintext highlighter-rouge">Port reservation</code>-&gt;<code class="language-plaintext highlighter-rouge">Add port</code>-&gt;<code class="language-plaintext highlighter-rouge">Random</code>-&gt;<code class="language-plaintext highlighter-rouge">add</code></li>
+</ul>
+
+<h3 id="3-ssh-进入服务器">3. ssh 进入服务器</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#s6.serv00.com可能会因为被墙连不上,可以用web6.serv00.com或者cache6.serv00.com    
+ssh -p 22 &lt;Login&gt;@&lt;SSH/SFTP服务器地址&gt;  
+</code></pre></div></div>
+
+<p>如果不会使用终端可采用其他 ssh 工具或者 <a href="https://ssh.hax.co.id/">webssh</a>，只需要输入账号密码端口即可</p>
+
+<h3 id="4-拉取代码到指定目录">4. 拉取代码到指定目录</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ~/domains &amp;&amp; git clone https://github.com/yixiu001/serv00-script.git &amp;&amp; cd serv00-script &amp;&amp; bash vless.sh  
+</code></pre></div></div>
+
+<h3 id="5-执行命令">5. 执行命令</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ~/domains/$USER.serv00.net/vless &amp;&amp; ./check_vless.sh -p &lt;端口号&gt;  
+</code></pre></div></div>
+
+<h3 id="6复制信息中返回的-vless-信息并粘贴到-v2ray-中使用">6，复制信息中返回的 vless 信息并粘贴到 v2ray 中使用</h3>
+
+<h3 id="7配置定时任务维护节点">7，配置定时任务维护节点</h3>
+
+<p>在面板中依次打开 <code class="language-plaintext highlighter-rouge">Cron jobs</code>-&gt;<code class="language-plaintext highlighter-rouge">Add cron job</code>-&gt;<code class="language-plaintext highlighter-rouge">Specify time</code> 选择每小时执行一次 <code class="language-plaintext highlighter-rouge">Hourly</code>-&gt;<code class="language-plaintext highlighter-rouge">Command</code> 中输入以下命令</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ~/domains/$USER.serv00.net/vless &amp;&amp; ./check_vless.sh  
+</code></pre></div></div>
+
+<h2 id="六其他常用命令">六、其他常用命令</h2>
+
+<h3 id="1-删除-vless-节点代码以及进程关闭">1. 删除 vless 节点代码以及进程关闭</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pm2 delete vless &amp;&amp; rm -rf ~/domains/serv00-script &amp;&amp; rm -rf ~/domains/$USER.serv00.net/vless  
+</code></pre></div></div>
+
+<h3 id="2-查看当前-vless-节点状态">2. 查看当前 vless 节点状态</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pm2 status    
+# 如果状态异常可以执行以下命令重启    
+cd ~/domains/$USER.serv00.net/vless &amp;&amp; ./check_vless.sh  
+</code></pre></div></div>
+
+<h3 id="3-查看错误日志">3. 查看错误日志</h3>
+
+<p>如果出现异常可以执行以下命令查看日志截图发到 <a href="https://t.me/yxjsjl">TG群聊</a> 解决</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pm2 logs  
+</code></pre></div></div>
+
+<p>后续其他命令修改待更新！！！</p>
+
+<h2 id="七serv00-自动化部署启动保活并且可发送消息到-telegram">七、serv00 自动化部署启动，保活，并且可发送消息到 Telegram</h2>
+
+<p><a href="https://github.com/jxing666/serv00-autodeploy">项目地址</a></p>
+
+<p><a href="https://www.youtube.com/watch?v=QnlzpvDl_mo">视频教程</a></p>
+
+<p>这个项目是群内的 python 大佬做的一个代码，完全自动化，利用 githubActions 以及 python 脚本实现了自动化部署 vless 节点以及维护节点，如果大家有兴趣的话可以自己去部署以下，如果有问题可以加 <a href="https://t.me/yxjsjl">电报群</a> 艾特大佬</p>]]></content><author><name>青云志</name></author><category term="保活" /><category term="节点" /><category term="Serv00" /><summary type="html"><![CDATA[一、简介 Serv00 是一家提供免费虚拟主机的厂商，但是他提供了 ssh 终端服务，所以我们也可以把它当作一个功能不算太过健全的 VPS 来使用，我们可以用它来部署各种简单的服务，比如 vless 节点，wordpress，alist 等，要求是每 3 个月需登录一次控制面板或 SSH,避免账号被回收 二、注册 注册之前检测自己的 IP纯净度 如果节点纯净度不够的话注册是不会成功的【他会给我们发送当前邮箱已注册】 如果大家 IP 纯净度不够可以使用【红杏加速器】 红杏加速器博主测试所有节点 IP 纯净度极高 限时 5 折优惠券,2024-07-26 截止【SVIP88】 永久 8.8 折优惠券【Yixiu】 节点开全局 打开 官网地址 注册的时候需要注意【What is the cost of hosting on serv00.com?】这一栏填写 free，不要空着 如果提示邮箱已注册我们换节点刷新页面重新来 如果显示发送成功但是邮箱没有收到信息 检查垃圾箱 换 IP 换邮箱重新注册【邮箱注意不要换同一个后缀名称的】可以用临时邮箱来注册 注册完成后 serv00 会给我们的邮箱发送一个包含 VPS 信息的邮件 三、登录面板开启权限 打开面板地址 https://panel4.serv00.com/ 修改语言为英文，选择右上角 Zmień język 修改语言为 English 第一步需要做的就是开启可以运行自己应用的权限。Additional services -&gt; Run your own applications -&gt; Enabled 如果不开启这一项，自己的用户目录下的所有文件都无法添加可执行权限。 选择 Change password 修改密码【可选】 四、自动化保号 因 serv00 要求是每 3 个月需登录一次控制面板或 SSH，所以为了避免被收回我写了个脚本可以批量自动化保号 1.Fork 仓库 打开 serv00-login 仓库页面。 点击页面右上角的 “Star” 按钮 点击页面右上角的 “Fork” 按钮，将仓库 fork 到你的 GitHub 账户下。 点击 Create fork 2. 设置 GitHub Secrets 创建 Telegram Bot 在 Telegram 中找到 @BotFather，创建一个新 Bot，并获取 API Token。 获取到你的 Chat ID 方法一，在 一休技术交流群 里发送 /id@KinhRoBot 获取，返回用户信息中的 ID 就是 Chat ID 获取到你的 Chat ID 方法二，可以通过向 Bot 发送一条消息，然后访问 https://api.telegram.org/bot&lt;your_bot_token&gt;/getUpdates 找到 Chat ID。 配置 GitHub Secrets 转到你 fork 的仓库页面。 点击 Settings，然后在左侧菜单中选择 Secrets。 添加以下 Secrets： ACCOUNTS_JSON: 包含账号信息的 JSON 数据。例如： [ {"username": "serv00的账号", "password": "serv00的密码", "panel": "panel6.serv00.com"}, {"username": "ct8的账号", "password": "ct8的密码", "panel": "panel.ct8.pl"}, {"username": "user2", "password": "password2", "panel": "panel6.serv00.com"} ] TELEGRAM_BOT_TOKEN: 你的 Telegram Bot 的 API Token。 TELEGRAM_CHAT_ID: 你的 Telegram Chat ID。 获取方法： 在 Telegram 中创建 Bot，并获取 API Token 和 Chat ID。 在 GitHub 仓库的 Secrets 页面添加这些值，确保它们安全且不被泄露。 3. 启动 GitHub Actions 配置 GitHub Actions 在你的 fork 仓库中，进入 Actions 页面。 如果 Actions 没有自动启用，点击 Enable GitHub Actions 按钮以激活它。 运行工作流 GitHub Actions 将会根据你设置的定时任务（例如每三天一次）自动运行脚本。 如果需要手动触发，可以在 Actions 页面手动运行工作流。 4. 等待脚本执行完成，查看 TelegramBot 信息 如果脚本执行异常，检查环境变量 ACCOUNTS_JSON 必须为标准 json 格式，可利用 json解析工具 检查是否配置异常 尤其注意最后一组数据不需要 “,”,很多小白朋友会配置错误 五、vless 节点搭建 1. 确保已经开启权限 第一步需要做的就是开启可以运行自己应用的权限。Additional services -&gt; Run your own applications -&gt; Enabled 如果不开启这一项，自己的用户目录下的所有文件都无法添加可执行权限。 2. 配置端口号 在面板中设置添加端口号 Port reservation-&gt;Add port-&gt;Random-&gt;add 3. ssh 进入服务器 #s6.serv00.com可能会因为被墙连不上,可以用web6.serv00.com或者cache6.serv00.com ssh -p 22 &lt;Login&gt;@&lt;SSH/SFTP服务器地址&gt; 如果不会使用终端可采用其他 ssh 工具或者 webssh，只需要输入账号密码端口即可 4. 拉取代码到指定目录 cd ~/domains &amp;&amp; git clone https://github.com/yixiu001/serv00-script.git &amp;&amp; cd serv00-script &amp;&amp; bash vless.sh 5. 执行命令 cd ~/domains/$USER.serv00.net/vless &amp;&amp; ./check_vless.sh -p &lt;端口号&gt; 6，复制信息中返回的 vless 信息并粘贴到 v2ray 中使用 7，配置定时任务维护节点 在面板中依次打开 Cron jobs-&gt;Add cron job-&gt;Specify time 选择每小时执行一次 Hourly-&gt;Command 中输入以下命令 cd ~/domains/$USER.serv00.net/vless &amp;&amp; ./check_vless.sh 六、其他常用命令 1. 删除 vless 节点代码以及进程关闭 pm2 delete vless &amp;&amp; rm -rf ~/domains/serv00-script &amp;&amp; rm -rf ~/domains/$USER.serv00.net/vless 2. 查看当前 vless 节点状态 pm2 status # 如果状态异常可以执行以下命令重启 cd ~/domains/$USER.serv00.net/vless &amp;&amp; ./check_vless.sh 3. 查看错误日志 如果出现异常可以执行以下命令查看日志截图发到 TG群聊 解决 pm2 logs 后续其他命令修改待更新！！！ 七、serv00 自动化部署启动，保活，并且可发送消息到 Telegram 项目地址 视频教程 这个项目是群内的 python 大佬做的一个代码，完全自动化，利用 githubActions 以及 python 脚本实现了自动化部署 vless 节点以及维护节点，如果大家有兴趣的话可以自己去部署以下，如果有问题可以加 电报群 艾特大佬]]></summary></entry><entry><title type="html">Cloudflare更换边缘证书颁发机构</title><link href="/https://blog.24811213.xyz/2024/07/09/Cloudflare%E6%9B%B4%E6%8D%A2%E8%BE%B9%E7%BC%98%E8%AF%81%E4%B9%A6%E9%A2%81%E5%8F%91%E6%9C%BA%E6%9E%84/" rel="alternate" type="text/html" title="Cloudflare更换边缘证书颁发机构" /><published>2024-07-09T00:00:00+08:00</published><updated>2024-07-09T00:00:00+08:00</updated><id>/https://blog.24811213.xyz/2024/07/09/Cloudflare%E6%9B%B4%E6%8D%A2%E8%BE%B9%E7%BC%98%E8%AF%81%E4%B9%A6%E9%A2%81%E5%8F%91%E6%9C%BA%E6%9E%84</id><content type="html" xml:base="/https://blog.24811213.xyz/2024/07/09/Cloudflare%E6%9B%B4%E6%8D%A2%E8%BE%B9%E7%BC%98%E8%AF%81%E4%B9%A6%E9%A2%81%E5%8F%91%E6%9C%BA%E6%9E%84/"><![CDATA[<p>杨幂的脚 2024-07-03</p>
+
+<p>Let’s Encrypt 证书只有 3 个月而且<strong>验证巨 TM 慢</strong>！！！</p>
+
+<h2 id="如何操作">如何操作</h2>
+
+<ol>
+  <li>
+    <p><strong>禁用通用 SSL</strong>删除原有证书  <br />
+ <a href="https://img.090227.xyz/file/f90fa53e3310a471eaf40.png"><img src="https://img.090227.xyz/file/f90fa53e3310a471eaf40.png" alt="禁用通用SSL删除原先证书" /></a></p>
+  </li>
+  <li>
+    <p>获取<strong>区域 ID</strong>  <br />
+ <a href="https://img.090227.xyz/file/bea582e6ef6ccd582e16c.png"><img src="https://img.090227.xyz/file/bea582e6ef6ccd582e16c.png" alt="获取API" /></a></p>
+  </li>
+  <li>
+    <p>获取<strong>Global API Key 密钥</strong>  <br />
+ <a href="https://img.090227.xyz/file/e1dabf563a35216e57a91.png"><img src="https://img.090227.xyz/file/e1dabf563a35216e57a91.png" alt="Global API Key" /></a></p>
+  </li>
+  <li>
+    <p>执行如下命令  <br />
+ 替换如下命令中的<strong>区域 ID</strong>、<strong>账户邮箱</strong>、<strong>Global API Key 密钥</strong>为你提取到的值</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> curl -X PATCH "https://api.cloudflare.com/client/v4/zones/区域ID/ssl/universal/settings" \    
+      -H "Content-Type: application/json" \    
+      -H "X-Auth-Email: 账户邮箱" \    
+      -H "X-Auth-Key: Global API Key密钥" \    
+      --data '{"certificate_authority": "digicert"}'  
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<hr />
+
+<p>原文：<a href="https://blog.intel.im/archives/cloudflare-geng-huan-bian-yuan-zheng-shu-ban-fa-ji-gou">https://blog.intel.im/archives/cloudflare-geng-huan-bian-yuan-zheng-shu-ban-fa-ji-gou</a></p>]]></content><author><name>青云志</name></author><category term="cloudflare" /><category term="SSL证书" /><summary type="html"><![CDATA[Let's Encrypt 证书只有 3 个月而且验证巨慢，是否可以将边缘证书颁发机构替换为其他机构呢？答案是可以的。]]></summary></entry><entry><title type="html">国内直连chatgpt一站式解决方案</title><link href="/https://blog.24811213.xyz/2024/06/26/%E5%9B%BD%E5%86%85%E7%9B%B4%E8%BF%9Echatgpt%E4%B8%80%E7%AB%99%E5%BC%8F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" rel="alternate" type="text/html" title="国内直连chatgpt一站式解决方案" /><published>2024-06-26T00:00:00+08:00</published><updated>2024-06-26T00:00:00+08:00</updated><id>/https://blog.24811213.xyz/2024/06/26/%E5%9B%BD%E5%86%85%E7%9B%B4%E8%BF%9Echatgpt%E4%B8%80%E7%AB%99%E5%BC%8F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88</id><content type="html" xml:base="/https://blog.24811213.xyz/2024/06/26/%E5%9B%BD%E5%86%85%E7%9B%B4%E8%BF%9Echatgpt%E4%B8%80%E7%AB%99%E5%BC%8F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"><![CDATA[<h2 id="视频教程">视频教程</h2>
+
+<p><a href="https://bulianglin.com/archives/pandora.html">原贴地址</a></p>
+
+<p><a href="https://youtu.be/IXA6IJY6ZW8">youtube 视频教程地址</a></p>
+
+<h2 id="相关链接">相关链接</h2>
+
+<p><del><a href="https://github.com/pandora-next/deploy">项目地址</a></del> （项目已经关停删库）  <br />
+<del><a href="https://fakeopen.org/PandoraNext">项目文档</a></del> （项目已经关停删库）  <br />
+<a href="https://chat.openai.com/api/auth/session">官方获取 Access Token 和 Session Token</a>  <br />
+<a href="https://github.com/Yidadaa/ChatGPT-Next-Web">第三方 WebUI</a>  <br />
+<del><a href="https://ai.fakeopen.com/auth">pandora获取Access Token和Session Token</a></del>  <br />
+<del><a href="https://ai.fakeopen.com/token">pandora生成Share Token</a></del>  <br />
+<del><a href="https://ai.fakeopen.com/pool">pandora生成Pool Token</a></del></p>
+
+<h2 id="使用-web-模式">使用 Web 模式</h2>
+
+<p><del><a href="https://baipiao.io/chatgpt">免费账号共享池</a></del>  <br />
+<del><a href="https://chat.oaifree.com">pandora演示地址一</a></del>  <br />
+<del><a href="https://chat1.zhile.io">pandora演示地址二</a></del>  <br />
+<a href="https://fofa.info/result?qbase64=Ym9keT0iQ29udGludWUgd2l0aCBBY2Nlc3MgVG9rZW4iICYmIHRpdGxlPSJQYW5kb3JhTmV4dCIgJiYgY291bnRyeT0iQ04i">通过fofa寻找别人搭建的网页</a>  <br />
+<a href="https://cloudflare.com">用过CF反向代理 Pandora</a>  <br />
+<a href="https://bulianglin.com/usr/uploads/2023/12/2305427416.zip">反向代理代码RProxy.zip</a></p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="k">default</span> <span class="p">{</span>  
+  <span class="k">async</span> <span class="nx">fetch</span><span class="p">(</span><span class="nx">request</span><span class="p">,</span> <span class="nx">env</span><span class="p">)</span> <span class="p">{</span>  
+    <span class="kd">let</span> <span class="nx">url</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">URL</span><span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">url</span><span class="p">);</span>  
+    <span class="nx">url</span><span class="p">.</span><span class="nx">hostname</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">chat.zhile.io</span><span class="dl">'</span>  
+    <span class="k">return</span> <span class="nx">fetch</span><span class="p">(</span><span class="k">new</span> <span class="nx">Request</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">request</span><span class="p">));</span>  
+  <span class="p">},</span>  
+<span class="p">};</span>  
+</code></pre></div></div>
+
+<h2 id="使用-proxy-模式自己搭建">使用 Proxy 模式（自己搭建）</h2>
+
+<p><del><a href="[https://dash.pandoranext.com">license_id（根据 github 账号年限获取使用额度</a></del></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#下载pandora  </span>
+https://github.com/pandora-next/deploy/releases  
+<span class="c">#后台运行pandora  </span>
+<span class="nb">nohup</span> ./PandoraNext <span class="o">&gt;</span> pandora.log 2&gt;&amp;1 &amp;  
+  
+<span class="c">#下载pandora-get-token.py  </span>
+https://raw.githubusercontent.com/bulianglin/demo/main/pandora-get-token.py  
+<span class="c">#后台运行载pandora-get-token.py  </span>
+<span class="nb">nohup </span>python3 <span class="nt">-u</span> pandora-get-token.py <span class="o">&gt;</span> gettoken.log 2&gt;&amp;1 &amp;  
+</code></pre></div></div>
+
+<blockquote>
+  <p>共享 Pool Token：<code class="language-plaintext highlighter-rouge">pk-this-is-a-real-free-pool-token-for-everyone</code></p>
+</blockquote>]]></content><author><name>青云志</name></author><summary type="html"><![CDATA[国内直连chatgpt一站式解决方案，免翻墙注册chatgpt账号，中国区openai总代理？不！是pandora！国内直连体验湿滑的 chatgpt | chat2api | 支持API调用]]></summary></entry><entry><title type="html">自建下载测速地址的方法</title><link href="/https://blog.24811213.xyz/2024/06/26/%E8%87%AA%E5%BB%BA%E4%B8%8B%E8%BD%BD%E6%B5%8B%E9%80%9F%E5%9C%B0%E5%9D%80%E7%9A%84%E6%96%B9%E6%B3%95/" rel="alternate" type="text/html" title="自建下载测速地址的方法" /><published>2024-06-26T00:00:00+08:00</published><updated>2024-06-26T00:00:00+08:00</updated><id>/https://blog.24811213.xyz/2024/06/26/%E8%87%AA%E5%BB%BA%E4%B8%8B%E8%BD%BD%E6%B5%8B%E9%80%9F%E5%9C%B0%E5%9D%80%E7%9A%84%E6%96%B9%E6%B3%95</id><content type="html" xml:base="/https://blog.24811213.xyz/2024/06/26/%E8%87%AA%E5%BB%BA%E4%B8%8B%E8%BD%BD%E6%B5%8B%E9%80%9F%E5%9C%B0%E5%9D%80%E7%9A%84%E6%96%B9%E6%B3%95/"><![CDATA[<p><a href="https://github.com/XIU2/CloudflareSpeedTest">测速工具</a></p>
+
+<h3 id="1-cloudflare-workers-文件反代无需服务器需要域名">1. Cloudflare Workers 文件反代（无需服务器，需要域名）</h3>
+
+<blockquote>
+  <p><strong>注意</strong>：因为 <code class="language-plaintext highlighter-rouge">*.workers.dev</code> 域名被 <strong>DNS 污染</strong>，所以<strong>默认分配的子域名将无法使用</strong>，有域名的可以将 Workers 服务路由绑定至<strong>自己的域名</strong>就能访问了。</p>
+</blockquote>
+
+<p>可以利用 Cloudflare Workers 服务，这个只限制访问次数不限制流量，免费版<strong>每日 10 万次数</strong>限制（每天 8 点重置）。  <br />
+搭建 Workers 文件反代很简单，也就在 Cloudflare 后台点几下就完事了，连服务器都省了。</p>
+
+<p><strong>「 点击展开 查看快速搭建步骤 」</strong></p>
+
+<hr />
+
+<p>简单来说就是：<strong>创建服务、粘贴代码、保存部署</strong>，完事~</p>
+
+<ol>
+  <li>打开 <a href="https://workers.cloudflare.com/">Cloudflare Workers</a>，点击中间橙色的 Start building 按钮。  <br />
+ <em><code class="language-plaintext highlighter-rouge">如果是第一次用，则会让你取个 "专属于你" 的二级子域名，即 YYY.workers.dev，以后可以改...</code></em></li>
+</ol>
+
+<hr />
+
+<ol>
+  <li>点击 创建服务 按钮（如下图所示）</li>
+</ol>
+
+<p><a href="https://user-images.githubusercontent.com/54703944/152347723-5afcbde2-a1d0-4d57-ac08-5052c0189b43.png"><img src="https://user-images.githubusercontent.com/54703944/152347723-5afcbde2-a1d0-4d57-ac08-5052c0189b43.png" alt="" /></a></p>
+
+<hr />
+
+<ol>
+  <li>输入<strong>服务名称</strong>（三级子域名），选择第二个 <strong>HTTP 处理程序</strong>，点击 创建服务 按钮（如下图所示）</li>
+</ol>
+
+<p><a href="https://user-images.githubusercontent.com/54703944/152347729-d5cac205-f54d-4805-a460-3845676c8d11.png"><img src="https://user-images.githubusercontent.com/54703944/152347729-d5cac205-f54d-4805-a460-3845676c8d11.png" alt="" /></a></p>
+
+<hr />
+
+<ol>
+  <li>点击右下角的 快速编辑 按钮</li>
+</ol>
+
+<p><a href="https://user-images.githubusercontent.com/54703944/152347733-f3536cc1-fd63-4a01-99d2-dae1a0633b34.png"><img src="https://user-images.githubusercontent.com/54703944/152347733-f3536cc1-fd63-4a01-99d2-dae1a0633b34.png" alt="" /></a></p>
+
+<hr />
+
+<ol>
+  <li>清空原内容并粘贴以下代码，点击 保存并部署（通常 10 秒内就完成了，如下图所示）</li>
+</ol>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">fetch</span><span class="dl">"</span><span class="p">,</span> <span class="nx">event</span> <span class="o">=&gt;</span> <span class="p">{</span>  
+  <span class="kd">let</span> <span class="nx">url</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">URL</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">request</span><span class="p">.</span><span class="nx">url</span><span class="p">);</span>  
+  <span class="nx">url</span><span class="p">.</span><span class="nx">protocol</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">https:</span><span class="dl">'</span>  
+  <span class="nx">url</span><span class="p">.</span><span class="nx">hostname</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">cachefly.cachefly.net</span><span class="dl">"</span><span class="p">;</span>  
+  <span class="kd">let</span> <span class="nx">request</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Request</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">event</span><span class="p">.</span><span class="nx">request</span><span class="p">);</span>  
+  <span class="nx">event</span><span class="p">.</span><span class="nx">respondWith</span><span class="p">(</span><span class="nx">fetch</span><span class="p">(</span><span class="nx">request</span><span class="p">));</span>  
+<span class="p">})</span>  
+</code></pre></div></div>
+
+<blockquote>
+  <p>这里是以 <code class="language-plaintext highlighter-rouge">https://cachefly.cachefly.net/200mb.test</code> 为反代目标（不建议只照着这一个薅），不过最大只有 <strong>200MB</strong>，想要<strong>更大的请修改反代目标</strong>（下面有可用的大文件 URL），另外如果目标是 http 地址则记得将上面代码中的 <code class="language-plaintext highlighter-rouge">https:</code> 改为 <code class="language-plaintext highlighter-rouge">http:</code></p>
+</blockquote>
+
+<blockquote>
+  <p>为了减少回源，提高下载测速准确度。建议反代目标选择文件小于 512MB 且 <strong><a href="https://developers.cloudflare.com/cache/concepts/default-cache-behavior/#default-cached-file-extensions">支持 CDN 缓存的文件后缀</a></strong>。</p>
+</blockquote>
+
+<p><a href="https://user-images.githubusercontent.com/54703944/152354320-2103bc1b-b4ed-4bfe-b238-153f005ba94d.png"><img src="https://user-images.githubusercontent.com/54703944/152354320-2103bc1b-b4ed-4bfe-b238-153f005ba94d.png" alt="" /></a></p>
+
+<hr />
+
+<ol>
+  <li><del>最后尝试浏览器访问 <code class="language-plaintext highlighter-rouge">https://XXX.YYY.workers.dev/200mb.test</code> 如果可以正常下载则代表部署成功</del></li>
+</ol>
+
+<blockquote>
+  <p><strong>注意</strong>：因为 <code class="language-plaintext highlighter-rouge">*.workers.dev</code> 域名被 <strong>DNS 污染</strong>，所以<strong>默认分配的子域名将无法使用</strong>，有域名的可以将 Workers 服务路由绑定至<strong>自己的域名</strong>就能访问了。</p>
+</blockquote>
+
+<p>具体可以看看 <a href="https://github.com/XIU2/CloudflareSpeedTest/issues/189">#189</a> 这里提到了 Workers 自定义域名。</p>
+
+<p>后续使用 CloudflareST 时，记得加上 <code class="language-plaintext highlighter-rouge">-url</code> 参数，例如：</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Windows  </span>
+<span class="s">CloudflareST.exe -url https://XXX.YYY.workers.dev/200mb.test</span>   
+  
+<span class="c1"># Linux/Mac  </span>
+<span class="s">./CloudflareST -url https://XXX.YYY.workers.dev/200mb.test</span>   
+</code></pre></div></div>
+
+<blockquote>
+  <p>访问这个 URL 其实就是在反代 <a href="https://cachefly.cachefly.net/200mb.test">https://cachefly.cachefly.net/200mb.test</a>  <br />
+如果想要改成其他大文件 URL（下面写的有），只需要修改 Workers 代码中的 <code class="language-plaintext highlighter-rouge">cachefly.cachefly.net</code> 域名和协议即可</p>
+</blockquote>
+
+<hr />
+
+<h3 id="11可选自定义-workers-地址的-url-路径简短好记">1.1【可选】自定义 Workers 地址的 URL 路径（简短好记）</h3>
+
+<p><strong>「 点击展开 查看简单说明 」</strong></p>
+
+<hr />
+
+<p>把上面原先的 Workers 代码改成下面这样，即可把原先很长/不好记的 URL 路径改为简短好记：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">fetch</span><span class="dl">"</span><span class="p">,</span> <span class="nx">event</span> <span class="o">=&gt;</span> <span class="p">{</span>  
+  <span class="kd">let</span> <span class="nx">url</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">URL</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">request</span><span class="p">.</span><span class="nx">url</span><span class="p">);</span>  
+  <span class="k">if</span> <span class="p">(</span><span class="nx">url</span><span class="p">.</span><span class="nx">pathname</span> <span class="o">==</span> <span class="dl">"</span><span class="s2">/test</span><span class="dl">"</span> <span class="o">&amp;&amp;</span> <span class="nx">url</span><span class="p">.</span><span class="nx">search</span> <span class="o">==</span> <span class="dl">""</span><span class="p">)</span> <span class="p">{</span>  
+    <span class="nx">url</span><span class="p">.</span><span class="nx">href</span><span class="o">=</span><span class="dl">"</span><span class="s2">https://cachefly.cachefly.net/200mb.test</span><span class="dl">"</span>  
+    <span class="kd">let</span> <span class="nx">request</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Request</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">event</span><span class="p">.</span><span class="nx">request</span><span class="p">);</span>  
+    <span class="nx">event</span><span class="p">.</span><span class="nx">respondWith</span><span class="p">(</span><span class="nx">fetch</span><span class="p">(</span><span class="nx">request</span><span class="p">));</span>  
+  <span class="p">}</span>  
+<span class="p">})</span>  
+</code></pre></div></div>
+
+<p>其中第 3 行的 <code class="language-plaintext highlighter-rouge">/test</code> 就是你可以自定义的 URL 路径，最终下载测速地址为：<code class="language-plaintext highlighter-rouge">https://xxx.yyy/test</code></p>
+
+<blockquote>
+  <p>你可以将其改为 <code class="language-plaintext highlighter-rouge">/</code>，这样的话最终下载测速地址为：<code class="language-plaintext highlighter-rouge">https://xxx.yyy</code>（<code class="language-plaintext highlighter-rouge">/</code> 可省略不写</p>
+</blockquote>
+
+<hr />
+
+<h3 id="2-服务器套-cloudflare-cdn需要服务器域名">2. 服务器套 Cloudflare CDN（需要服务器+域名）</h3>
+
+<p><strong>「 点击展开 查看简单说明 」</strong></p>
+
+<hr />
+
+<p>首先你需要有个域名，然后在你的服务器上面创建一个虚拟主机（如 Nginx/Caddy），并在其目录下生成一个空文件即可：</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 以下命令会在 /XXX 目录下，生成一个文件名为 cfst.bin 大小为 300MB 的文件  </span>
+<span class="c1"># （超过 512M 的文件不会被 CDN 缓存，会导致次次回源，即大量消耗服务器流量不说，还会影响下载测速准确度，因为多了个回源环节）  </span>
+<span class="c1"># 记得修改命令中的 /XXX/ 示例路径，否则直接运行会提示找不到文件夹！  </span>
+  
+<span class="s">dd if=/dev/zero of=/XXX/cfst.bin bs=1M count=0 seek=300</span>  
+  
+<span class="c1"># 因为是空文件，所以 Cloudflare 在缓存时 300MB 就会被压缩为 300KB 了，不占用 Cloudflare 的节点缓存空间，因此 Cloudflare 并没有追究文件正不正常的问题，顶多像我这样因流量太大（每天 10TB）而被域名限速了。。。  </span>
+<span class="c1"># 另外，不建议搞太多不同大小的文件，这样不利于缓存，因此 Cloudflare 的缓存机制还会看文件热度，如果流量分散到几个文件上，可能会导致文件热度不足早早就被清理，从而增加回源次数，消耗服务器流量。  </span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>也可以使用其他 Cloudflare CDN <strong>支持缓存的文件后缀</strong>，具体见：<a href="https://developers.cloudflare.com/cache/concepts/default-cache-behavior/#default-cached-file-extensions">#default-cached-file-extensions</a></p>
+</blockquote>
+
+<p>最后给你的网站套上 Cloudflare CDN 即可。</p>
+
+<blockquote>
+  <p>使用初期的时候，会因为回源而消耗部分服务器流量并缓存到 CDN 节点，后续访问 URL 就直接从 CDN 缓存中读取了。</p>
+</blockquote>
+
+<p>另外，建议去<strong>缓存 - Tiered Cache</strong> 中开启 <strong><code class="language-plaintext highlighter-rouge">Argo Tiered Cache</code></strong> 功能，这样可以进一步降低回源次数，节省服务器流量。</p>
+
+<hr />
+
+<h2 id="-一些可用于cloudflare-workers-文件反代的大文件-url"># 一些可用于 <code class="language-plaintext highlighter-rouge">Cloudflare Workers 文件反代</code> 的大文件 URL：</h2>
+
+<p>文件反代不知道在哪里找大文件的话，可以去看看各 IDC 的官方测速文件（可以谷歌搜索 <code class="language-plaintext highlighter-rouge">VPS looking glass</code> 或 <code class="language-plaintext highlighter-rouge">testfile MB</code> 就能找到很多，建议优先选择<strong>美西</strong>），建议选择 <strong>512MB 以下</strong>且 <strong><a href="https://developers.cloudflare.com/cache/concepts/default-cache-behavior/#default-cached-file-extensions">支持 CDN 缓存的文件后缀</a></strong>，我举几个例子：</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 这几个小于 512 MB，且都是会被 CDN 缓存的 .zip 文件后缀（常见的 文档、图片、音视频、压缩包、安装包、静态文件 后缀）  </span>
+<span class="s">http://ipv4.download.thinkbroadband.com/200MB.zip</span>  
+<span class="s">http://ipv4.download.thinkbroadband.com/512MB.zip</span>  
+<span class="s">https://testfileorg.netwet.net/500MB-CZIPtestfile.org.zip</span>  
+  
+<span class="c1"># 这几个 .test 的后缀是不支持缓存的，可以用但会影响下载测速准确度  </span>
+<span class="s">https://cachefly.cachefly.net/200mb.test</span>  
+<span class="s">https://lg-seattle.cloudzy.com/500MB.test</span>  
+<span class="s">https://lg-miami.cloudzy.com/500MB.test</span>  
+<span class="s">https://lg-chicago.cloudzy.com/500MB.test</span>  
+<span class="s">https://lg.my.controlvm.com/500MB.test</span>  
+<span class="s">http://23.145.48.48/500MB.test</span>  
+<span class="s">http://speedtest-sfo3.digitalocean.com/1gb.test</span>  
+</code></pre></div></div>
+
+<blockquote>
+  <p><strong>注意</strong>：这些文件地址是让你 <strong>Workers 反代</strong>用的，不能直接用于 <code class="language-plaintext highlighter-rouge">-url</code> 参数！</p>
+</blockquote>]]></content><author><name>青云志</name></author><category term="cloudflare" /><category term="测速" /><summary type="html"><![CDATA[利用 Cloudflare workers 建立自己的专属IP测速地址]]></summary></entry></feed>
