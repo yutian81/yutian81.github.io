@@ -11,7 +11,7 @@ permalink: /donate/
 > 做了一些微小的事情，如果对你有帮助，可以考虑请我喝杯咖啡。
 > 
 > Did some tiny things, consider buying me a cup of coffee if it helps you.
-<br>
+<div style="margin-top: 50px;"></div>
 <div style="display: flex; justify-content: center; align-items: center; gap: 40px;">
   <div style="text-align: center;">
     <p>微信 / Wechat</p>
