@@ -1,13 +1,13 @@
 # ---------------- #
 #   Main Configs   #
 # ---------------- #
-baseurl: https://blog.24811213.xyz
+baseurl: 
 url: https://blog.24811213.xyz
 date_format: "ordinal"
 title: 青云志
 subtitle: "雨天狂奔的网络空间"
-description: "网络技术爱好者"
-keywords: 网络,搜集,分享,随笔,感悟,工作,
+description: "一个又菜又爱玩的小白"
+keywords: 网络,技巧,教程,搜集,分享,随笔,感悟,工作
 timezone: Asia/Shanghai
 encoding: "utf-8"
 # 页面左下角显示的年份
