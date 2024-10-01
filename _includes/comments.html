@@ -118,33 +118,23 @@
         </script>
 
   {% when 'waline' %}
-      <!-- Waline CSS -->
-      <link
-        rel="stylesheet"
-        href="https://unpkg.com/@waline/client@v3/dist/waline.css"
-      />
-      <link
-        rel="stylesheet"
-        href="https://unpkg.com/@waline/client@v3/dist/waline-meta.css"
-      />
-      <!-- 文章统计信息 -->
       <div id="article-info" style="text-align: center; margin-bottom: 20px;">
-        <span>当前页阅读量: <span class="waline-pageview-count" data-path="{{ page.url }}"></span></span>
-        &nbsp;|&nbsp;  <!-- 使用分隔符 -->
-        <span>当前页评论量: <span class="waline-comment-count" data-path="{{ page.url }}"></span></span>
-      </div>      
-      <!-- 文章内容 -->
+          当前页阅读量: <span class="waline-pageview-count" data-path="{{ page.url }}"></span>
+          &nbsp;|&nbsp;
+          当前页评论量: <span class="waline-comment-count" data-path="{{ page.url }}"></span>
+      </div>
       <div id="waline"></div>
-      <!-- Waline 初始化脚本 -->
+      <link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css" />
+      <link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline-meta.css" />
       <script type="module">
-        import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js'; 
-        init({
-          el: '#waline',
-          lang: 'zh-CN',
-          serverURL: '{{ site.waline.serverURL }}',  // 从 config.yml 引用 serverURL
-          pageview: true, // 浏览量统计
-          comment: true,  // 评论数统计
-        });
+          import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js'; 
+          init({
+            el: '#waline',
+            lang: 'zh-CN',
+            serverURL: '{{ site.waline.serverURL }}',  // 从 config.yml 引用 serverURL
+            pageview: true, // 浏览量统计
+            comment: true,  // 评论数统计
+          });
       </script>
 
   {% when 'beaudar' %}
