@@ -1,6 +1,6 @@
 ---
 layout: page
-title: archives / 归档
+title: Archives / 归档
 description: 按年份归档
 keywords: 归档
 comments: false
