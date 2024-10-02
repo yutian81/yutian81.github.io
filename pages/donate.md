@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 捐助 / Donate
+title: Donate / 捐助
 description: 随缘
 keywords: Donate
 comments: true
