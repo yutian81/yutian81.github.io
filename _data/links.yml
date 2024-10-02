@@ -1,91 +1,32 @@
-- name: 坚果云
-  url: https://www.jianguoyun.com
-  icon: https://www.favicon.vip/get.php?url=www.jianguoyun.com
+- name: CMLiussss
+  url: https://blog.cmliussss.com
+  icon: https://www.favicon.vip/get.php?url=blog.cmliussss.com
 
-- name: 金山文档
-  url: https://www.kdocs.cn
-  icon: https://www.favicon.vip/get.php?url=www.kdocs.cn
+- name: 哪吒手册
+  url: https://nezha.wiki
+  icon: https://www.favicon.vip/get.php?url=nezha.wiki
 
-- name: 阿里图标库
-  url: https://www.iconfont.cn
-  icon: https://gitee.com/yutian88881/picbed/raw/master/%E5%9B%BE%E5%BA%8A/1727863562049Iconfont.png
+- name: Alist手册
+  url: https://alist.nn.ci/zh
+  icon: https://www.favicon.vip/get.php?url=alist.nn.ci
+  
+- name: 安知鱼手册
+  url: https://docs.anheyu.com
+  icon: https://www.favicon.vip/get.php?url=docs.anheyu.com
 
-- name: 千图网
-  url: https://www.58pic.com
-  icon: https://www.favicon.vip/get.php?url=www.58pic.com
+- name: 东方月初
+  url: https://hexo.200038.xyz
+  icon: https://www.favicon.vip/get.php?url=hexo.200038.xyz
 
-- name: GitHub
-  url: https://github.com
-  icon: https://www.favicon.vip/get.php?url=github.com
+- name: 一粒微尘
+  url: https://blog.667408.xyz
+  icon: https://www.favicon.vip/get.php?url=blog.667408.xyz
 
-- name: CloudFlare
-  url: https://dash.cloudflare.com
-  icon: https://www.favicon.vip/get.php?url=dash.cloudflare.com
+- name: 科技小岛
+  url: https://www.kejiland.com
+  icon: https://www.favicon.vip/get.php?url=www.kejiland.com
 
-- name: GreasyFork
-  url: https://greasyfork.org/zh-CN
-  icon: https://www.favicon.vip/get.php?url=greasyfork.org
+- name: 周润发
+  url: https://blog.001315.xyz
+  icon: https://www.favicon.vip/get.php?url=blog.001315.xyz
 
-- name: 谷歌插件
-  url: https://www.crxsoso.com
-  icon: https://www.favicon.vip/get.php?url=www.crxsoso.com
-
-- name: 423Down
-  url: http://www.423down.com
-  icon: https://www.favicon.vip/get.php?url=www.423down.com
-
-- name: 克隆窝
-  url: https://www.uy5.net
-  icon: https://www.favicon.vip/get.php?url=www.uy5.net
-
-- name: 分享迷
-  url: https://www.fenxm.com
-  icon: https://www.favicon.vip/get.php?url=www.fenxm.com
-
-- name: 吾爱破解
-  url: https://www.52pojie.cn
-  icon: https://www.favicon.vip/get.php?url=www.52pojie.cn
-
-- name: 卡饭论坛
-  url: https://bbs.kafan.cn
-  icon: https://www.favicon.vip/get.php?url=bbs.kafan.cn
-
-- name: 远景论坛
-  url: https://bbs.pcbeta.com
-  icon: https://www.favicon.vip/get.php?url=bbs.pcbeta.com
-
-- name: 新媒体工具
-  url: https://xmt.gotab.link
-  icon: https://www.favicon.vip/get.php?url=xmt.gotab.link
-
-- name: 在线工具箱
-  url: https://tool.lu
-  icon: https://www.favicon.vip/get.php?url=tool.lu
-
-- name: 火山写作
-  url: https://www.writingo.net
-  icon: https://www.favicon.vip/get.php?url=www.volcengine.com
-
-- name: Kimi AI
-  url: https://kimi.moonshot.cn
-  icon: https://www.favicon.vip/get.php?url=kimi.moonshot.cn
-
-- name: 智谱清言
-  url: https://chatglm.cn
-  icon: https://www.favicon.vip/get.php?url=chatglm.cn
-
-- name: 讯飞星火
-  url: https://xinghuo.xfyun.cn/desk
-  icon: https://www.favicon.vip/get.php?url=xinghuo.xfyun.cn
-
-- name: 马克配音
-  url: https://ttsmaker.cn
-  icon: https://www.favicon.vip/get.php?url=ttsmaker.cn
-
-- name: AI 工具集
-  url: https://ai-bot.cn
-  icon: https://www.favicon.vip/get.php?url=ai-bot.cn
-
-- name: AI 旋风
-  url: https://www.aixuanfeng.com
-  icon: https://www.favicon.vip/get.php?url=www.aixuanfeng.com
