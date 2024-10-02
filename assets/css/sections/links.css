@@ -23,8 +23,8 @@
 
 /* 单个图标的样式 */
 .link-card .link-icon {
-  width: 25px; /* 调整图标宽度 */
-  height: 25px; /* 调整图标高度 */
+  width: 23px; /* 调整图标宽度 */
+  height: 23px; /* 调整图标高度 */
   margin-right: 10px; /* 图标与文本之间的间距 */
 }
 
