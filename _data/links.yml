@@ -1,91 +1,91 @@
 - name: 坚果云
   url: https://www.jianguoyun.com
-  src: life
+  icon: https://www.favicon.vip/get.php?url=www.jianguoyun.com
 
 - name: 金山文档
   url: https://www.kdocs.cn
-  src: life
+  icon: https://www.favicon.vip/get.php?url=www.kdocs.cn
 
 - name: 阿里图标库
   url: https://www.iconfont.cn
-  src: life
+  icon: https://example.com/icons/iconfont.svg
 
 - name: 千图网
   url: https://www.58pic.com
-  src: life
+  icon: https://example.com/icons/58pic.svg
 
 - name: GitHub
   url: https://github.com
-  src: life
+  icon: https://example.com/icons/github.svg
 
 - name: CloudFlare
   url: https://dash.cloudflare.com
-  src: life
+  icon: https://example.com/icons/cloudflare.svg
 
 - name: Greasy Fork
   url: https://greasyfork.org/zh-CN
-  src: life
+  icon: https://example.com/icons/greasyfork.svg
 
 - name: 谷歌插件
   url: https://www.crxsoso.com
-  src: life
+  icon: https://example.com/icons/crxsoso.svg
 
 - name: 423Down
   url: http://www.423down.com
-  src: life
+  icon: https://example.com/icons/423down.svg
 
 - name: 克隆窝
   url: https://www.uy5.net
-  src: life
+  icon: https://example.com/icons/uy5.svg
 
 - name: 分享迷
   url: https://www.fenxm.com
-  src: life
+  icon: https://example.com/icons/fenxm.svg
 
 - name: 吾爱破解
   url: https://www.52pojie.cn
-  src: life
+  icon: https://example.com/icons/52pojie.svg
 
 - name: 卡饭论坛
   url: https://bbs.kafan.cn/
-  src: life
+  icon: https://example.com/icons/kafan.svg
 
 - name: 远景论坛
   url: https://bbs.pcbeta.com/
-  src: life
+  icon: https://example.com/icons/pcbeta.svg
 
 - name: 新媒体工具集
   url: https://xmt.gotab.link/
-  src: www
+  icon: https://example.com/icons/xmt.svg
 
 - name: 在线工具箱
   url: https://tool.lu/
-  src: www
+  icon: https://example.com/icons/toollu.svg
 
 - name: 火山写作
   url: https://www.writingo.net
-  src: www
+  icon: https://example.com/icons/writingo.svg
 
 - name: Kimi AI
   url: https://kimi.moonshot.cn/
-  src: www
+  icon: https://example.com/icons/kimi.svg
 
 - name: 智谱清言
   url: https://chatglm.cn/
-  src: www
+  icon: https://example.com/icons/chatglm.svg
 
 - name: 讯飞星火
   url: https://xinghuo.xfyun.cn/desk
-  src: www
+  icon: https://example.com/icons/xinghuo.svg
 
 - name: 马克配音
   url: https://ttsmaker.cn/
-  src: www
+  icon: https://example.com/icons/ttsmaker.svg
 
 - name: AI 工具集
   url: https://ai-bot.cn/
-  src: www
+  icon: https://example.com/icons/aibot.svg
 
 - name: AI 旋风
   url: https://www.aixuanfeng.com/
-  src: www
+  icon: https://example.com/icons/aixuanfeng.svg
