@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Fragments / 索引
+title: Fragments / 灵感
 description: fragments 索引页
 keywords: fragments
 comments: false
