@@ -1,0 +1,53 @@
+/* 链接卡片的容器样式 */
+.link-container {
+  display: flex;
+  flex-wrap: wrap; /* 允许卡片换行 */
+  gap: 20px; /* 每个卡片之间的间距 */
+  justify-content: space-between; /* 卡片之间的间距均匀 */
+}
+
+/* 单个卡片的样式 */
+.link-card {
+  background-color: #f8f9fa; /* 背景颜色 */
+  border: 1px solid #ddd; /* 边框颜色 */
+  border-radius: 0; /* 方角 */
+  padding: 20px; /* 内边距 */
+  text-align: center; /* 文本居中 */
+  width: calc(25% - 20px); /* 每行4个卡片，卡片占25%的宽度，减去间距 */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 添加轻微阴影效果 */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* 链接的样式 */
+.link-card a {
+  text-decoration: none; /* 去掉下划线 */
+  color: #007bff; /* 链接颜色 */
+  font-size: 18px; /* 字体大小 */
+  font-weight: bold; /* 加粗字体 */
+  transition: color 0.3s;
+}
+
+/* 鼠标悬停时的链接效果 */
+.link-card a:hover {
+  color: #0056b3; /* 悬停时颜色变深 */
+}
+
+/* 鼠标悬停时卡片效果 */
+.link-card:hover {
+  transform: translateY(-5px); /* 卡片轻微上移 */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* 加强阴影效果 */
+}
+
+/* 响应式设计：当屏幕宽度小于768px时，每行显示2个 */
+@media (max-width: 768px) {
+  .link-card {
+    width: calc(50% - 20px); /* 宽度调整为50% */
+  }
+}
+
+/* 响应式设计：当屏幕宽度小于480px时，每行显示1个 */
+@media (max-width: 480px) {
+  .link-card {
+    width: 100%; /* 小屏幕时卡片全宽 */
+  }
+}
