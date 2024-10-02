@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: About / 关于
 description: 不知道写啥，以后再改
 keywords: 关于,青云志
 comments: true
