@@ -11,11 +11,20 @@
   background-color: #f8f9fa; /* 背景颜色 */
   border: 1px solid #ddd; /* 边框颜色 */
   border-radius: 0; /* 方角 */
-  padding: 20px; /* 内边距 */
+  padding: 10px; /* 内边距，减少高度 */
   text-align: center; /* 文本居中 */
   width: calc(25% - 20px); /* 每行4个卡片，卡片占25%的宽度，减去间距 */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 添加轻微阴影效果 */
   transition: transform 0.3s, box-shadow 0.3s;
+  display: flex; /* 使用 flexbox 布局 */
+  align-items: center; /* 垂直居中对齐 */
+}
+
+/* 图标的样式 */
+.link-card .link-icon {
+  width: 50px; /* 固定图标宽度 */
+  height: 50px; /* 固定图标高度 */
+  margin-right: 10px; /* 图标与文本之间的间距 */
 }
 
 /* 链接的样式 */
@@ -25,6 +34,7 @@
   font-size: 18px; /* 字体大小 */
   font-weight: bold; /* 加粗字体 */
   transition: color 0.3s;
+  white-space: nowrap; /* 不允许换行 */
 }
 
 /* 鼠标悬停时的链接效果 */
