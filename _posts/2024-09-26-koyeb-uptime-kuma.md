@@ -96,9 +96,8 @@ koyeb 官方推荐的 S3 是 `Backblaze`，[点击直达](https://www.backblaze.
 - LITESTREAM_REGION=对应 R2 存储桶的区域，我选的是亚太地区，即 `APAC`  
 - LITESTREAM_SECRET_ACCESS_KEY=对应 R2 存储桶的 `机密访问密钥`  
 - LITESTREAM_URL=对应 R2 存储桶的 `S3 客户端终结点`，以 `https://` 开头  
-- UPTIME_KUMA_PORT=开放的端口，就填 `8000` 不要乱改
-- UPTIME_KUMA_CLOUDFLARED_TOKEN=argo的token，[token获取教程](https://github.com/louislam/uptime-kuma/wiki/Reverse-Proxy-with-Cloudflare-Tunnel)，token可以在这里设置变量，也可以搭建好后在项目管理面板的设置里去定义，设置好argo后，即可以通过访问argo域名来访问项目，也即`反向代理`
-
+- UPTIME_KUMA_PORT=开放的端口，就填 `8000` 不要乱改  
+  
 设置完成后，点击创建，等待部署完成，得到 koyeb 分配的一个网址，格式为：`xxxx-xxxx-xxxx.koyeb.app`  
   
 ![17273438750941727343874253.png](https://fastly.jsdelivr.net/gh/yutian81/yutian81.github.io@master/assets/images/17273438750941727343874253.png)  
@@ -131,9 +130,10 @@ koyeb 官方推荐的 S3 是 `Backblaze`，[点击直达](https://www.backblaze.
   
 > [!TIPS]  
 >  
-> koyeb 免费版不支持绑定自定义域名，推荐使用cf的argo隧道来反代，项目本身支持运行argo：        
-> 通过项目后台设置里自带的 `cloudflared` 选项进行设置：    
-> 在 CF 后台创建一个 argo 隧道，协议选 `http`，服务填 `http://localhost:8000`，将获取的 `token` 填入到项目的 `cloudflared` 设置项里并启动它。
-> 如果在部署时已经设置了这个变量`UPTIME_KUMA_CLOUDFLARED_TOKEN`，则此处不用再设置，`cloudflared`会自动启动  
+> koyeb 免费版不支持绑定自定义域名，我们有三种方式来绑定域名：    
+> 1、在 cf 后台设置 `cname` 解析记录；    
+> 2、用 `cf worker` 搭建一个 `反代服务` 绑定自定义域，关于 worker 搭建反代可以在油管搜索；    
+> 3、通过项目后台设置里自带的 `cloudflared` 选项进行设置：    
+> 在 CF 后台创建一个 argo 隧道，协议选 `http`，服务填 `http://localhost:8000`，将获取的 `token` 填入到项目的 `cloudflared` 设置项里并启动它。  
   
 ![17273454946951727345494151.png](https://fastly.jsdelivr.net/gh/yutian81/yutian81.github.io@master/assets/images/17273454946951727345494151.png)  
