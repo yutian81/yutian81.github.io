@@ -21,25 +21,25 @@ import Link from "@/views/Link.vue";
 
 ### 我的友链信息
 
-- 名称：`無名小栈`
-- 描述：`分享技术与科技生活`
-- 地址：`https://blog.imsyy.top/`
-- 头像：`https://pic.imgdb.cn/item/65bc52b0871b83018a06699d.png`
-- 站点图片：`https://pic.imgdb.cn/item/65dc47009f345e8d030b65ba.png`
-- 订阅：`https://blog.imsyy.top/rss.xml`
+- 名称：`九天之上`
+- 描述：`又菜又爱玩，万事都不难`
+- 地址：`https://blog.24811213.xyz/`
+- 头像：`https://blog.24811213.xyz/favicon.ico`
+- 站点图片：` https://s0.wp.com/mshots/v1/https://blog.24811213.xyz/?w=400&h=300`
+- 订阅：`https://blog.24811213.xyz/rss.xml`
 
 ```yml
-name: 無名小栈
-desc: 分享技术与科技生活
-url: https://blog.imsyy.top/
-avatar: https://pic.imgdb.cn/item/65bc52b0871b83018a06699d.png
-screenshot: https://pic.imgdb.cn/item/65dc47009f345e8d030b65ba.png
-rss: https://blog.imsyy.top/rss.xml
+- name: 九天之上
+  desc: 又菜又爱玩，万事都不难
+  url: https://blog.24811213.xyz/
+  avatar: https://blog.24811213.xyz/favicon.ico
+  screenshot: https://s0.wp.com/mshots/v1/https://blog.24811213.xyz/?w=400&h=300
+  rss: https://blog.24811213.xyz/rss.xml
 ```
 
 ### 申请友链
 
-- 我已添加 [無名小栈](https://blog.imsyy.top/) 的友情链接。
+- 我已添加 [九天之上](https://blog.24811213.xyz/) 的友情链接。
 - **请多多进行互动后再来进行友链添加**，若为首次评论直接申请友链，将不会通过。
 - 本站不添加 **采集站**、**纯搬运站点**、**论坛类站点** 等非 **个人博客** 类型的站点。
 - 站点目前可以在 **中国大陆区域** 正常访问。
