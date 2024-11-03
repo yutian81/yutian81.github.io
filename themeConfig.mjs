@@ -258,10 +258,10 @@ export const themeConfig = {
       {
         text: "项目",
         items: [
-          { text: "Home", link: "https://github.com/imsyy/home/", newTab: true },
-          { text: "SPlayer", link: "https://github.com/imsyy/SPlayer/", newTab: true },
-          { text: "DailyHotApi", link: "https://github.com/imsyy/DailyHotApi/", newTab: true },
-          { text: "Snavigation", link: "https://github.com/imsyy/Snavigation/", newTab: true },
+          { text: "home", link: "https://github.com/yutian81/site-home", newTab: true },
+          { text: "blog", link: "https://github.com/yutian81/yutian81.github.io", newTab: true },
+          { text: "pintree", link: "https://github.com/yutian81/pintree", newTab: true },
+          { text: "twikoo", link: "https://github.com/yutian81/twikoo", newTab: true },
         ],
       },
       {
@@ -320,7 +320,7 @@ export const themeConfig = {
     // 站点简介
     hello: {
       enable: true,
-      text: "这里有关于<strong>开发</strong>相关的问题和看法，也会有一些<strong>工作备忘</strong>的分享，其中大部分内容会侧重于<strong>IT相关</strong>。希望你可以在这里找到对你有用的知识和教程。",
+      text: "这里有我的各种<strong>折腾笔记</strong>，也有一些<strong>工作备忘</strong>和<strong>生活随笔</strong>。又菜又爱玩<strong>万事都不难</strong>。",
     },
     // 目录
     toc: {
