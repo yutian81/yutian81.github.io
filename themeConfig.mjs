@@ -163,19 +163,19 @@ export const themeConfig = {
       name: "服务",
       list: [
         {
-          icon: "https://pic.efefee.cn/uploads/2024/04/08/6613465358077.png",
-          name: "起始页",
-          url: "https://nav.imsyy.top/",
+          icon: "https://blog.24811213.xyz/pintree/assets/logo.svg",
+          name: "收藏夹",
+          url: "/pintree",
         },
         {
-          icon: "https://pic.efefee.cn/uploads/2024/04/08/661346d418ad7.png",
+          icon: "https://hot.imsyy.top/ico/favicon.png",
           name: "今日热榜",
           url: "https://hot.imsyy.top/",
         },
         {
-          icon: "https://pic.efefee.cn/uploads/2024/04/08/66134722586fa.png",
-          name: "站点监测",
-          url: "https://status.imsyy.top/",
+          icon: "https://ctool.dev/favicon.ico",
+          name: "在线工具",
+          url: "https://ctool.dev/",
         },
       ],
     },
@@ -240,7 +240,7 @@ export const themeConfig = {
         link: "https://res.abeim.cn/api/qq/?qq=1539250352",
       },
       {
-        icon: "zhihu",
+        icon: "twitter-x",
         link: "https://www.zhihu.com/people/yuzong88881",
       },
     ],
@@ -285,20 +285,16 @@ export const themeConfig = {
         text: "服务",
         items: [
           { text: "站点状态", link: "https://uptime.ytian.us.kg/status/service", newTab: true },
-          { text: "一个导航", link: "https://nav.imsyy.top/", newTab: true },
+          { text: "在线工具", link: "https://ctool.dev/", newTab: true },
           { text: "站点订阅", link: "https://blog.24811213.xyz/rss.xml", newTab: true },
-          {
-            text: "反馈投诉",
-            link: "https://github.com/yutian81/yutian81.github.io/issues",
-            newTab: true,
-          },
+          { text: "问题反馈", link: "https://github.com/yutian81/yutian81.github.io/issues", newTab: true, },
         ],
       },
     ],
   },
   // 评论
   comment: {
-    enable: false,
+    enable: true,
     // 评论系统选择
     // artalk / twikoo
     type: "twikoo",
@@ -313,9 +309,9 @@ export const themeConfig = {
     twikoo: {
       // 必填，若不想使用 CDN，可以使用 pnpm add twikoo 安装并引入
       js: "https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/twikoo/1.6.39/twikoo.all.min.js",
-      envId: "",
+      envId: "https://twikoo.24811213.xyz/",
       // 环境地域，默认为 ap-shanghai，腾讯云环境填 ap-shanghai 或 ap-guangzhou；Vercel 环境不填
-      region: "https://twikoo.24811213.xyz/",
+      region: "",
       lang: "zh-CN",
     },
   },
