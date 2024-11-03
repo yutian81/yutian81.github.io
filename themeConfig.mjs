@@ -177,6 +177,11 @@ export const themeConfig = {
           name: "在线工具",
           url: "https://ctool.dev/",
         },
+        {
+          icon: "https://pan.811520.xyz/2024-11/1730634973-Cloudflare_Logo.webp",
+          name: "CF优选",
+          url: "https://cf.090227.xyz/",
+        },
       ],
     },
     {
@@ -193,19 +198,9 @@ export const themeConfig = {
           url: "https://img.ytian.us.kg/",
         },
         {
-          icon: "https://pan.811520.xyz/2024-10/IP地址.webp",
-          name: "本机IP",
-          url: "https://yuzong.nyc.mn/",
-        },
-        {
           icon: "https://pan.811520.xyz/2024-10/插入链接.webp",
           name: "短链生成",
-          url: "https://slink.yutian81.top/duanlian",
-        },
-        {
-          icon: "https://nezha.yutian81.top/static/logo.svg",
-          name: "哪吒面板",
-          url: "https://nezha.yutian81.top/",
+          url: "https://slink.yutian81.top/duanlian",  
         },
         {
           icon: "https://www.favicon.vip/get.php?url=ssh.ytian.us.kg",
@@ -235,19 +230,11 @@ export const themeConfig = {
         icon: "bilibili",
         link: "https://space.bilibili.com/677845115",
       },
-      {
-        icon: "qq",
-        link: "https://res.abeim.cn/api/qq/?qq=1539250352",
-      },
-      {
-        icon: "twitter-x",
-        link: "https://www.zhihu.com/people/yuzong88881",
-      },
     ],
     // sitemap
     sitemap: [
       {
-        text: "博客",
+        text: "我的博客",
         items: [
           { text: "近期文章", link: "/" },
           { text: "全部分类", link: "/pages/categories" },
@@ -256,16 +243,16 @@ export const themeConfig = {
         ],
       },
       {
-        text: "项目",
+        text: "云端平台",
         items: [
-          { text: "home", link: "https://github.com/yutian81/site-home", newTab: true },
-          { text: "blog", link: "https://github.com/yutian81/yutian81.github.io", newTab: true },
-          { text: "pintree", link: "https://github.com/yutian81/pintree", newTab: true },
-          { text: "twikoo", link: "https://github.com/yutian81/twikoo", newTab: true },
+          { text: "Vercel", link: "https://vercel.com/", newTab: true },
+          { text: "NorthFlank", link: "https://app.northflank.com/", newTab: true },
+          { text: "Koyeb", link: "https://app.koyeb.com/", newTab: true },
+          { text: "Huawei", link: "https://www.huaweicloud.com/intl/zh-cn/", newTab: true },
         ],
       },
       {
-        text: "专栏",
+        text: "我的专栏",
         items: [
           { text: "技术分享", link: "/pages/categories/技术分享" },
           { text: "我的项目", link: "/pages/project" },
@@ -274,7 +261,16 @@ export const themeConfig = {
         ],
       },
       {
-        text: "页面",
+        text: "推荐项目",
+        items: [
+          { text: "edgetunnel", link: "https://github.com/cmliu/edgetunnel", newTab: true },
+          { text: "twikoo", link: "https://github.com/yutian81/twikoo", newTab: true },
+          { text: "alist", link: "https://alist.nn.ci/zh/", newTab: true },
+          { text: "nezha", link: "https://nezha.wiki/guide/dashboard.html", newTab: true },
+        ],
+      }, 
+      {        
+        text: "页面导航",
         items: [
           { text: "畅所欲言", link: "/pages/message" },
           { text: "关于本站", link: "/pages/about" },
@@ -283,7 +279,7 @@ export const themeConfig = {
         ],
       },
       {
-        text: "服务",
+        text: "网站服务",
         items: [
           { text: "站点状态", link: "https://uptime.ytian.us.kg/status/service", newTab: true },
           { text: "在线工具", link: "https://ctool.dev/", newTab: true },
@@ -348,7 +344,7 @@ export const themeConfig = {
   // 友链
   friends: {
     // 友链朋友圈
-    circleOfFriends: "",
+    circleOfFriends: "https://rss.811520.xyz",
     // 动态友链
     dynamicLink: {
       server: "",
@@ -372,9 +368,9 @@ export const themeConfig = {
   // 搜索
   // https://www.algolia.com/
   search: {
-    enable: false,
-    appId: "",
-    apiKey: "",
+    enable: true,
+    appId: "XPBJIXHP3T",
+    apiKey: "b3124222b88b04594547b8f3313104db",
   },
   // 打赏
   rewardData: {
