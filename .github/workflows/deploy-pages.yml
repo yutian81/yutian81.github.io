@@ -14,16 +14,6 @@ jobs:
       # 检出代码库
       - name: Checkout repository
         uses: actions/checkout@v3
-        with:
-          persist-credentials: false  # 禁用默认的 GITHUB_TOKEN，手动配置推送权限
-
-      # 设置 GitHub Token 以推送到 pages 分支
-      - name: Setup GitHub token
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
 
       # 安装 pnpm
       - name: Install pnpm
@@ -48,8 +38,8 @@ jobs:
           git commit -m "Deploy to GitHub Pages"
 
           # 添加远程仓库并推送到 pages 分支
-          git remote add origin https://x-access-token:${GITHUB_TOKEN}@github.com/yutian81/yutian81.github.io.git
-          git push --force origin pages
+          git remote add origin https://github.com/yutian81/yutian81.github.io.git
+          git push --force https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/yutian81/yutian81.github.io.git pages
 
         env:
           CI: true
