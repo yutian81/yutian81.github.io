@@ -3,4 +3,4 @@ Allow: /
 Allow: /pages/
 Allow: /posts/
 
-Sitemap: https://blog.imsyy.top/sitemap.xml
+Sitemap: https://blog.24811213.xyz/sitemap.xml
