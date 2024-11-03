@@ -1,0 +1,99 @@
+---  
+title: 新玩具 - 部署无名大佬的 VitePress 主题博客  
+filename: VitePress-curve  
+tags:  
+  - blog  
+  - cloudflare  
+  - github  
+categories:  
+  - 前端建站  
+date: 2024-11-03  
+description: 作者的仓库和博客只介绍了本地部署和 vercel 部署两种方式，是否可以部署到 github pages 和 cf pages 呢？答案是可以的！  
+articleGPT: 这段内容提供了一个详细的指南，介绍如何将名为vitepress-theme-curve的VitePress主题博客部署到GitHub Pages和Cloudflare Pages。步骤包括从模板复制仓库、设置仓库名称和权限、配置GitHub Actions以及绑定自定义域名。同时，也提供了关于如何在Cloudflare Pages上部署的两种方法。文档最后提到了一些需要用户自行修改的设置文件，以及提供了作者博客的链接，用户可以查阅更多相关设置的指南。  
+top: true  
+share: true  
+delete: false  
+---  
+  
+# 新玩具 - 部署无名大佬的 VitePress 主题博客  
+  
+## 相关资源  
+  
+官方仓库：[GitHub - imsyy/vitepress-theme-curve: 一个极简的 VitePress 主题](https://github.com/imsyy/vitepress-theme-curve)  
+  
+博客教程：[作者原教程](https://blog.imsyy.top/posts/2024/0320)  
+  
+作者的仓库和博客只介绍了 `本地部署` 和 `vercel 部署` 两种方式，是否可以部署到 `github pages` 和 `cf pages` 呢？答案是可以的！  
+  
+部署完成后的演示站点：[九天之上](https://blog.24811213.xyz/)  
+  
+## 部署到 git pages  
+  
+### 一. 使用模板复制 [我的仓库](https://github.com/yutian81/)  
+  
+> 注意：点击右上角的 `use this template` ，而不是 fork，fork 后会跟我的仓库同步，我在仓库中推送的文章会更新到你的博客。仓库 `必须是公开库`，否则构建的站点无法访问。  
+  
+![image.png](https://pan.811520.xyz/2024-11/1730619531-image.webp)  
+  
+### 二. 设置仓库  
+  
+- 将仓库改名为 `你的用户名.github.io`  
+- 将仓库的 `action 权限` 设置为 `可读写`，不清楚的可自行 gpt 解决  
+- 将 `.vitepress/theme/assets/themeConfig.mjs` 文件复制一份到仓库根目录，这是主题配置文件  
+  
+### 三. 配置 github action  
+  
+- 打开 .github/workflows/deploy-pages.yml 文件，修改其中两个地方：  
+  
+```bash  
+# 27行，这里的域名修改为你将为博客绑定的自定义域名  
+echo "blog.24811213.xyz" > CNAME  
+  
+# 38行，将 github.com/yutian81/yutian81.github.io 改为你自己的仓库地址  
+git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/yutian81/yutian81.github.io.git  
+```  
+  
+- 手动运行 Deploy to GitHub Pages 工作流  
+  
+![image.png](https://pan.811520.xyz/2024-11/1730620765-image.webp)  
+  
+- 运行完成后，会自动在仓库内生成一个 `pages 分支`，这就是我们部署后的 `静态页面` 文件。生成了这个分支就证明部署成功了。访问 `https://你的用户名.github.io` 即可访问博客首页  
+  
+![image.png](https://pan.811520.xyz/2024-11/1730620832-image.webp)  
+  
+- 进入仓库的 `设置` 页，点击左侧 `pages`，下图序号 `3` 这里选择 `pages 分支`，点击 `保存`  
+  
+![image.png](https://pan.811520.xyz/2024-11/1730620958-image.webp)  
+  
+- 在这个页面往下拉，绑定你的 `自定义域名`，这个域名要跟你在上面 `action中设定的域名` 完全一样。然后在 `cf` 中新增一个 `cname` 记录，记录值为 `你的用户名.github.io` 。等待几分钟，等待 dns 生效，然后访问 `https://自定义域名` 即可访问博客首页  
+  
+![image.png](https://pan.811520.xyz/2024-11/1730621091-image.webp)  
+  
+> git pages 部署方式要求仓库必须为 `公开库`。如果你对此很介意，那么可以部署到 cf pages，私有仓库也不影响  
+  
+## 部署到 cf pages  
+  
+首先在 `cf` 新建一个 `pages` 项目，链接到你的博客仓库项目，也就是 `你的用户名.github.io` 仓库。然后有 `两种方式` 可以实现博客的部署：  
+  
+### 方法一  
+  
+- 链接到博客仓库项目后，选择仓库的 pages 分支，直接以默认值部署，部署完成后就可以访问了  
+  
+### 方法二  
+  
+- 链接到博客仓库项目后，选择仓库的 main 分支  
+- 构建命令 ：npm run build  
+- 构建输出目录：.vitepress\dist  
+- 其他保持默认，点击部署，完成后就可以访问  
+  
+## 博客设置说明  
+  
+> 以下文件请自行修改（修改前 `注意备份`）  
+  
+- 你复制到根目录的 `themeConfig.mjs` 为 `主题` 配置文件  
+- `.vitepress/theme/assets/linkData.mjs` 是 `友链` 数据  
+- `.vitepress/theme/views/About.vue` 是 `关于` 页面的设置  
+- `.vitepress/theme/views/Project.vue` 我的 `项目` 页面设置  
+- `.vitepress/theme/views/` 内的 `vue` 文件都可以自行修改  
+  
+更多设置请去无名大佬的 [博客](https://blog.imsyy.top/) 查阅相关文章  
