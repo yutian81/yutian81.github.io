@@ -28,14 +28,21 @@ jobs:
       # 部署到 pages 分支
       - name: Deploy to GitHub Pages
         run: |
-          # 进入 .vitepress/dist 目录进行部署
+          # 进入构建输出目录
           cd .vitepress/dist
+
+          # 初始化一个新的 git 仓库
           git init
+          git checkout -b pages  # 创建并切换到 pages 分支
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
+
+          # 提交构建文件
           git add .
           git commit -m "Deploy to GitHub Pages"
-          git push --force "https://${{ secrets.GITHUB_TOKEN }}@github.com/yutian81/yutian81.github.io.git" main:pages
+
+          # 推送到仓库的 pages 分支
+          git push --force "https://${{ secrets.GITHUB_TOKEN }}@github.com/yutian81/yutian81.github.io.git" pages
 
         env:
           CI: true
