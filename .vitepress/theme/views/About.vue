@@ -69,7 +69,7 @@
           </a>
         </span>
         <img
-          src="https://pan.811520.xyz/2024-10/1730361808-1730361797368.webp"
+          src="https://pan.811520.xyz/2024-11/1730434481-1730434479289.webp"
           alt="male"
           class="male"
         />
