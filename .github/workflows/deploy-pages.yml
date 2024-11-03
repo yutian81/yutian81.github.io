@@ -1,0 +1,41 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # 当推送到 main 分支时触发
+  workflow_dispatch:  # 手动触发工作流
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 检出代码库
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # 安装 pnpm
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      # 安装依赖并构建项目
+      - name: Install dependencies and build
+        run: |
+          pnpm install
+          pnpm build
+
+      # 部署到 pages 分支
+      - name: Deploy to GitHub Pages
+        run: |
+          # 进入 .vitepress/dist 目录进行部署
+          cd .vitepress/dist
+          git init
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add .
+          git commit -m "Deploy to GitHub Pages"
+          git push --force "https://${{ secrets.GITHUB_TOKEN }}@github.com/yutian81/yutian81.github.io.git" main:pages
+
+        env:
+          CI: true
