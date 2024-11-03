@@ -10,17 +10,25 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Set up Node.js 20
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
       - name: Checkout repository
         uses: actions/checkout@v3
       # 安装 pnpm
+
       - name: Install pnpm
         run: npm install -g pnpm
       # 安装依赖并构建项目
+
       - name: Install dependencies and build
         run: |
           pnpm install
           pnpm build
       # 部署到 pages 分支
+
       - name: Deploy to GitHub Pages
         run: |
           cd .vitepress/dist       
