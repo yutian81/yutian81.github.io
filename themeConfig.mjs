@@ -168,7 +168,7 @@ export const themeConfig = {
           url: "/pintree",
         },
         {
-          icon: "https://hot.imsyy.top/ico/favicon.png",
+          icon: "https://image.baidu.com/search/down?url=https://hot.imsyy.top/ico/favicon.png",
           name: "今日热榜",
           url: "https://hot.imsyy.top/",
         },
@@ -270,6 +270,7 @@ export const themeConfig = {
           { text: "技术分享", link: "/pages/categories/技术分享" },
           { text: "我的项目", link: "/pages/project" },
           { text: "效率工具", link: "/pages/tools" },
+          { text: "我的收藏", link: "https://blog.811520.xyz/tlink/" },
         ],
       },
       {
