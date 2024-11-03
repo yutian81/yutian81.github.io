@@ -33,13 +33,15 @@ jobs:
 
           # 初始化一个新的 git 仓库
           git init
-          git checkout -b pages  # 创建并切换到 pages 分支
           git add .
           git commit -m "Deploy to GitHub Pages"
 
+          # 创建 pages 分支（如果不存在）
+          git checkout -B pages
+
           # 添加远程仓库并推送到 pages 分支
-          git remote add origin https://github.com/yutian81/yutian81.github.io.git
-          git push --force https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/yutian81/yutian81.github.io.git pages
+          git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/yutian81/yutian81.github.io.git
+          git push --force origin pages
 
         env:
           CI: true
