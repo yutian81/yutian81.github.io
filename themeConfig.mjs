@@ -5,7 +5,7 @@ export const themeConfig = {
     // 站点标题
     title: "九天之上",
     // 站点描述
-    description: "基于 vitepress-theme-curve 搭建的github pages 站点",
+    description: "基于 vitepress-theme-curve 搭建的 github pages 站点",
     // 站点logo
     logo: "/images/logo/logo.webp",
     // 站点地址
