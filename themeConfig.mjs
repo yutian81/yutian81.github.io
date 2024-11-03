@@ -17,7 +17,7 @@ export const themeConfig = {
       name: "雨天狂奔",
       cover: "/images/logo/logo.webp",
       email: "admin@24811213.xyz",
-      link: "https://www.811520.xyz",
+      link: "https://www.24811213.xyz",
     },
   },
   // 备案信息
