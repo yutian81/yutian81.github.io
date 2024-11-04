@@ -6,7 +6,7 @@ card: true
 
 <center><h1>如果对你有帮助，可以考虑请我喝杯咖啡</h1></center>
 
-<div style="display: flex; justify-content: center; align-items: center; gap: 60px; margin-top: 30px;">
+<div style="display: flex; justify-content: center; align-items: center; gap: 80px; margin-top: 40px; flex-direction: row;" class="payment-container">
   <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
     <p style="font-weight: bold; margin: 0; line-height: 1.5;">微信 / Wechat</p>
     <img style="width:192px; border:1px solid lightgrey;" src="https://pan.811520.xyz/2024-11/1730603920-wechatpay.webp" alt="wechat receipt code" />
@@ -17,12 +17,32 @@ card: true
   </div>
 </div>
 
+<style>
+  /* 默认布局：并排排列 */
+  .payment-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    margin-top: 40px;
+    flex-direction: row;
+  }
+
+  /* 屏幕宽度小于768px时，调整为上下排列 */
+  @media (max-width: 768px) {
+    .payment-container {
+      flex-direction: column;
+      gap: 20px; /* 调整上下间距 */
+    }
+  }
+</style>
+
 <br><br>
 
 <center><h1>感谢以下热心的朋友！</h1></center>
 <br>
-> 排名不分先后
-<br>
+
+> **排名不分先后**
 
 | 昵称          | 捐助金额      | 日期            |  昵称         | 捐助金额      | 日期            |
 | :-----------: | :----------: | :-------------: | :-----------: | :----------: | :-------------: |
