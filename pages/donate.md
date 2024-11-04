@@ -48,7 +48,7 @@ card: false
   }
 
   .payment-image {
-    width: 150px !important; /* 使用 !important 确保图片宽度 */
+    width: 192px !important; /* 使用 !important 确保图片宽度 */
     border: 1px solid lightgrey;
   }
 
