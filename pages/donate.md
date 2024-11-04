@@ -67,8 +67,7 @@ card: false
 
 <center><h1>感谢以下热心的朋友！</h1></center>
 <br>
-
-<p style="text-align: center; font-weight: bold;">感谢以下热心的朋友！</p>
+<p style="text-align: center; font-weight: bold;">排名不分先后</p>
 
 | 昵称          | 捐助金额      | 日期            |  昵称         | 捐助金额      | 日期            |
 | :-----------: | :----------: | :-------------: | :-----------: | :----------: | :-------------: |
