@@ -275,10 +275,11 @@ export const themeConfig = {
       {        
         text: "页面导航",
         items: [
-          { text: "畅所欲言", link: "/pages/message" },
+          //{ text: "畅所欲言", link: "/pages/message" },
           { text: "关于本站", link: "/pages/about" },
           { text: "隐私政策", link: "/pages/privacy" },
           { text: "版权协议", link: "/pages/cc" },
+          { text: "致谢名单", link: "/pages/donate" },
         ],
       },
       {
