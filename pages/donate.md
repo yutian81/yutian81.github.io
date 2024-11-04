@@ -1,21 +1,28 @@
 ---
 title: 致谢名单
 aside: false
-card: true
+card: false
 ---
 
-<center><h1>如果对你有帮助，可以考虑请我喝杯咖啡</h1></center>
+<h1 class="centered-bold">如果对你有帮助，可以考虑请我喝杯咖啡</h1>
 
-<div style="display: flex; justify-content: center; align-items: center; gap: 80px; margin-top: 40px; flex-direction: row;" class="payment-container">
-  <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-    <p style="font-weight: bold; margin: 0; line-height: 1.5;">微信 / Wechat</p>
-    <img style="width:192px; border:1px solid lightgrey;" src="https://pan.811520.xyz/2024-11/1730603920-wechatpay.webp" alt="wechat receipt code" />
+<div class="payment-container">
+  <div class="payment-item">
+    <p class="payment-label">微信 / Wechat</p>
+    <img class="payment-image" src="https://pan.811520.xyz/2024-11/1730603920-wechatpay.webp" alt="wechat receipt code" />
   </div>
-  <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-    <p style="font-weight: bold; margin: 0; line-height: 1.5;">支付宝 / Alipay</p>
-    <img style="width:192px; border:1px solid lightgrey;" src="https://pan.811520.xyz/2024-11/1730603921-alipay.webp" alt="alipay receipt code" />
+  <div class="payment-item">
+    <p class="payment-label">支付宝 / Alipay</p>
+    <img class="payment-image" src="https://pan.811520.xyz/2024-11/1730603921-alipay.webp" alt="alipay receipt code" />
   </div>
 </div>
+
+<style>
+  .centered-bold {
+    text-align: center; /* 居中 */
+    font-weight: bold;  /* 加粗 */
+  }
+</style>
 
 <style>
   /* 默认布局：并排排列 */
@@ -26,6 +33,25 @@ card: true
     gap: 80px;
     margin-top: 40px;
     flex-direction: row;
+  }
+
+  /* 每个支付项的样式 */
+  .payment-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .payment-label {
+    font-weight: bold;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .payment-image {
+    width: 192px;
+    border: 1px solid lightgrey;
   }
 
   /* 屏幕宽度小于768px时，调整为上下排列 */
@@ -42,7 +68,7 @@ card: true
 <center><h1>感谢以下热心的朋友！</h1></center>
 <br>
 
-> **排名不分先后**
+<p style="text-align: center; font-weight: bold;">感谢以下热心的朋友！</p>
 
 | 昵称          | 捐助金额      | 日期            |  昵称         | 捐助金额      | 日期            |
 | :-----------: | :----------: | :-------------: | :-----------: | :----------: | :-------------: |
