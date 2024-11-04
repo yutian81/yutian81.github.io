@@ -373,8 +373,8 @@ export const themeConfig = {
   // https://www.algolia.com/
   search: {
     enable: true,
-    appId: "XPBJIXHP3T",
-    apiKey: "b3124222b88b04594547b8f3313104db",
+    appId: "S7IG34YR03",
+    apiKey: "48ae36d5003641e18d40c628ea921519",
   },
   // 打赏
   rewardData: {
