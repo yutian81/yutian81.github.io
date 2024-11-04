@@ -10,11 +10,11 @@ card: true
 <div style="display: flex; justify-content: center; align-items: center; gap: 40px;">
   <div style="text-align: center;">
     <p>微信 / Wechat</p>
-    <img style="width:256px;border:1px solid lightgrey;" src="https://pan.811520.xyz/2024-11/1730603920-wechatpay.webp" alt="wechat receipt code" />
+    <img style="width:192px;border:1px solid lightgrey;" src="https://pan.811520.xyz/2024-11/1730603920-wechatpay.webp" alt="wechat receipt code" />
   </div>
   <div style="text-align: center;">
     <p>支付宝 / Alipay</p>
-    <img style="width:256px;border:1px solid lightgrey;" src="https://pan.811520.xyz/2024-11/1730603921-alipay.webp" alt="alipay receipt code" />
+    <img style="width:192px;border:1px solid lightgrey;" src="https://pan.811520.xyz/2024-11/1730603921-alipay.webp" alt="alipay receipt code" />
   </div>
 </div>
 
