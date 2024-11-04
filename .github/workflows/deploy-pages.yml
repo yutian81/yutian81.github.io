@@ -9,30 +9,33 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      REPO_URL: "yutian81/yutian81.github.io"  # 远程仓库的 URL
+      BUILD_PATH: ".vitepress/dist"  # 构建输出路径
+      CUSTOM_DOMAIN: "blog.24811213.xyz"  # 自定义域名
+
     steps:
-      - name: Set up Node.js 20
+      - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '20'
 
       - name: Checkout repository
         uses: actions/checkout@v3
-      # 安装 pnpm
 
+      # 安装 pnpm、安装依赖并构建项目
       - name: Install pnpm
         run: npm install -g pnpm
-      # 安装依赖并构建项目
-
       - name: Install dependencies and build
         run: |
           pnpm install
           pnpm build
-      # 部署到 pages 分支
 
+      # 将静态文件部署到 pages 分支
       - name: Deploy to GitHub Pages
         run: |
-          cd .vitepress/dist       
-          echo "blog.24811213.xyz" > CNAME  # 修改为你自己的自定义域名
+          cd $BUILD_PATH       
+          echo "$CUSTOM_DOMAIN" > CNAME  # 使用自定义域名
           git config --global user.email "actions@github.com"
           git config --global user.name "GitHub Actions"
           # 初始化一个新的 git 仓库
@@ -43,7 +46,7 @@ jobs:
           git checkout -B pages
 
           # 添加远程仓库并推送到 pages 分支
-          git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/yutian81/yutian81.github.io.git
+          git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ env.REPO_URL }}.git
           git push --force origin pages
 
         env:
