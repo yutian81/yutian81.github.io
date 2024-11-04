@@ -4,23 +4,25 @@ aside: false
 card: true
 ---
 
-## 如果对你有帮助，可以考虑请我喝杯咖啡
-
-<div style="margin-top: 50px;"></div>
-<div style="display: flex; justify-content: center; align-items: center; gap: 40px;">
-  <div style="text-align: center;">
-    <p>微信 / Wechat</p>
-    <img style="width:192px;border:1px solid lightgrey;" src="https://pan.811520.xyz/2024-11/1730603920-wechatpay.webp" alt="wechat receipt code" />
+<center><h2>如果对你有帮助，可以考虑请我喝杯咖啡</h2></center>
+<br>
+<div style="display: flex; justify-content: center; align-items: center; gap: 60px; height: 100vh;">
+  <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+    <p style="font-weight: bold; margin: 0; line-height: 1.5;">微信 / Wechat</p>
+    <img style="width:192px; border:1px solid lightgrey;" src="https://pan.811520.xyz/2024-11/1730603920-wechatpay.webp" alt="wechat receipt code" />
   </div>
-  <div style="text-align: center;">
-    <p>支付宝 / Alipay</p>
-    <img style="width:192px;border:1px solid lightgrey;" src="https://pan.811520.xyz/2024-11/1730603921-alipay.webp" alt="alipay receipt code" />
+  <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+    <p style="font-weight: bold; margin: 0; line-height: 1.5;">支付宝 / Alipay</p>
+    <img style="width:192px; border:1px solid lightgrey;" src="https://pan.811520.xyz/2024-11/1730603921-alipay.webp" alt="alipay receipt code" />
   </div>
 </div>
 
-## 感谢以下热心的朋友
+<br><br>
 
-> 排名不分先后
+<center><h2>感谢以下热心的朋友！</h2></center>
+<br>
+> **排名不分先后**
+<br>
 
 | 昵称          | 捐助金额      | 日期            |  昵称         | 捐助金额      | 日期            |
 | :-----------: | :----------: | :-------------: | :-----------: | :----------: | :-------------: |
