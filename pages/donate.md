@@ -4,8 +4,8 @@ aside: false
 card: true
 ---
 
-<center><h2>如果对你有帮助，可以考虑请我喝杯咖啡</h2></center>
-<br>
+<center><h1>如果对你有帮助，可以考虑请我喝杯咖啡</h1></center>
+
 <div style="display: flex; justify-content: center; align-items: center; gap: 60px; margin-top: 30px;">
   <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
     <p style="font-weight: bold; margin: 0; line-height: 1.5;">微信 / Wechat</p>
@@ -19,9 +19,9 @@ card: true
 
 <br><br>
 
-<center><h2>感谢以下热心的朋友！</h2></center>
+<center><h1>感谢以下热心的朋友！</h1></center>
 <br>
-> **排名不分先后**
+> 排名不分先后
 <br>
 
 | 昵称          | 捐助金额      | 日期            |  昵称         | 捐助金额      | 日期            |
