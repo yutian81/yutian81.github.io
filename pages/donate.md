@@ -22,9 +22,7 @@ card: false
     text-align: center; /* 居中 */
     font-weight: bold;  /* 加粗 */
   }
-</style>
 
-<style>
   /* 默认布局：并排排列 */
   .payment-container {
     display: flex;
@@ -50,7 +48,7 @@ card: false
   }
 
   .payment-image {
-    width: 128px;
+    width: 150px !important; /* 使用 !important 确保图片宽度 */
     border: 1px solid lightgrey;
   }
 
