@@ -6,7 +6,7 @@ card: true
 
 <center><h2>如果对你有帮助，可以考虑请我喝杯咖啡</h2></center>
 <br>
-<div style="display: flex; justify-content: center; align-items: center; gap: 60px; height: 100vh;">
+<div style="display: flex; justify-content: center; align-items: center; gap: 60px; margin-top: 30px;">
   <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
     <p style="font-weight: bold; margin: 0; line-height: 1.5;">微信 / Wechat</p>
     <img style="width:192px; border:1px solid lightgrey;" src="https://pan.811520.xyz/2024-11/1730603920-wechatpay.webp" alt="wechat receipt code" />
