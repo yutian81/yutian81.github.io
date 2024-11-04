@@ -1,5 +1,5 @@
 ---
-title: 鼓励作者
+title: 致谢名单
 aside: false
 card: true
 ---
