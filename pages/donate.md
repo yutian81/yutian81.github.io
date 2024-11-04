@@ -50,7 +50,7 @@ card: false
   }
 
   .payment-image {
-    width: 192px;
+    width: 128px;
     border: 1px solid lightgrey;
   }
 
