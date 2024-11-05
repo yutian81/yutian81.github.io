@@ -5,7 +5,6 @@ comment: true
 card: false
 ---
 
-<!DOCTYPE html>
 <html lang="zh-CN" data-theme="light">
 
 <head>
@@ -204,5 +203,3 @@ card: false
 <link rel="stylesheet" href="https://raw.githubusercontent.com/yutian81/anzhiyu-rss/refs/heads/page/main/fclite.css">
 <script src="https://raw.githubusercontent.com/yutian81/anzhiyu-rss/refs/heads/page/main/fclite.js"></script>
 </body>
-
-</html>
