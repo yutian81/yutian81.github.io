@@ -1,7 +1,7 @@
 ---
 title: 致谢名单
 aside: false
-card: false
+comment: true
 ---
 
 <h1 class="centered-bold">如果对你有帮助，可以考虑请我喝杯咖啡</h1>
