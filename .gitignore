@@ -22,6 +22,10 @@ test.html
 themeConfig.mjs
 !.vitepress/theme/assets/themeConfig.mjs
 
+workflows/*
+!deploy-pages.yml
+!merge.yml
+
 posts/*
 !posts/2024-10/1010.md
 !posts/2024-11/110301.md
