@@ -385,6 +385,7 @@ export const themeConfig = {
     enable: true,
     appId: "S7IG34YR03",
     apiKey: "48ae36d5003641e18d40c628ea921519",
+    indexName: "hexo-blog",
   },
   // 打赏
   rewardData: {
