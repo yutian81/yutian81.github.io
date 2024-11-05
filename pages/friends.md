@@ -2,6 +2,7 @@
 title: 博客友圈
 aside: false
 comment: true
+card: true
 ---
 
 <style>
