@@ -15,6 +15,7 @@ card: false
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Friend-Circle-Lite</title>
 </head>
+
 <style>
     body {
         background-image: url('./bg-light.webp');
@@ -33,6 +34,7 @@ card: false
         overflow-x: hidden;
         height: fit-content;
     }
+
     #theme-toggle {
         z-index: 1000;
         position: fixed;
@@ -57,7 +59,7 @@ card: false
         margin-top: 40px;
         max-width: 1100px;
     }
-    
+
     @media (max-width: 1200px) {
         .root-container {
             max-width: 95%;
@@ -70,16 +72,19 @@ card: false
         height: 150px;
         border-radius: 50%;
     }
+
     p {
         color: #666;
         margin-bottom: 30px;
     }
+
     .button-container {
         margin-top: 20px;
         display: flex;
         justify-content: center;
         gap: 10px;
     }
+
     .button {
         background-color: rgb(255, 255, 255);
         border: 2px solid #007BFF;
@@ -92,6 +97,7 @@ card: false
         display: inline-block;
         transition: background-color 0.3s, color 0.3s;
     }
+
     .button:hover {
         background-color: #007BFF;
         color: white;
@@ -109,6 +115,7 @@ card: false
         color: #007BFF;
         animation: bounce 1.5s infinite;
     }
+
     .scroll-down-icon::before,
     .scroll-down-icon::after {
         content: '';
@@ -122,10 +129,12 @@ card: false
         border-bottom: 3px solid #007BFF;
         transform: translate(-50%, -50%) rotate(-45deg);
     }
+
     .scroll-down-icon::after {
         top: 80%;
         opacity: .6;
     }
+
     @keyframes bounce {
         0%, 100% {
             transform: translateY(0);
@@ -138,33 +147,33 @@ card: false
     }
 
     /* 暗色模式样式 */
-[data-theme="dark"] body {
-    background-image: url('./bg-dark.webp');
-    color: #ffffff;
-}
+    [data-theme="dark"] body {
+        background-image: url('./bg-dark.webp');
+        color: #ffffff;
+    }
 
-[data-theme="dark"] .container {
-    background: rgba(30, 30, 30, 0.8);
-}
+    [data-theme="dark"] .container {
+        background: rgba(30, 30, 30, 0.8);
+    }
 
-[data-theme="dark"] p {
-    color: #cccccc;
-}
+    [data-theme="dark"] p {
+        color: #cccccc;
+    }
 
-[data-theme="dark"] .button {
-    background-color: #333333;
-    border: 2px solid #007BFF;
-    color: #007BFF;
-}
+    [data-theme="dark"] .button {
+        background-color: #333333;
+        border: 2px solid #007BFF;
+        color: #007BFF;
+    }
 
-[data-theme="dark"] .button:hover {
-    background-color: #007BFF;
-    color: white;
-}
+    [data-theme="dark"] .button:hover {
+        background-color: #007BFF;
+        color: white;
+    }
 
-[data-theme="dark"] .scroll-down-icon {
-    color: #007BFF;
-}
+    [data-theme="dark"] .scroll-down-icon {
+        color: #007BFF;
+    }
 </style>
 
 <body>
@@ -172,34 +181,37 @@ card: false
         <div id="friend-circle-lite-root"></div>
     </div>
     <button id="theme-toggle">暗色模式</button>
-<script>
-    if (typeof UserConfig === 'undefined') {
-        var UserConfig = {
-            // 填写你的fc Lite地址
-            private_api_url: 'https://rss.811520.xyz/',
-            // 点击加载更多时，一次最多加载几篇文章，默认20
-            page_turning_number: 20,
-            // 头像加载失败时，默认头像地址
-            error_img: 'https://raw.githubusercontent.com/yutian81/anzhiyu-rss/refs/heads/page/favicon.ico' // 'https://i.p-i.vip/30/20240815-66bced9226a36.webp'
-        }
-    }
-</script>
-<script>
-    const scrollButton = document.getElementById('scroll-down-button');
-    const targetElement = document.getElementById('friend-circle-lite-root');
-    scrollButton.addEventListener('click', function(event) {
-        event.preventDefault();
-        targetElement.scrollIntoView({ behavior: 'smooth' });
-    });
 
-    const button = document.getElementById('theme-toggle');
-    button.addEventListener('click', () => {
-        const currentTheme = document.documentElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-        document.documentElement.setAttribute('data-theme', newTheme);
-        button.textContent = newTheme === 'light' ? '暗色模式' : '亮色模式';
-    });
-</script>
-<link rel="stylesheet" href="https://raw.githubusercontent.com/yutian81/anzhiyu-rss/refs/heads/page/main/fclite.css">
-<script src="https://raw.githubusercontent.com/yutian81/anzhiyu-rss/refs/heads/page/main/fclite.js"></script>
+    <script>
+        if (typeof UserConfig === 'undefined') {
+            var UserConfig = {
+                private_api_url: 'https://rss.811520.xyz/',
+                page_turning_number: 20,
+                error_img: 'https://raw.githubusercontent.com/yutian81/anzhiyu-rss/refs/heads/page/favicon.ico' // 'https://i.p-i.vip/30/20240815-66bced9226a36.webp'
+            }
+        }
+    </script>
+
+    <script>
+        const scrollButton = document.getElementById('scroll-down-button');
+        const targetElement = document.getElementById('friend-circle-lite-root');
+        scrollButton.addEventListener('click', function(event) {
+            event.preventDefault();
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        });
+
+        const button = document.getElementById('theme-toggle');
+        button.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            button.textContent = newTheme === 'light' ? '暗色模式' : '亮色模式';
+        });
+    </script>
+
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/yutian81/anzhiyu-rss/refs/heads/page/main/fclite.css">
+    <script src="https://raw.githubusercontent.com/yutian81/anzhiyu-rss/refs/heads/page/main/fclite.js"></script>
 </body>
+
+</html>
+
