@@ -152,7 +152,7 @@ export const themeConfig = {
       list: [
         {
           icon: "/images/logo/logo.webp",
-          name: "主站",
+          name: "博客主站",
           url: "/",
         },
         {
@@ -160,16 +160,21 @@ export const themeConfig = {
           name: "博客镜像站",
           url: "https://blog.811520.xyz/",
         },
-      ],
-    },
-    {
-      name: "服务",
-      list: [
+        {
+          icon: "/images/logo/logo.webp",
+          name: "个人主页",
+          url: "https://www.24811213.xyz/",
+        },
         {
           icon: "https://blog.24811213.xyz/pintree/assets/logo.svg",
           name: "收藏大全",
           url: "/pintree",
         },
+      ],
+    },
+    {
+      name: "服务",
+      list: [
         {
           icon: "https://cover.ruom.top/favicon.ico",
           name: "封面制作",
@@ -190,21 +195,11 @@ export const themeConfig = {
           name: "在线工具",
           url: "https://ctool.dev/",
         },
-        {
-          icon: "https://pan.811520.xyz/2024-11/1730634973-Cloudflare_Logo.webp",
-          name: "CF优选",
-          url: "https://cf.090227.xyz/",
-        },
       ],
     },
     {
       name: "项目",
       list: [
-        {
-          icon: "/images/logo/logo.webp",
-          name: "个人主页",
-          url: "https://www.24811213.xyz/",
-        },
         {
           icon: "https://image.baidu.com/search/down?url=https://hot.imsyy.top/ico/favicon.png",
           name: "今日热榜",
@@ -214,6 +209,11 @@ export const themeConfig = {
           icon: "https://rss.811520.xyz/favicon.ico",
           name: "博客友圈",
           url: "https://rss.811520.xyz/",
+        },
+        {
+          icon: "https://pan.811520.xyz/2024-11/1730634973-Cloudflare_Logo.webp",
+          name: "CF优选",
+          url: "https://cf.090227.xyz/",
         },
         {
           icon: "https://github.githubassets.com/assets/apple-touch-icon-144x144-b882e354c005.png",
