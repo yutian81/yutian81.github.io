@@ -8,6 +8,9 @@ on:
     - cron: "0 0 * * 0" # 每周执行
   workflow_dispatch:
 
+env:
+  UPSTREAM_REPO: imsyy/vitepress-theme-curve # 定义上游仓库地址
+
 jobs:
   sync_latest_from_upstream:
     name: Sync latest commits from upstream repo
@@ -17,13 +20,16 @@ jobs:
     steps:
       - name: Checkout target repo
         uses: actions/checkout@v3
+
       # 添加上游仓库作为远程仓库
       - name: Add upstream repository
         run: |
-          git remote add upstream https://github.com/imsyy/vitepress-theme-curve.git
+          git remote add upstream https://github.com/${{ env.UPSTREAM_REPO }}.git
+
       # 获取上游更改
       - name: Fetch upstream changes
         run: git fetch upstream
+
       # 合并上游仓库的 master 分支到目标 main 分支
       - name: Merge upstream changes
         run: |
@@ -32,9 +38,11 @@ jobs:
             echo "[Warning] 合并时发生冲突，保留本地版本。"
             exit 0  # 继续执行后续步骤
           }
+
       # 推送更改到目标仓库
       - name: Push changes
         run: git push origin main
+
       # 同步检查
       - name: Sync check
         if: failure()
