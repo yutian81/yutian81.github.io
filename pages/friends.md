@@ -41,7 +41,7 @@ div#page {
     <div class="title-h2-a-left">
         <h2 style="padding-top:0;margin:.6rem 0 .6rem">🎣 钓鱼</h2><a class="random-post-start no-text-decoration" href="javascript:fetchRandomPost();" data-pjax-state="" style="transition-duration: 0.3s; transform: rotate(5400deg); opacity: 1;"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right"></i></a>
     </div>
-    <div class="title-h2-a-right"><a class="random-post-all no-text-decoration" href="/link/" data-pjax-state="">全部友链</a></div>
+    <div class="title-h2-a-right"><a class="random-post-all no-text-decoration" href="/pages/link/" data-pjax-state="">全部友链</a></div>
 </div>
 <div id="random-post"></div>
 <div class="title-h2-a">
