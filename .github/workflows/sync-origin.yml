@@ -27,8 +27,7 @@ jobs:
       - name: Sync main to origin
         run: |
           set -e
-          git fetch origin
-          if ! git diff --quiet origin/main; then
-            git pull origin main --rebase  # 拉取远程更新并重放本地更改
-          fi
-          git push origin main:origin
+          git fetch origin  # 获取远程更新
+          git checkout main  # 切换到 main 分支
+          git pull origin main --rebase  # 拉取远程更新并重放本地更改
+          git push origin main:origin --force  # 推送更改到 origin
