@@ -2,16 +2,207 @@
 title: 博客友圈
 aside: false
 comment: true
-card: true
+card: false
 ---
 
-# 博客友圈
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
 
-## 🎣 钓鱼
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="https://github.com/yutian81/anzhiyu-rss/raw/refs/heads/page/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="https://github.com/yutian81/anzhiyu-rss/raw/refs/heads/page/favicon.ico" type="image/x-icon">
+    <meta name="description" content="🐱一个精简版，无后端，且仅利用github action运行的精简版友链朋友圈程序，兼容fc的json格式信息，同时支持推送友圈更新，支持他人订阅个人站点并在更新时发送邮箱推送。">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friend-Circle-Lite</title>
+</head>
+<style>
+    body {
+        background-image: url('./bg-light.webp');
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        height: fit-content;
+    }
+    #theme-toggle {
+        z-index: 1000;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 90px;
+        height: 30px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        font-size: 16px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
 
-[全部友链](/pages/link)
+    .root-container {
+        width: 100%;
+        margin-top: 40px;
+        max-width: 1100px;
+    }
+    
+    @media (max-width: 1200px) {
+        .root-container {
+            max-width: 95%;
+            margin-top: 20px;
+        }
+    }
 
+    .avatar {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+    }
+    p {
+        color: #666;
+        margin-bottom: 30px;
+    }
+    .button-container {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+    .button {
+        background-color: rgb(255, 255, 255);
+        border: 2px solid #007BFF;
+        color: #007BFF;
+        padding: 10px 20px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
+        display: inline-block;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    .button:hover {
+        background-color: #007BFF;
+        color: white;
+    }
 
-## 🐟 鱼塘
+    .card-author,
+    .card-date {
+        height: fit-content !important;
+    }
 
-[精彩推荐](https://rss.811520.xyz/)
+    .scroll-down-icon {
+        position: absolute;
+        bottom: 20px;
+        height: 24px;
+        color: #007BFF;
+        animation: bounce 1.5s infinite;
+    }
+    .scroll-down-icon::before,
+    .scroll-down-icon::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 12px;
+        height: 12px;
+        opacity: .8;
+        border-left: 3px solid #007BFF;
+        border-bottom: 3px solid #007BFF;
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+    .scroll-down-icon::after {
+        top: 80%;
+        opacity: .6;
+    }
+    @keyframes bounce {
+        0%, 100% {
+            transform: translateY(0);
+            opacity: .6;
+        }
+        50% {
+            transform: translateY(-10px);
+            opacity: 1;
+        }
+    }
+
+    /* 暗色模式样式 */
+[data-theme="dark"] body {
+    background-image: url('./bg-dark.webp');
+    color: #ffffff;
+}
+
+[data-theme="dark"] .container {
+    background: rgba(30, 30, 30, 0.8);
+}
+
+[data-theme="dark"] p {
+    color: #cccccc;
+}
+
+[data-theme="dark"] .button {
+    background-color: #333333;
+    border: 2px solid #007BFF;
+    color: #007BFF;
+}
+
+[data-theme="dark"] .button:hover {
+    background-color: #007BFF;
+    color: white;
+}
+
+[data-theme="dark"] .scroll-down-icon {
+    color: #007BFF;
+}
+</style>
+
+<body>
+    <div class="root-container">
+        <div id="friend-circle-lite-root"></div>
+    </div>
+    <button id="theme-toggle">暗色模式</button>
+<script>
+    if (typeof UserConfig === 'undefined') {
+        var UserConfig = {
+            // 填写你的fc Lite地址
+            private_api_url: 'https://rss.811520.xyz/',
+            // 点击加载更多时，一次最多加载几篇文章，默认20
+            page_turning_number: 20,
+            // 头像加载失败时，默认头像地址
+            error_img: 'https://raw.githubusercontent.com/yutian81/anzhiyu-rss/refs/heads/page/favicon.ico' // 'https://i.p-i.vip/30/20240815-66bced9226a36.webp'
+        }
+    }
+</script>
+<script>
+    const scrollButton = document.getElementById('scroll-down-button');
+    const targetElement = document.getElementById('friend-circle-lite-root');
+    scrollButton.addEventListener('click', function(event) {
+        event.preventDefault();
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    const button = document.getElementById('theme-toggle');
+    button.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', newTheme);
+        button.textContent = newTheme === 'light' ? '暗色模式' : '亮色模式';
+    });
+</script>
+<link rel="stylesheet" href="https://raw.githubusercontent.com/yutian81/anzhiyu-rss/refs/heads/page/main/fclite.css">
+<script src="https://raw.githubusercontent.com/yutian81/anzhiyu-rss/refs/heads/page/main/fclite.js"></script>
+</body>
+
+</html>
