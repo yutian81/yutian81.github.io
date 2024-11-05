@@ -23,9 +23,12 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      # 拉取最新的 main 分支并推送到 origin
+      # 拉取更新并推送到 origin
       - name: Sync main to origin
         run: |
           set -e
-          git pull origin main  # 更新 main 分支
-          git push origin main:origin || { echo "Push to origin failed"; exit 1; }
+          git fetch origin
+          if ! git diff --quiet origin/main; then
+            git pull origin main --rebase  # 拉取远程更新并重放本地更改
+          fi
+          git push origin main:origin
