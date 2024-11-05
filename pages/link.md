@@ -25,7 +25,7 @@ import Link from "@/views/Link.vue";
 - 描述：`又菜又爱玩，万事都不难`
 - 地址：`https://blog.24811213.xyz/`
 - 头像：`https://blog.24811213.xyz/favicon.ico`
-- 站点图片：` https://s0.wp.com/mshots/v1/https://blog.24811213.xyz/?w=400&h=300`
+- 站点图片：`https://s0.wp.com/mshots/v1/https://blog.24811213.xyz/?w=400&h=300`
 - 订阅：`https://blog.24811213.xyz/rss.xml`
 
 ```yml
