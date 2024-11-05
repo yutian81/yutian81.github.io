@@ -167,13 +167,23 @@ export const themeConfig = {
       list: [
         {
           icon: "https://blog.24811213.xyz/pintree/assets/logo.svg",
-          name: "收藏夹",
+          name: "收藏大全",
           url: "/pintree",
         },
         {
-          icon: "https://image.baidu.com/search/down?url=https://hot.imsyy.top/ico/favicon.png",
-          name: "今日热榜",
-          url: "https://hot.imsyy.top/",
+          icon: "https://cover.ruom.top/favicon.ico",
+          name: "封面制作",
+          url: "https://cover.ruom.top/",
+        },
+        {
+          icon: "https://www.favicon.vip/get.php?url=img.ytian.us.kg",
+          name: "兰空图床",
+          url: "https://img.ytian.us.kg/",
+        },
+        {
+          icon: "https://pan.811520.xyz/2024-10/插入链接.webp",
+          name: "短链生成",
+          url: "https://slink.yutian81.top/duanlian",  
         },
         {
           icon: "https://ctool.dev/favicon.ico",
@@ -196,19 +206,19 @@ export const themeConfig = {
           url: "https://www.24811213.xyz/",
         },
         {
-          icon: "https://www.favicon.vip/get.php?url=img.ytian.us.kg",
-          name: "兰空图床",
-          url: "https://img.ytian.us.kg/",
+          icon: "https://image.baidu.com/search/down?url=https://hot.imsyy.top/ico/favicon.png",
+          name: "今日热榜",
+          url: "https://hot.imsyy.top/",
         },
         {
-          icon: "https://pan.811520.xyz/2024-10/插入链接.webp",
-          name: "短链生成",
-          url: "https://slink.yutian81.top/duanlian",  
+          icon: "https://rss.811520.xyz/favicon.ico",
+          name: "博客友圈",
+          url: "https://rss.811520.xyz/",
         },
         {
-          icon: "https://www.favicon.vip/get.php?url=ssh.ytian.us.kg",
-          name: "WebSSH",
-          url: "https://ssh.ytian.us.kg/",
+          icon: "https://github.githubassets.com/assets/apple-touch-icon-144x144-b882e354c005.png",
+          name: "Serv00",
+          url: "https://github.com/yutian81/serv00-ct8-ssh",
         },
       ],
     },
