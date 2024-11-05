@@ -1,0 +1,30 @@
+name: Sync main to origin
+
+on:
+  schedule:
+    - cron: "0 0 * * 1"  # 每周一的 00:00 自动运行一次
+  workflow_dispatch:      # 支持手动触发工作流
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 检出代码
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # 确保获取完整的 Git 历史
+
+      # 设置 git 用户信息
+      - name: Set up Git user
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      # 将 main 分支的更改推送到 origin 分支
+      - name: Sync main to origin
+        run: |
+          git checkout main
+          git pull origin main   # 更新 main 分支
+          git push origin main:origin  # 将 main 推送到 origin 分支
