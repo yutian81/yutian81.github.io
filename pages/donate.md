@@ -21,6 +21,7 @@ comment: true
   .centered-bold {
     text-align: center; /* 居中 */
     font-weight: bold;  /* 加粗 */
+    justify-content: center;
   }
 
   /* 默认布局：并排排列 */
