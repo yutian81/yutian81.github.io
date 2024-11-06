@@ -123,13 +123,15 @@ export const themeConfig = {
       items: [
         { text: "技术分享", link: "/pages/categories/技术分享", icon: "technical" },
         { text: "我的项目", link: "/pages/project", icon: "code" },
-        { text: "效率工具", link: "/pages/tools", icon: "tools" },
+        { text: "收藏大全", link: "/pintree", icon: "tools" },
+        { text: "工作备忘", link: "/pages/categories/工作备忘", icon: "people" },
+        //{ text: "效率工具", link: "/pages/tools", icon: "tools" },
       ],
     },
     {
-      text: "友链",
+      text: "友圈",
       items: [
-        { text: "友圈鱼塘", link: "/pages/friends", icon: "fish" },
+        //{ text: "友圈鱼塘", link: "/pages/friends", icon: "fish" },
         { text: "友情链接", link: "/pages/link", icon: "people" },
         { text: "畅所欲言", link: "/pages/message", icon: "chat" },
         { text: "致谢名单", link: "/pages/donate", icon: "reward" },
@@ -153,12 +155,12 @@ export const themeConfig = {
         {
           icon: "/images/logo/logo.webp",
           name: "博客主站",
-          url: "/",
+          url: "https://blog.811520.xyz/",
         },
         {
           icon: "/images/logo/logo.webp",
-          name: "博客镜像站",
-          url: "https://blog.811520.xyz/",
+          name: "博客演示站",
+          url: "/",
         },
         {
           icon: "/images/logo/logo.webp",
@@ -166,14 +168,14 @@ export const themeConfig = {
           url: "https://www.24811213.xyz/",
         },
         {
-          icon: "https://blog.24811213.xyz/pintree/assets/logo.svg",
-          name: "收藏大全",
-          url: "/pintree",
+          icon: "/images/logo/logo.webp",
+          name: "私有工具",
+          url: "https://blog.811520.xyz/tlink/",
         },
       ],
     },
     {
-      name: "服务",
+      name: "常用",
       list: [
         {
           icon: "https://cover.ruom.top/favicon.ico",
@@ -192,13 +194,13 @@ export const themeConfig = {
         },
         {
           icon: "https://ctool.dev/favicon.ico",
-          name: "在线工具",
+          name: "开发工具",
           url: "https://ctool.dev/",
         },
       ],
     },
     {
-      name: "项目",
+      name: "服务",
       list: [
         {
           icon: "https://image.baidu.com/search/down?url=https://hot.imsyy.top/ico/favicon.png",
@@ -252,7 +254,7 @@ export const themeConfig = {
           { text: "近期文章", link: "/" },
           { text: "全部分类", link: "/pages/categories" },
           { text: "全部标签", link: "/pages/tags" },
-          { text: "文章归档", link: "/pages/archives", newTab: true },
+          { text: "文章归档", link: "/pages/archives" },
         ],
       },
       {
@@ -269,12 +271,12 @@ export const themeConfig = {
         items: [
           { text: "技术分享", link: "/pages/categories/技术分享" },
           { text: "我的项目", link: "/pages/project" },
-          { text: "效率工具", link: "/pages/tools" },
-          { text: "我的收藏", link: "https://blog.811520.xyz/tlink/" },
+          { text: "收藏大全", link: "/pintree", newTab: true },
+          { text: "工作备忘", link: "/pages/categories/工作备忘" },
         ],
       },
       {
-        text: "推荐项目",
+        text: "项目推荐",
         items: [
           { text: "edgetunnel", link: "https://github.com/cmliu/edgetunnel", newTab: true },
           { text: "twikoo", link: "https://github.com/yutian81/twikoo", newTab: true },
@@ -295,8 +297,8 @@ export const themeConfig = {
       {
         text: "网站服务",
         items: [
+          { text: "音乐时刻", link: "https://blog.811520.xyz/music/", newTab: true },
           { text: "站点状态", link: "https://uptime.ytian.us.kg/status/service", newTab: true },
-          { text: "在线工具", link: "https://ctool.dev/", newTab: true },
           { text: "站点订阅", link: "https://blog.24811213.xyz/rss.xml", newTab: true },
           { text: "问题反馈", link: "https://github.com/yutian81/yutian81.github.io/issues", newTab: true, },
         ],
@@ -369,7 +371,7 @@ export const themeConfig = {
   // 音乐播放器
   // https://github.com/imsyy/Meting-API
   music: {
-    enable: true,
+    enable: false,
     // url
     url: "https://meting-api-ten.vercel.app",
     // id
