@@ -203,7 +203,7 @@ export const themeConfig = {
       name: "服务",
       list: [
         {
-          icon: "https://image.baidu.com/search/down?url=https://hot.imsyy.top/ico/favicon.png",
+          icon: "https://pan.811520.xyz/2024-11/1730875618-1730875614898.webp",
           name: "今日热榜",
           url: "https://hot.imsyy.top/",
         },
