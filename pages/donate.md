@@ -21,7 +21,6 @@ comment: true
   .centered-bold {
     text-align: center; /* 居中 */
     font-weight: bold;  /* 加粗 */
-    justify-content: center;
   }
 
   /* 默认布局：并排排列 */
@@ -65,7 +64,8 @@ comment: true
 <br><br>
 
 <h1 class="centered-bold">感谢所有热心的朋友！</h1>
-<p class="centered-bold">以下排名不分先后</p>
+
+<div align="center"><strong>以下排名不分先后</strong></div>
 
 | 昵称          | 捐助金额      | 日期            |  昵称         | 捐助金额      | 日期            |
 | :-----------: | :----------: | :-------------: | :-----------: | :----------: | :-------------: |
