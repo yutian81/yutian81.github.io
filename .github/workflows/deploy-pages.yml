@@ -6,7 +6,6 @@ on:
       - main  # 每次推送到 main 分支时触发部署
     paths-ignore:
       - '.github/**'  # 替换为要排除的文件或文件夹路径
-      - './*.md'  # 排除根目录 Markdown 文件
       - 'pages/**'
       - 'themeConfig.mjs'
   workflow_dispatch:  # 允许手动触发
