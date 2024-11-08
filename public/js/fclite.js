@@ -51,7 +51,7 @@ function initialize_fc_lite() {
             }
         }
 
-        fetch(`${UserConfig.private_api_url}all.json`)
+        fetch(${UserConfig.private_api_url}all.json)
             .then(response => response.json())
             .then(data => {
                 localStorage.setItem(cacheKey, JSON.stringify(data));
@@ -67,12 +67,12 @@ function initialize_fc_lite() {
         allArticles = data.article_data;
         // 处理统计数据
         const stats = data.statistical_data;
-        statsContainer.innerHTML = `
+        statsContainer.innerHTML = 
             <div>Powered by: <a href="https://github.com/willow-god/Friend-Circle-Lite" target="_blank">FriendCircleLite</a><br></div>
             <div>Designed By: <a href="https://www.liushen.fun/" target="_blank">LiuShen</a><br></div>
             <div>订阅:${stats.friends_num}   活跃:${stats.active_num}   总文章数:${stats.article_num}<br></div>
             <div>更新时间:${stats.last_updated_time}</div>
-        `;
+        ;
 
         displayRandomArticle(); // 显示随机友链卡片
 
@@ -126,17 +126,8 @@ function initialize_fc_lite() {
     // 显示随机文章的逻辑
     function displayRandomArticle() {
         const randomArticle = allArticles[Math.floor(Math.random() * allArticles.length)];
-        randomArticleContainer.innerHTML = `
-            <div class="random-container" style="
-                background-image: url('https://pan.811520.xyz/2024-10/1728387512098.webp'); 
-                background-size: cover; 
-                background-position: center; 
-                background-repeat: no-repeat;
-                width: 100%; 
-                height: 100%; 
-                padding: 20px; 
-                border-radius: 8px;
-                color: #fff;">
+        randomArticleContainer.innerHTML = 
+            <div class="random-container">
                 <div class="random-container-title">随机钓鱼</div>
                 <div class="random-title">${randomArticle.title}</div>
                 <div class="random-author">作者: ${randomArticle.author}</div>
@@ -145,7 +136,7 @@ function initialize_fc_lite() {
                 <a href="#" id="refresh-random-article">刷新</a>
                 <button class="random-link-button" onclick="window.open('${randomArticle.link}', '_blank')">过去转转</button>
             </div>
-        `;
+        ;
 
         // 为刷新按钮添加事件监听器
         const refreshBtn = document.getElementById('refresh-random-article');
@@ -161,14 +152,14 @@ function initialize_fc_lite() {
             const modal = document.createElement('div');
             modal.id = 'modal';
             modal.className = 'modal';
-            modal.innerHTML = `
+            modal.innerHTML = 
             <div class="modal-content">
                 <img id="modal-author-avatar" src="" alt="">
                 <a id="modal-author-name-link"></a>
                 <div id="modal-articles-container"></div>
                 <img id="modal-bg" src="" alt="">
             </div>
-            `;
+            ;
             root.appendChild(modal);
         }
 
