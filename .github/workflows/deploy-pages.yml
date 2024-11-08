@@ -2,11 +2,11 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches:
-      - main  # 每次推送到 main 分支时触发部署
+    # branches:
+    #   - main  # 每次推送到 main 分支时触发部署
     paths-ignore:
       - '.github/**'  # 替换为要排除的文件或文件夹路径
-      - './*.md'  # 例如排除所有 Markdown 文件
+      - './*.md'  # 排除根目录 Markdown 文件
   workflow_dispatch:  # 允许手动触发
 
 jobs:
