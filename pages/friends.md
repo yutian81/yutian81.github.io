@@ -14,10 +14,6 @@ comment: true
 
 <style>
 .friend-circle-container {
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
