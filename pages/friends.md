@@ -37,18 +37,15 @@ comment: true
 }
 </style>
 
-<script setup>
-import { onMounted } from 'vue'
-
-onMounted(() => {
-    if (typeof window.UserConfig === 'undefined') {
-        window.UserConfig = {
-            private_api_url: 'https://rss.811520.xyz/',
-            page_turning_number: 20,
-            error_img: 'https://fastly.jsdelivr.net/gh/willow-god/Friend-Circle-Lite@latest/static/favicon.ico'
-        }
-    }
-})
+<script>
+  // 确保 UserConfig 在页面加载时初始化
+  if (typeof window.UserConfig === 'undefined') {
+    window.UserConfig = {
+      private_api_url: 'https://rss.811520.xyz/',
+      page_turning_number: 20,
+      error_img: 'https://fastly.jsdelivr.net/gh/willow-god/Friend-Circle-Lite@latest/static/favicon.ico'
+    };
+  }
 </script>
 
 <link rel="stylesheet" href="/css/fclite.css">
