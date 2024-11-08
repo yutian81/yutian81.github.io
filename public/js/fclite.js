@@ -239,4 +239,4 @@ function whenDOMReady() {
 }
 
 whenDOMReady();
-document.addEventListener("pjax:complete", initialize_fc_lite);
+document.addEventListener('pjax:complete', initialize_fc_lite);
