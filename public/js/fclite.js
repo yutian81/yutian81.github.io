@@ -127,7 +127,7 @@ function initialize_fc_lite() {
     function displayRandomArticle() {
         const randomArticle = allArticles[Math.floor(Math.random() * allArticles.length)];
         randomArticleContainer.innerHTML = `
-            <div class="random-container">
+            <div class="random-container" style="background-image: url('https://pan.811520.xyz/2024-10/1728387512098.webp'); background-size: cover;">
                 <div class="random-container-title">随机钓鱼</div>
                 <div class="random-title">${randomArticle.title}</div>
                 <div class="random-author">作者: ${randomArticle.author}</div>
