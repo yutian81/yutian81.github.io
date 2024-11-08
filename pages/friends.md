@@ -24,13 +24,11 @@ comment: true
     overflow-y: scroll;
     overflow-x: hidden;
 }
-
 .root-container {
     width: 100%;
     margin-top: 40px;
     max-width: 1100px;
 }
-
 @media (max-width: 1200px) {
     .root-container {
         max-width: 95%;
