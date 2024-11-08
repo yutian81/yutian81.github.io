@@ -231,12 +231,8 @@ function initialize_fc_lite() {
 };
 
 function whenDOMReady() {
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initialize_fc_lite);
-    } else {
-        initialize_fc_lite();
-    }
+    initialize_fc_lite();
 }
 
 whenDOMReady();
-document.addEventListener('pjax:complete', initialize_fc_lite);
+document.addEventListener("pjax:complete", initialize_fc_lite);
