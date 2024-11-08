@@ -37,16 +37,31 @@ comment: true
 }
 </style>
 
-<script>
-  // 确保 UserConfig 在页面加载时初始化
-  if (typeof window.UserConfig === 'undefined') {
-    window.UserConfig = {
-      private_api_url: 'https://rss.811520.xyz/',
-      page_turning_number: 20,
-      error_img: 'https://fastly.jsdelivr.net/gh/willow-god/Friend-Circle-Lite@latest/static/favicon.ico'
+<script setup>
+import { onMounted } from 'vue'
+
+onMounted(() => {
+    // 设置 UserConfig 配置，避免页面加载时未定义
+    if (typeof window.UserConfig === 'undefined') {
+        window.UserConfig = {
+            private_api_url: 'https://rss.811520.xyz/',
+            page_turning_number: 20,
+            error_img: 'https://fastly.jsdelivr.net/gh/willow-god/Friend-Circle-Lite@latest/static/favicon.ico'
+        }
+    }
+
+    // 动态加载 fclite.js 并确保初始化
+    const script = document.createElement('script');
+    script.src = "/js/fclite.js";
+    script.defer = true;
+    script.onload = () => {
+        // 确保 fclite.js 初始化完成
+        if (typeof window.FriendCircleLite !== 'undefined') {
+            window.FriendCircleLite.init();
+        }
     };
-  }
+    document.body.appendChild(script);
+})
 </script>
 
 <link rel="stylesheet" href="/css/fclite.css">
-<script src="/js/fclite.js" defer></script>
