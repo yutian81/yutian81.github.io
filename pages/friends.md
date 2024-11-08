@@ -14,7 +14,6 @@ comment: true
 
 <style>
 .friend-circle-container {
-    background-image: url('https://fastly.jsdelivr.net/gh/yutian81/blogrss@main/static/bg-light.webp');
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
