@@ -47,7 +47,7 @@ onMounted(() => {
         window.UserConfig = {
             private_api_url: 'https://rss.811520.xyz/',
             page_turning_number: 20,
-            error_img: 'https://cdn.bsgun.cn/Hexo-static/img/error-404.avif'
+            error_img: 'https://fastly.jsdelivr.net/gh/willow-god/Friend-Circle-Lite@latest/static/favicon.ico'
         }
     }
 })
