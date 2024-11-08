@@ -1,5 +1,7 @@
 function initialize_fc_lite() {
+
     // 用户配置
+    // 设置默认配置
     UserConfig = {
         private_api_url: UserConfig?.private_api_url || "", 
         page_turning_number: UserConfig?.page_turning_number || 20, // 默认20篇
@@ -180,24 +182,53 @@ function initialize_fc_lite() {
         authorArticles.slice(0, 4).forEach(article => {
             const articleDiv = document.createElement('div');
             articleDiv.className = 'modal-article';
-            articleDiv.innerText = article.title;
-            articleDiv.onclick = () => window.open(article.link, '_blank');
+
+            const title = document.createElement('a');
+            title.className = 'modal-article-title';
+            title.innerText = article.title;
+            title.href = article.link;
+            title.target = '_blank';
+            articleDiv.appendChild(title);
+
+            const date = document.createElement('div');
+            date.className = 'modal-article-date';
+            date.innerText = "📅" + article.created.substring(0, 10);
+            articleDiv.appendChild(date);
+
             modalArticlesContainer.appendChild(articleDiv);
         });
 
+        // 设置类名以触发显示动画
         modal.style.display = 'block';
-
-        // 关闭模态框的事件监听
-        modal.onclick = function (event) {
-            if (event.target === modal) {
-                modal.style.display = 'none';
-            }
-        };
+        setTimeout(() => {
+            modal.classList.add('modal-open');
+        }, 10); // 确保显示动画触发
     }
 
-    loadMoreBtn.addEventListener('click', loadMoreArticles);
+    // 隐藏模态框的函数
+    function hideModal() {
+        const modal = document.getElementById('modal');
+        modal.classList.remove('modal-open');
+        modal.addEventListener('transitionend', () => {
+            modal.style.display = 'none';
+            root.removeChild(modal);
+        }, { once: true });
+    }
+
+    // 初始加载
     loadMoreArticles();
-}
+
+    // 加载更多按钮点击事件
+    loadMoreBtn.addEventListener('click', loadMoreArticles);
+
+    // 点击遮罩层关闭模态框
+    window.onclick = function(event) {
+        const modal = document.getElementById('modal');
+        if (event.target === modal) {
+            hideModal();
+        }
+    };
+};
 
 function whenDOMReady() {
     if (document.readyState === 'loading') {
@@ -207,8 +238,5 @@ function whenDOMReady() {
     }
 }
 
-// 首次初始化时执行
 whenDOMReady();
-
-// 在pjax加载完成后再初始化
-document.addEventListener('pjax:complete', initialize_fc_lite);
+document.addEventListener("pjax:complete", initialize_fc_lite);
