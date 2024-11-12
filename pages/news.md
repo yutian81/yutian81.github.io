@@ -21,7 +21,7 @@ comment: true
 
     /* 图片容器和图片样式 */
     .image-container {
-        width: 100% !important;
+        width: 60% !important;
         height: 90vh !important; /* 设置容器的高度为视口的 90% */
         overflow-y: scroll !important; /* 使图片在容器内可以滚动 */
         display: flex !important;
