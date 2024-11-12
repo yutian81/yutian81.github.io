@@ -116,6 +116,7 @@ export const themeConfig = {
         { text: "文章列表", link: "/pages/archives", icon: "article" },
         { text: "全部分类", link: "/pages/categories", icon: "folder" },
         { text: "全部标签", link: "/pages/tags", icon: "hashtag" },
+        { text: "每日早报", link: "/pages/news", icon: "tools" },
       ],
     },
     {
@@ -290,7 +291,7 @@ export const themeConfig = {
           { text: "关于本站", link: "/pages/about" },
           { text: "隐私政策", link: "/pages/privacy" },
           { text: "版权协议", link: "/pages/cc" },
-          { text: "致谢名单", link: "/pages/donate" },
+          { text: "致谢名单", link: "/pages/thanks" },
         ],
       },
       {
