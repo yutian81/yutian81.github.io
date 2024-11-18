@@ -8,7 +8,7 @@ on:
       - '.github/**'  # 替换为要排除的文件或文件夹路径
       - 'pages/**'
       - 'public/**'
-      - 'themeConfig.mjs'
+      - '.vitepress/**'
   workflow_dispatch:  # 允许手动触发
 
 jobs:
