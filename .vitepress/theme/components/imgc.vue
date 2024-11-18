@@ -62,3 +62,7 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+@import '/css/imgc.style.css';
+</style>
