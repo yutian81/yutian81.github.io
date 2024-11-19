@@ -123,7 +123,7 @@ export const themeConfig = {
       items: [
         { text: "技术分享", link: "/pages/categories/技术分享", icon: "technical" },
         { text: "我的项目", link: "/pages/project", icon: "code" },
-        { text: "收藏大全", link: "/pintree", icon: "tools" },
+        { text: "收藏大全", link: "/pintree/", icon: "tools" },
         { text: "工作备忘", link: "/pages/categories/工作备忘", icon: "people" },
         //{ text: "效率工具", link: "/pages/tools", icon: "tools" },
       ],
@@ -196,6 +196,16 @@ export const themeConfig = {
           name: "开发工具",
           url: "https://ctool.dev/",
         },
+        {
+          icon: "https://suburl.v1.mk/favicon.ico",
+          name: "图片压缩",
+          url: "https://imgtool.v1.mk/",
+        },
+        {
+          icon: "https://github.githubassets.com/assets/apple-touch-icon-144x144-b882e354c005.png",
+          name: "博客仓库",
+          url: "https://github.com/yutian81/yutian81.github.io",
+        },
       ],
     },
     {
@@ -208,7 +218,7 @@ export const themeConfig = {
         },
         {
           icon: "https://rss.811520.xyz/favicon.ico",
-          name: "博客友圈",
+          name: "友圈后端",
           url: "https://rss.811520.xyz/",
         },
         {
