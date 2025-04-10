@@ -184,12 +184,12 @@ export const themeConfig = {
         {
           icon: "https://www.favicon.vip/get.php?url=img.ytian.us.kg",
           name: "兰空图床",
-          url: "https://img.ytian.us.kg/",
+          url: "https://img.811520.xyz/",
         },
         {
           icon: "https://pan.811520.xyz/2024-10/插入链接.webp",
           name: "短链生成",
-          url: "https://slink.yutian81.top/duanlian",  
+          url: "https://slink.yuzong.nyc.mn/duanlian",  
         },
         {
           icon: "https://ctool.dev/favicon.ico",
@@ -375,7 +375,7 @@ export const themeConfig = {
       // 倒计时日期
       data: {
         name: "春节",
-        date: "2025-01-29",
+        date: "2025-05-01",
       },
     },
     // 站点数据
