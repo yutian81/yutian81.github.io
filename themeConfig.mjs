@@ -123,7 +123,7 @@ export const themeConfig = {
       items: [
         { text: "技术分享", link: "/pages/categories/技术分享", icon: "technical" },
         { text: "我的项目", link: "/pages/project", icon: "code" },
-        { text: "收藏大全", link: "/pintree/", icon: "tools" },
+        { text: "收藏大全", link: "https://s8nav.yuchen.ggff.net", icon: "tools" },
         { text: "工作备忘", link: "/pages/categories/工作备忘", icon: "people" },
         //{ text: "效率工具", link: "/pages/tools", icon: "tools" },
       ],
@@ -297,7 +297,7 @@ export const themeConfig = {
         items: [
           { text: "技术分享", link: "/pages/categories/技术分享" },
           { text: "我的项目", link: "/pages/project" },
-          { text: "收藏大全", link: "/pintree", newTab: true },
+          { text: "收藏大全", link: "https://s8nav.yuchen.ggff.net", newTab: true },
           { text: "工作备忘", link: "/pages/categories/工作备忘" },
         ],
       },
