@@ -17,7 +17,7 @@ jobs:
     env:
       REPO_URL: "yutian81/yutian81.github.io"  # 远程仓库的 URL
       BUILD_PATH: ".vitepress/dist"  # 构建输出路径
-      CUSTOM_DOMAIN: "blog.24811213.xyz"  # 自定义域名
+      CUSTOM_DOMAIN: "blog2.811520.xyz"  # 自定义域名
 
     steps:
       - name: Set up Node.js
