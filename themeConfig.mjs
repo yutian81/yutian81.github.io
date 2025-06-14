@@ -9,7 +9,7 @@ export const themeConfig = {
     // 站点logo
     logo: "/images/logo/logo.webp",
     // 站点地址
-    site: "https://blog.24811213.xyz",
+    site: "https://blog2.811520.xyz",
     // 语言
     lang: "zh-CN",
     // 作者
@@ -17,7 +17,7 @@ export const themeConfig = {
       name: "雨天狂奔",
       cover: "/images/logo/logo.webp",
       email: "admin@24811213.xyz",
-      link: "https://www.24811213.xyz",
+      link: "https://daoyi.hidns.vip/#/",
     },
   },
   // 备案信息
@@ -40,7 +40,7 @@ export const themeConfig = {
           rel: "alternate",
           type: "application/rss+xml",
           title: "RSS",
-          href: "https://blog.24811213.xyz/rss.xml",
+          href: "https://blog2.811520.xyz/rss.xml",
         },
       ],
       // 预载 CDN
@@ -123,7 +123,7 @@ export const themeConfig = {
       items: [
         { text: "技术分享", link: "/pages/categories/技术分享", icon: "technical" },
         { text: "我的项目", link: "/pages/project", icon: "code" },
-        { text: "收藏大全", link: "https://s8nav.yuchen.ggff.net", icon: "tools" },
+        { text: "收藏大全", link: "https://daoyi.hidns.vip/#/", icon: "tools" },
         { text: "工作备忘", link: "/pages/categories/工作备忘", icon: "people" },
         //{ text: "效率工具", link: "/pages/tools", icon: "tools" },
       ],
@@ -164,7 +164,7 @@ export const themeConfig = {
         {
           icon: "/images/logo/logo.webp",
           name: "个人主页",
-          url: "https://www.24811213.xyz/",
+          url: "https://daoyi.hidns.vip/#/",
         },
         {
           icon: "/images/logo/logo.webp",
@@ -224,7 +224,7 @@ export const themeConfig = {
         {
           icon: "https://pan.811520.xyz/2024-11/1730634973-Cloudflare_Logo.webp",
           name: "CF优选",
-          url: "https://cf.090227.xyz/",
+          url: "https://blog2.811520.xyz/blogrss/",
         },
         {
           icon: "https://github.githubassets.com/assets/apple-touch-icon-144x144-b882e354c005.png",
@@ -297,7 +297,7 @@ export const themeConfig = {
         items: [
           { text: "技术分享", link: "/pages/categories/技术分享" },
           { text: "我的项目", link: "/pages/project" },
-          { text: "收藏大全", link: "https://s8nav.yuchen.ggff.net", newTab: true },
+          { text: "收藏大全", link: "https://daoyi.hidns.vip/#/", newTab: true },
           { text: "工作备忘", link: "/pages/categories/工作备忘" },
         ],
       },
@@ -325,7 +325,7 @@ export const themeConfig = {
         items: [
           { text: "音乐时刻", link: "https://blog.811520.xyz/music/", newTab: true },
           { text: "站点状态", link: "https://uptime.ytian.us.kg/status/service", newTab: true },
-          { text: "站点订阅", link: "https://blog.24811213.xyz/rss.xml", newTab: true },
+          { text: "站点订阅", link: "https://blog2.811520.xyz/rss.xml", newTab: true },
           { text: "问题反馈", link: "https://github.com/yutian81/yutian81.github.io/issues", newTab: true, },
         ],
       },
@@ -386,7 +386,7 @@ export const themeConfig = {
   // 友链
   friends: {
     // 友链朋友圈
-    circleOfFriends: "https://rss.811520.xyz",
+    circleOfFriends: "https://blog2.811520.xyz/blogrss/",
     // 动态友链
     dynamicLink: {
       server: "",
