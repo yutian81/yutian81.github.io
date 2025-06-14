@@ -411,9 +411,9 @@ export const themeConfig = {
   // https://www.algolia.com/
   search: {
     enable: true,
-    appId: "S7IG34YR03",
-    apiKey: "48ae36d5003641e18d40c628ea921519",
-    indexName: "hexo-blog",
+    appId: "J8AAAZLZZ7",
+    apiKey: "94c1d72ea8e1533fc67c3e7244c7e196",
+    indexName: "daoyi-wiki",
   },
   // 打赏
   rewardData: {
