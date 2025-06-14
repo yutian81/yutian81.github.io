@@ -44,7 +44,7 @@ onMounted(() => {
     // 设置 UserConfig 配置，避免页面加载时未定义
     if (typeof window.UserConfig === 'undefined') {
         window.UserConfig = {
-            private_api_url: 'https://rss.811520.xyz/',
+            private_api_url: 'https://blog2.811520.xyz/blogrss/',
             page_turning_number: 20,
             error_img: 'https://fastly.jsdelivr.net/gh/willow-god/Friend-Circle-Lite@latest/static/favicon.ico'
         }
