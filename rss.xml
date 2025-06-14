@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>九天之上</title>
+        <link>https://blog2.811520.xyz</link>
+        <description>基于 vitepress-theme-curve 搭建的 github pages 站点</description>
+        <lastBuildDate>Sat, 14 Jun 2025 06:58:34 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>雨天狂奔</generator>
+        <language>zh</language>
+        <copyright>Copyright © 2020-present 雨天狂奔</copyright>
+        <item>
+            <title><![CDATA[支持 API 调用的短链接服务]]></title>
+            <link>https://blog2.811520.xyz/posts/2025-04/2025040401</link>
+            <guid>https://blog2.811520.xyz/posts/2025-04/2025040401</guid>
+            <pubDate>Thu, 03 Apr 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[这是一个使用 Cloudflare Worker 和 KV 创建的免费短链接服务，支持自定义短链，支持 QRcode 二维码，还有多种玩法，比如：变身网络记事本 pastebin、变身图床 imghost、变身网络日记本 journal 等。支持 API 调用。]]></description>
+            <author>admin@24811213.xyz (雨天狂奔)</author>
+        </item>
+        <item>
+            <title><![CDATA[青云志个人项目集锦]]></title>
+            <link>https://blog2.811520.xyz/posts/2025-03/2025032701</link>
+            <guid>https://blog2.811520.xyz/posts/2025-03/2025032701</guid>
+            <pubDate>Thu, 27 Mar 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[原本我是个标准的代码小白，因为 EDT 项目进入 CM 的 TG 群，得到了很多大佬的帮助，开始在 AI 的辅助下改写代码，并尝试开发一些小项目。现将我个人修改和原创的一些小项目汇总在这里并置顶，便于浏览者查询]]></description>
+            <author>admin@24811213.xyz (雨天狂奔)</author>
+        </item>
+        <item>
+            <title><![CDATA[给 curve 博客新增朋友圈鱼塘页面]]></title>
+            <link>https://blog2.811520.xyz/posts/2024-11/110801</link>
+            <guid>https://blog2.811520.xyz/posts/2024-11/110801</guid>
+            <pubDate>Fri, 08 Nov 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[给 curve 博客新增朋友圈鱼塘页面，达到与安知鱼基本相同的效果]]></description>
+            <author>admin@24811213.xyz (雨天狂奔)</author>
+        </item>
+        <item>
+            <title><![CDATA[给 curve 博客新增一个致谢页面]]></title>
+            <link>https://blog2.811520.xyz/posts/2024-11/110601</link>
+            <guid>https://blog2.811520.xyz/posts/2024-11/110601</guid>
+            <pubDate>Wed, 06 Nov 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[给 curve 博客新增一个致谢页面]]></description>
+            <author>admin@24811213.xyz (雨天狂奔)</author>
+        </item>
+        <item>
+            <title><![CDATA[新玩具 - 部署无名大佬的 VitePress 主题博客]]></title>
+            <link>https://blog2.811520.xyz/posts/2024-11/110301</link>
+            <guid>https://blog2.811520.xyz/posts/2024-11/110301</guid>
+            <pubDate>Sun, 03 Nov 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[作者的仓库和博客只介绍了本地部署和 vercel 部署两种方式，是否可以部署到 github pages 和 cf pages 呢？答案是可以的！]]></description>
+            <author>admin@24811213.xyz (雨天狂奔)</author>
+        </item>
+        <item>
+            <title><![CDATA[欢迎使用 Curve]]></title>
+            <link>https://blog2.811520.xyz/posts/2024-10/1010</link>
+            <guid>https://blog2.811520.xyz/posts/2024-10/1010</guid>
+            <pubDate>Thu, 10 Oct 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[欢迎使用 Curve 主题，这是你的第一篇文章]]></description>
+            <author>admin@24811213.xyz (雨天狂奔)</author>
+        </item>
+    </channel>
+</rss>
